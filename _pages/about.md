@@ -17,17 +17,19 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the CS Department of [**Zhejiang University (ZJU)**](https://www.zju.edu.cn/english/), under the auspices of Professors [**Mingli Song**](https://person.zju.edu.cn/en/msong) and [**Chun Chen**](https://person.zju.edu.cn/en/0082004). I earned my B.S. degree in Mathematical Science from [**CUMTB**](https://english.cumtb.edu.cn/), as well as my B.Econ. degree in Economics (double degree) from [**Peking University (PKU)**](https://english.pku.edu.cn/) in 2021. In the same year, I joined [**JD Explore Academy (JDE)**](https://corporate.jd.com/) as a a research intern, where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by JD algorithm scientist [**Fengxiang He**](https://fengxianghe.github.io/) and Professor [**Dacheng Tao**](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
+I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the CS Department of [**Zhejiang University**](https://www.zju.edu.cn/english/) (ZJU), under the auspices of Professors [**Mingli Song**](https://person.zju.edu.cn/en/msong) and [**Chun Chen**](https://person.zju.edu.cn/en/0082004). I earned my B.S. degree in Mathematical Science from [**CUMTB**](https://english.cumtb.edu.cn/), as well as my B.Econ. degree in Economics (double degree) from [**Peking University**](https://english.pku.edu.cn/) (PKU) in 2021. In the same year, I joined [**JD Explore Academy**](https://corporate.jd.com/) (JDE) as a a research intern, where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by JD algorithm scientist [**Fengxiang He**](https://fengxianghe.github.io/) and Professor [**Dacheng Tao**](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
+
+<br/><br/>
 
 <br/><br/>
 
 ### Research interest
 
-In the science aspect, my primary research interest lies in understanding the **mechanisms underpining the practical success of deep learning**. My ultimate goal is to understand the emergence of intelligence (both machine intelligence and biological intelligence).
+In the science aspect, my primary research interest lies in understanding the mechanisms underpining the practical success of deep learning. My ultimate goal is to understand the emergence of intelligence (both machine intelligence and biological intelligence).
 
 In the technology aspect, I am passionate about developing machine learning methodologies inspired by principles.
 
-My current research focuses on examining the **theoretical foundations of decentralized learning** (or swarm learning). I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning systems. Please refer to my publications below for further details.
+My current research focuses on examining the theoretical foundations of **decentralized learning** (or swarm learning). I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning systems. Please refer to my publications below for further details.
 
 Please always feel free to contact ([**email**](raiden@zju.edu.cn)) if you have any questions, are interested in collaborating, or simply want to chat.
 
