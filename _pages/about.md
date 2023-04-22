@@ -9,7 +9,7 @@ profile:
   image: photo_9.jpg
   image_circular: True # false: crops the image to make it circular
   address: >
-    <p>Taken at the gorgeous <a href='https://en.wikipedia.org/wiki/West_Lake'>Westlake</a>, <a href='https://en.wikipedia.org/wiki/West_Lake'>Hangzhou</a></p>
+    <p>Taken at the gorgeous <a href='https://en.wikipedia.org/wiki/West_Lake'>Westlake</a>, <a href='https://en.wikipedia.org/wiki/Hangzhou'>Hangzhou</a></p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
