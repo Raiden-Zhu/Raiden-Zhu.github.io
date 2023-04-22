@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the CS Department of [**Zhejiang University**](https://www.zju.edu.cn/english/) (ZJU), under the auspices of Professors [**Mingli Song**](https://person.zju.edu.cn/en/msong) and [**Chun Chen**](https://person.zju.edu.cn/en/0082004). I earned my B.S. degree in Mathematical Science from [CUMTB](https://english.cumtb.edu.cn/), as well as my B.Econ. degree in Economics (double degree) from [**Peking University**](https://english.pku.edu.cn/) (PKU) in 2021. In the same year, I joined [**JD Explore Academy**](https://corporate.jd.com/) (JDE) as a a research intern, where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by JD algorithm scientist [**Fengxiang He**](https://fengxianghe.github.io/) and Professor [**Dacheng Tao**](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
+I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the CS Department of [**Zhejiang University**](https://www.zju.edu.cn/english/) (ZJU), under the auspices of Professors [**Mingli Song**](https://person.zju.edu.cn/en/msong) and [**Chun Chen**](https://person.zju.edu.cn/en/0082004). I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [**Peking University**](https://english.pku.edu.cn/) (PKU) in 2021. In the same year, I joined [**JD Explore Academy**](https://corporate.jd.com/) (JDE) as a a research intern, where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by JD algorithm scientist [**Fengxiang He**](https://fengxianghe.github.io/) and Professor [**Dacheng Tao**](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
 
 <br/><br/>
 
@@ -30,7 +30,7 @@ In the technology aspect, I am passionate about developing machine learning meth
 
 My current research focuses on examining the theoretical foundations of **decentralized learning** (or swarm learning). I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning algorithms. 
 
-Please always feel free to contact ([**email**](raiden@zju.edu.cn)) if you have any questions, are interested in collaborating, or simply want to chat (WeChat: RaidenT_T).
+Please always feel free to contact ([**email**](raiden@zju.edu.cn)) if you have any questions, are interested in collaborating, or simply want to chat (**WeChat**: RaidenT_T).
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
