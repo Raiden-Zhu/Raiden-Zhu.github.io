@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.zju.edu.cn/english/'>Zhejiang University</a>. 
+subtitle: # <a href='https://www.zju.edu.cn/english/'>Zhejiang University</a>. 
 
 profile:
   align: left
@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a second-year PhD student at Zhejiang University, under the auspices of Professors Mingli Song and Chun Chen. I was a research intern at JD Explore Academy, where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by JD algorithm scientist Fengxiang He and Professor Dacheng Tao.
+I am a second-year PhD student at [**Zhejiang University**](https://www.zju.edu.cn/english/), under the auspices of Professors [**Mingli Song**](https://person.zju.edu.cn/en/msong) and [**Chun Chen**](https://person.zju.edu.cn/en/0082004). I was a research intern at [**JD Explore Academy**](https://corporate.jd.com/), where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by JD algorithm scientist [**Fengxiang He**](https://fengxianghe.github.io/) and Professor [**Dacheng Tao**](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
