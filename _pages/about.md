@@ -26,12 +26,11 @@ I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at 
 ### Research interest
 
 In the science aspect, my primary research interest lies in understanding the mechanisms underpining the practical success of deep learning. My ultimate goal is to understand the emergence of intelligence (both machine intelligence and biological intelligence).
-
 In the technology aspect, I am passionate about developing machine learning methodologies inspired by principles.
 
-My current research focuses on examining the theoretical foundations of **decentralized learning** (or swarm learning). I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning systems. Please refer to my publications below for further details.
+My current research focuses on examining the theoretical foundations of **decentralized learning** (or swarm learning). I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning algorithms. 
 
-Please always feel free to contact ([**email**](raiden@zju.edu.cn)) if you have any questions, are interested in collaborating, or simply want to chat.
+Please always feel free to contact ([**email**](raiden@zju.edu.cn)) if you have any questions, are interested in collaborating, or simply want to chat (WeChat: RaidenT_T).
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
