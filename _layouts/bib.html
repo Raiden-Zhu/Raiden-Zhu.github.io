@@ -140,6 +140,9 @@
           {%- endif %}
           {%- if entry.tldr %}
             <a class="tldr btn btn-sm z-depth-0" role="button">Tldr</a>
+            <div class="tldr hidden">
+                  {{entry.tldr}}
+            </div>
           {%- endif %}
           {%- if entry.arxiv %}
             <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
