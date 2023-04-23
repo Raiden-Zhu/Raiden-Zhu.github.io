@@ -42,13 +42,13 @@ layout: default
 
           <!-- News -->
           {% if page.news -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit; font-weight: bold;">News</a></h2>
+            <h3><a href="{{ '/news/' | relative_url }}" style="color: inherit; font-weight: bold;">News</a></h3>
             {%- include news.html %}
           {%- endif %}
 
           <!-- Latest posts -->
 <!--           {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
+            <h3><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h3>
             {%- include latest_posts.html %}
           {%- endif %} -->
 
@@ -57,16 +57,16 @@ layout: default
             ...
           </div>
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit; font-weight: bold;">Selected Publications</a></h2>
+            <h3><a href="{{ '/publications/' | relative_url }}" style="color: inherit; font-weight: bold;">Selected Publications</a></h3>
             {%- include selected_papers.html %}
           {%- endif %}
               
           <!-- Services -->
-            <h2><a style="color: inherit; font-weight: bold;">Academic Services</a></h2>
+            <h3><a style="color: inherit; font-weight: bold;">Academic Services</a></h3>
             <p>I serve as a reviewer for several conferences and journals, including ICML, NeurIPS, AISTATS, UAI, ACML, and Information Science.</p>
    
           <!-- Miscellaneous -->
-            <h2><a style="color: inherit; font-weight: bold;">Miscellaneous</a></h2>
+            <h3><a style="color: inherit; font-weight: bold;">Miscellaneous</a></h3>
             <ul>
                   <li>I am an (old-school) ACG fan. My favorites range from Detective Conan and Pokemon to Attack on Titan.</li>
                   <li>I am also a basketball fanatic.</li>
