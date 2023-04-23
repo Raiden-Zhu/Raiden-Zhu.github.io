@@ -53,20 +53,24 @@ layout: default
           {%- endif %} -->
 
           <!-- Selected papers -->
-          <div id="publications" style="max-width: 1200px;">
+<!--           <div id="publications" style="max-width: 1200px;">
             ...
-          </div>
+          </div> -->
           {% if page.selected_papers -%}
-            <h3><a href="{{ '/publications/' | relative_url }}" style="color: inherit; font-weight: bold;">Selected Publications</a></h3>
+            <h3 href="{{ '/publications/' | relative_url }}" style="color: inherit; font-weight: bold;">Selected Publications</h3>
             {%- include selected_papers.html %}
           {%- endif %}
               
           <!-- Services -->
-            <h3><a style="color: inherit; font-weight: bold;">Academic Services</a></h3>
+            <h3 style="color: inherit; font-weight: bold;">Academic Services</h3>
+            <ul>
+                  <li>IConference Reviewer: ICML 2022, 2023; NeurIPS 2022, 2023; AISTATS 2023; UAI 2023.</li>
+                  <li>Jouranl Reviewer: Information Science.</li>
+            </ul>
             <p>I serve as a reviewer for several conferences and journals, including ICML, NeurIPS, AISTATS, UAI, ACML, and Information Science.</p>
    
           <!-- Miscellaneous -->
-            <h3><a style="color: inherit; font-weight: bold;">Miscellaneous</a></h3>
+            <h3 style="color: inherit; font-weight: bold;">Miscellaneous</h3>
             <ul>
                   <li>I am an (old-school) ACG fan. My favorites range from Detective Conan and Pokemon to Attack on Titan.</li>
                   <li>I am also a basketball fanatic.</li>
