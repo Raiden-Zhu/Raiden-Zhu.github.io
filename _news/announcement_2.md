@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am awarded as an outstanding PhD student for the academic year 2021-2022 (top 10%)!
+I am awarded as an outstanding PhD student of Zhejiang University for the academic year 2021-2022 (top 10%)!
