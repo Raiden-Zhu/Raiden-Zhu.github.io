@@ -30,7 +30,7 @@ In the technology aspect, I am passionate about developing machine learning meth
 
 My current research focuses on examining the theoretical foundations of **decentralized learning** (or swarm learning). I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning algorithms. 
 
-Please always feel free to contact ([**email**](raiden@zju.edu.cn)) if you have any questions, are interested in collaborating, or simply want to chat (**WeChat**: RaidenT_T).
+Please always feel free to contact (via [**email**](raiden@zju.edu.cn) or [**WeChat**](https://github.com/Raiden-Zhu/Raiden-Zhu.github.io/blob/master/assets/img/WeChat_QR_code.jpg)) if you have any questions, are interested in collaborating, or simply want to chat.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
