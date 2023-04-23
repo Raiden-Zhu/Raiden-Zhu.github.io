@@ -918,8 +918,5 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
     grid-column: none;
   }
 }
-#publications {
-  max-width: 800px; /* adjust this value to fit your needs */
-}
 
 /*# sourceMappingURL=main.css.map */
