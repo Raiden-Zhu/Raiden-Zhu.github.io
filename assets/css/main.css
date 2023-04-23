@@ -119,6 +119,12 @@ strong {
   color: var(--global-text-color);
 }
 
+h2 {
+  color: var(--global-theme-color);
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
