@@ -9,7 +9,7 @@ profile:
   image: photo_9.jpg
   image_circular: True # false: crops the image to make it circular
   address: >
-      <p><span style="font-size: 0.5em; font-family: 'Open Sans';">Taken at the gorgeous <a href='https://en.wikipedia.org/wiki/West_Lake'>Westlake</a>, <a href='https://en.wikipedia.org/wiki/Hangzhou'>Hangzhou</a></span></p>
+      <p><span style="font-size: 0.45em; font-family: 'Open Sans';">Taken at the gorgeous <a href='https://en.wikipedia.org/wiki/West_Lake'>Westlake</a>, <a href='https://en.wikipedia.org/wiki/Hangzhou'>Hangzhou</a></span></p>
 
 
 news: true  # includes a list of news items
@@ -27,7 +27,7 @@ I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at 
 
 <br/><br/>
 
-### <span style="font-family: 'Open Sans'; font-weight: bold;">R</span>esearch <span style="font-family: 'Open Sans'; font-weight: bold;">I</span>mterest
+### <span style="font-family: 'Open Sans'; font-weight: bold;">Research Interest</span>
 
 In the science aspect, my primary research interest lies in understanding the mechanisms underpining the practical success of deep learning. My ultimate goal is to understand the emergence of intelligence (both machine intelligence and biological intelligence).
 In the technology aspect, I am passionate about developing machine learning methodologies inspired by principles.
