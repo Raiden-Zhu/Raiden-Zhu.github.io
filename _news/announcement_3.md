@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Our paper "Topology-aware Generalization of Decentralized SGD" is accepted by ICML 2022!
