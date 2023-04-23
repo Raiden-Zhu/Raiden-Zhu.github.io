@@ -922,5 +922,8 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
     grid-column: none;
   }
 }
+.tldr {
+  display: inline-block;
+}
 
 /*# sourceMappingURL=main.css.map */
