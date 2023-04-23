@@ -22,7 +22,7 @@ I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at 
 
 <br/><br/>
 
-## <span style="font-family: 'Open Sans'; font-weight: bold;">Research Interest</span>
+### <span style="font-family: 'Open Sans'; font-weight: bold;">Research Interest</span>
 
 In the science aspect, my primary research interest lies in understanding the mechanisms underpining the practical success of deep learning. My ultimate goal is to understand the emergence of intelligence (both machine intelligence and biological intelligence).
 In the technology aspect, I am passionate about developing machine learning methodologies inspired or grounded by principles.
