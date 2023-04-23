@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 ### <span style="font-family: 'Open Sans'; font-weight: bold;">2023</span>
-- "Understanding Deep Learning Phenomena in Deep Learning." VIPA, Zhejiang University. March, 2023.
+- "Understanding Deep Learning Phenomena." VIPA, Zhejiang University. March, 2023.
 
 ### <span style="font-family: 'Open Sans'; font-weight: bold;">2022</span>
 - "The Non-overfitting Puzzle in Deep Learning." VIPA, Zhejiang University. March, 2022.
