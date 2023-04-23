@@ -9,7 +9,8 @@ profile:
   image: photo_9.jpg
   image_circular: True # false: crops the image to make it circular
   address: >
-      <p><span style="font-size: 0.6em; font-family: 'Open Sans';">Taken at the gorgeous <a href='https://en.wikipedia.org/wiki/West_Lake'>Westlake</a>, <a href='https://en.wikipedia.org/wiki/Hangzhou'>Hangzhou</a></span></p>
+      <p><span style="font-size: 0.7em; font-family: 'Open Sans';">Taken at the gorgeous <a href='https://en.wikipedia.org/wiki/West_Lake'>Westlake</a>, <a href='https://en.wikipedia.org/wiki/Hangzhou'>Hangzhou</a></span></p>
+
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
@@ -17,7 +18,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the CS Department of [**Zhejiang University**](https://www.zju.edu.cn/english/) (ZJU), under the auspices of Professors [**Mingli Song**](https://person.zju.edu.cn/en/msong) and [**Chun Chen**](https://person.zju.edu.cn/en/0082004). I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [**Peking University**](https://english.pku.edu.cn/) (PKU) in 2021. In the same year, I joined [**JD Explore Academy**](https://corporate.jd.com/) (JDE) as a a research intern, where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by Doctor [**Fengxiang He**](https://fengxianghe.github.io/) and Professor [**Dacheng Tao**](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
+I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the CS Department of [<span style="font-weight: bold; color: #4b2e83;">Zhejiang University</span>](https://www.zju.edu.cn/english/) (ZJU), under the auspices of Professors [**Mingli Song**](https://person.zju.edu.cn/en/msong) and [**Chun Chen**](https://person.zju.edu.cn/en/0082004). I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [**Peking University**](https://english.pku.edu.cn/) (PKU) in 2021. In the same year, I joined [**JD Explore Academy**](https://corporate.jd.com/) (JDE) as a a research intern, where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by Doctor [**Fengxiang He**](https://fengxianghe.github.io/) and Professor [**Dacheng Tao**](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
+
+Does this help?
+
 
 <br/><br/>
 
