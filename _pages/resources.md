@@ -7,7 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-### <span style="font-family: 'Open Sans';">Your Title</span>
+### <span style="font-family: 'Open Sans';"><b>Your Title</b></span>
 - Coming soon.
 
 ### <b>2022</b>
