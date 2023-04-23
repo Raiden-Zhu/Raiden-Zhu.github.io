@@ -1,3 +1,7 @@
+#publications {
+  max-width: 800px; /* adjust this value to fit your needs */
+}
+
 /*******************************************************************************
  * Variables used throughout the theme.
  * To adjust anything, simply edit the variables below and rebuild the theme.
