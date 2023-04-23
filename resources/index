@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>talk | Tongtian  Zhu</title>
+    <title>resources | Tongtian  Zhu</title>
     <meta name="author" content="Tongtian  Zhu" />
     <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 " />
@@ -77,10 +77,10 @@
                 <a class="nav-link" href="/publications/">publications</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/resources/">talk<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/resources/">resources<span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/teaching/">talk<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/teaching/">talk</a>
               </li>
               <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus</a>
@@ -118,18 +118,16 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">talk</h1>
+            <h1 class="post-title">resources</h1>
             <p class="post-description"></p>
           </header>
 
           <article>
             ### 2023
-- "Understanding Deep Learning Phenomena in Deep Learning." VIPA, Zhejiang University. March, 2023.
+- Coming soon.
 
 ### 2022
-- "The Non-overfitting Puzzle in Deep Learning." VIPA, Zhejiang University. March, 2022.
-- "The Non-overfitting Puzzle in Deep Learning." Deep Learning Theory Seminar, Zhejiang University. March, 2022.
-- "Topology-aware Generalization bounds of Decentralized SGD." The Thirty-ninth International Conference on Machine Learning (ICML). July, 2022. [[slides](https://github.com/Raiden-Zhu/Generalization-of-DSGD/blob/main/Slides_ICML2022_Generalization_of_D_SGD.pdf), [paper](https://arxiv.org/pdf/2206.12680)]
+- Coming soon.
 
           </article>
 
