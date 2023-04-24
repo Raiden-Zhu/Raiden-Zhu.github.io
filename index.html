@@ -231,9 +231,8 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
           <h3><a href="/publications/" style="color: inherit; font-weight: bold;">Selected Publications</a></h3>
           <div class="publications">
             <ol class="bibliography"><li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 preview">
+<div class="row">
+    <div class="col-sm-2">
 <figure>
 
   <picture>
@@ -249,7 +248,14 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
   </picture>
 
 </figure>
+<abbr class="badge">ICML 2022</abbr>
 </div>
+</div>
+
+
+In this modified version of the code, we removed the `else` keyword from the `elsif` statement that checks for the presence of the `abbr` field. This allows both the preview image and abbreviation to be displayed if their respective fields are present in the BibTeX entry.
+
+Make sure to test your changes thoroughly to ensure that everything works as expected.
 
         <!-- Entry bib key -->
         <div id="pmlr-v162-zhu22d" class="col-sm-8">
@@ -290,9 +296,11 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
             <p>This paper studies the algorithmic stability and generalizability of decentralized stochastic gradient descent (D-SGD). We prove that the consensus model learned by D-SGD is \mathcalO(N^-1+ m^-1 +λ^2)-stable in expectation in the non-convex non-smooth setting, where N is the total sample size, m is the worker number, and 1+λis the spectral gap that measures the connectivity of the communication topology. These results then deliver an \mathcalO(N^-(1+α)/2+ m^-(1+α)/2+λ^1+α + \phi_S) in-average generalization bound, which is non-vacuous even when λis closed to 1, in contrast to vacuous as suggested by existing literature on the projected version of D-SGD. Our theory indicates that the generalizability of D-SGD is positively correlated with the spectral gap, and can explain why consensus control in initial training phase can ensure better generalization. Experiments of VGG-11 and ResNet-18 on CIFAR-10, CIFAR-100 and Tiny-ImageNet justify our theory. To our best knowledge, this is the first work on the topology-aware generalization of vanilla D-SGD.</p>
           </div>
         </div>
-      </div>
-</li></ol>
-          </div>
+      </li></ol>
+</div>
+
+          </article>
+</div>
 
               
           <!-- Services -->
@@ -324,11 +332,11 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
               </div>
 
             </div>
-        </article>
+        
 
 </div>
 
-    </div>
+    
 
     <!-- Footer -->    
     <footer class="fixed-bottom">

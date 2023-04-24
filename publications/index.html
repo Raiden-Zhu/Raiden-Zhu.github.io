@@ -120,9 +120,14 @@
 <div class="publications">
   <h2 class="year">2023</h2>
   <ol class="bibliography"><li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr"><abbr class="badge">AAAI 2023 (oral)</abbr></div>
+<div class="row">
+    <div class="col-sm-2"><abbr class="badge">AAAI 2023 (oral)</abbr></div>
+</div>
+
+
+In this modified version of the code, we removed the `else` keyword from the `elsif` statement that checks for the presence of the `abbr` field. This allows both the preview image and abbreviation to be displayed if their respective fields are present in the BibTeX entry.
+
+Make sure to test your changes thoroughly to ensure that everything works as expected.
 
         <!-- Entry bib key -->
         <div id="deng2023stability" class="col-sm-8">
@@ -160,14 +165,13 @@
             <p>Value Decomposition (VD) aims to deduce the contributions of agents for decentralized policies in the presence of only global rewards, and has recently emerged as a powerful credit assignment paradigm for tackling cooperative Multi-Agent Reinforcement Learning (MARL) problems. One of the main challenges in VD is to promote diverse behaviors among agents, while existing methods directly encourage the diversity of learned agent networks with various strategies. However, we argue that these dedicated designs for agent networks are still limited by the indistinguishable VD network, leading to homogeneous agent behaviors and thus downgrading the cooperation capability. In this paper, we propose a novel Contrastive Identity-Aware learning (CIA) method, explicitly boosting the credit-level distinguishability of the VD network to break the bottleneck of multi-agent diversity. Specifically, our approach leverages contrastive learning to maximize the mutual information between the temporal credits and identity representations of different agents, encouraging the full expressiveness of credit assignment and further the emergence of individualities. The algorithm implementation of the proposed CIA module is simple yet effective that can be readily incorporated into various VD architectures. Experiments on the SMAC benchmarks and across different VD backbones demonstrate that the proposed method yields results superior to the state-of-the-art counterparts. Our code is available at this https URL.</p>
           </div>
         </div>
-      </div>
+      &lt;/div&gt;
 </li></ol>
 
   <h2 class="year">2022</h2>
   <ol class="bibliography"><li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 preview">
+<div class="row">
+    <div class="col-sm-2">
 <figure>
 
   <picture>
@@ -183,7 +187,14 @@
   </picture>
 
 </figure>
+<abbr class="badge">ICML 2022</abbr>
 </div>
+</div>
+
+
+In this modified version of the code, we removed the `else` keyword from the `elsif` statement that checks for the presence of the `abbr` field. This allows both the preview image and abbreviation to be displayed if their respective fields are present in the BibTeX entry.
+
+Make sure to test your changes thoroughly to ensure that everything works as expected.
 
         <!-- Entry bib key -->
         <div id="pmlr-v162-zhu22d" class="col-sm-8">
@@ -224,7 +235,7 @@
             <p>This paper studies the algorithmic stability and generalizability of decentralized stochastic gradient descent (D-SGD). We prove that the consensus model learned by D-SGD is \mathcalO(N^-1+ m^-1 +λ^2)-stable in expectation in the non-convex non-smooth setting, where N is the total sample size, m is the worker number, and 1+λis the spectral gap that measures the connectivity of the communication topology. These results then deliver an \mathcalO(N^-(1+α)/2+ m^-(1+α)/2+λ^1+α + \phi_S) in-average generalization bound, which is non-vacuous even when λis closed to 1, in contrast to vacuous as suggested by existing literature on the projected version of D-SGD. Our theory indicates that the generalizability of D-SGD is positively correlated with the spectral gap, and can explain why consensus control in initial training phase can ensure better generalization. Experiments of VGG-11 and ResNet-18 on CIFAR-10, CIFAR-100 and Tiny-ImageNet justify our theory. To our best knowledge, this is the first work on the topology-aware generalization of vanilla D-SGD.</p>
           </div>
         </div>
-      </div>
+      &lt;/div&gt;
 </li></ol>
 
 
