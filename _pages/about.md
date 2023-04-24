@@ -6,7 +6,7 @@ subtitle: # <a href='https://www.zju.edu.cn/english/'>Zhejiang University</a>.
 
 profile:
   align: left
-  image: photo_9.jpg
+  image: photo_10.jpg
   image_circular: True # false: crops the image to make it circular
   address: >
       <p><span style="font-size: 0.85em; font-family: 'Open Sans';">At the gorgeous <a href='https://en.wikipedia.org/wiki/West_Lake'>Westlake</a>, <a href='https://en.wikipedia.org/wiki/Hangzhou'>Hangzhou</a></span></p>
