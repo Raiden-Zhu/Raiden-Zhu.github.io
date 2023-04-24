@@ -554,6 +554,7 @@ footer.sticky-bottom {
 }
 .publications ol.bibliography li .abbr {
   height: 2rem;
+  width: 4rem;
   margin-bottom: 0.5rem;
 }
 .publications ol.bibliography li .abbr abbr {
