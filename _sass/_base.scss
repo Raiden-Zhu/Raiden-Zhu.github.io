@@ -707,6 +707,13 @@ footer.sticky-bottom {
       div.abstract.hidden.open {
         border-color: var(--global-text-color);
       }
+      div.tdlr.hidden {
+        border: dashed 1px var(--global-bg-color);
+      }
+
+      div.tdlr.hidden.open {
+        border-color: var(--global-text-color);
+      }
     }
   }
 }
