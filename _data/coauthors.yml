@@ -33,3 +33,11 @@
 "Song":
   - firstname: ["Jie"]
     url: https://person.zju.edu.cn/songjie
+
+"Niu":
+  - firstname: ["Zhengyang"]
+    url: http://sigma.whu.edu.cn/member.php
+    
+"Zhou":
+  - firstname: ["Yihe"]
+    url: https://dblp.org/search/pid/api?q=author:Yihe_Zhou:
