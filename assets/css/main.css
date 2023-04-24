@@ -655,6 +655,12 @@ footer.sticky-bottom {
 .publications ol.bibliography li div.abstract.hidden.open {
   border-color: var(--global-text-color);
 }
+.publications ol.bibliography li div.tdlr.hidden {
+  border: dashed 1px var(--global-bg-color);
+}
+.publications ol.bibliography li div.tdlr.hidden.open {
+  border-color: var(--global-text-color);
+}
 
 figure.highlight {
   margin: 0 0 1rem;
