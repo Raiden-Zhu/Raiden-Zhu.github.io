@@ -554,7 +554,6 @@ footer.sticky-bottom {
 }
 .publications ol.bibliography li .abbr {
   height: 2rem;
-  width: 6rem;
   margin-bottom: 0.5rem;
 }
 .publications ol.bibliography li .abbr abbr {
@@ -574,7 +573,7 @@ footer.sticky-bottom {
   border: 1px solid var(--global-theme-color);
 }
 .publications ol.bibliography li .title {
-  font-weight: bolder;
+  font-weight: bold;
 }
 .publications ol.bibliography li .author a {
   border-bottom: 1px dashed var(--global-theme-color);
