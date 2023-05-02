@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <small href='https://twitter.com/Raiden13238619/'>Twitter</small>. 
+subtitle: # <small href='https://twitter.com/Raiden13238619/'>Twitter</small>. 
 
 profile:
   align: left
