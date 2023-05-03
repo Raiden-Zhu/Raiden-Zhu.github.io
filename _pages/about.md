@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: # <small href='https://twitter.com/Raiden13238619/'>Twitter</small>. 
+subtitle: _Great research is not to convince your peers but to the next generations. _
 
 profile:
   align: left
