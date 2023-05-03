@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <small><em>"Not to convince your peers, but to the next generations."</em></small>
+subtitle: <small><em>"Convince the next generations, not peers."</em></small>
 
 profile:
   align: left
