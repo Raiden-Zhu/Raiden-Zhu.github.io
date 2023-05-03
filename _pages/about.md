@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: _"Great research is not to convince your peers but to the next generations." _
+subtitle: <small><em>"Great research is not to convince your peers but to the next generations."</em></small>
 
 profile:
   align: left
