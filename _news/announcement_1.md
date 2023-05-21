@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "[Contrastive Identity-Aware Learning for Multi-Agent Value Decomposition](https://arxiv.org/pdf/2211.12712)" is accpeted at **AAAI 2023 (oral presentation)**!
+Our paper "[Contrastive Identity-Aware Learning for Multi-Agent Value Decomposition](https://arxiv.org/pdf/2211.12712)" is accpeted at **AAAI 2023 (Oral)**!
