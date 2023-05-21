@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hi there! I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the Computer Science Department of [<span style="font-weight: bold; color: #B509AC;">Zhejiang University</span>](https://www.zju.edu.cn/english/) (ZJU), under the auspices of Professors [**Mingli Song**](https://person.zju.edu.cn/en/msong) and [**Chun Chen**](https://person.zju.edu.cn/en/0082004). I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [<span style="font-weight: bold; color: #B509AC;">Peking University</span>](https://english.pku.edu.cn/) (PKU) in 2021. In the same year, I joined [<span style="font-weight: bold; color: #B509AC;">JD Explore Academy</span>](https://corporate.jd.com/) (JDE) as a a research intern, where I focused on the generalization theory of decentralized learning (or swarm learning), fortunately supervised by Doctor [**Fengxiang He**](https://fengxianghe.github.io/) and Professor [**Dacheng Tao**](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
 
-Twitter
+Twitter|Google Scholar|
 
 <!-- <br/><br/> -->
 
