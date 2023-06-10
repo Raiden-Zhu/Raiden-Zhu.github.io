@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Decentralized SGD and Average-direction SAM are Asymptotically Equivalent
-date: 2022-12-10 11:59:00-0400
+date: 2022-12-10
 description: The first work on the surprising sharpness-aware minimization nature of decentralized learning
 categories: sample-posts external-services
 giscus_comments: true
