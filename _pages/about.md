@@ -25,7 +25,9 @@ My current research focuses on examining the theoretical foundations of **decent
 
 <i class="ai ai-google-scholar"></i> [**Google Scholar**](https://scholar.google.com/citations?user=QvBDUsIAAAAJ&hl=zh-CN]) &nbsp;&nbsp; <!-- <i class="fa fa-twitter"></i> <[**Twitter**](https://twitter.com/Raiden13238619/) &nbsp;&nbsp; --> <i class="fa fa-envelope"></i> [**Email**](mailto:raiden@zju.edu.cn) &nbsp;&nbsp; <!--<i class="fa fa-weixin"></i> [**WeChat**](https://raw.githubusercontent.com/Raiden-Zhu/Raiden-Zhu.github.io/master/assets/img/WeChat_QR_code.jpg) &nbsp;&nbsp; --> <i class="fa fa-github"></i> [**Github**](https://github.com/Raiden-Zhu) &nbsp;&nbsp; <!--<i class="fab fa-zhihu"></i> [**Zhihu**](https://www.zhihu.com/people/you-li-70-94) --> 
 
+<div style="text-align:center;">
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=tS-1W4gsJQveW3uLgiUjZjQG3LnHb7prM6Wkzr-ARIQ&cl=ffffff&w=200"></script>
+</div>
 
 <!-- <br/><br/> -->
 
