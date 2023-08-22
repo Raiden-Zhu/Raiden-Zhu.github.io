@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I give a long talk at [<span style="font-weight: bold; color: #B509AC;">westlake university</span>](https://dlt-seminar.github.io/) on the generalization benefits of decentralization!
+I give a long talk at [<span style="font-weight: bold; color: #B509AC;">Westlake University</span>](https://dlt-seminar.github.io/) on the generalization benefits of decentralization!
 
