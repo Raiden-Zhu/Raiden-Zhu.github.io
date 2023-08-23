@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I give a long talk at [<span style="color: #B509AC;">Westlake University</span>](https://dlt-seminar.github.io/) on the generalization benefits of decentralization!
+I give a long talk at [<span style="color: #B509AC;">the Deep Learning Theory Seminar</span>](https://dlt-seminar.github.io/) in Westlake University on the generalization benefits of decentralization!
 
