@@ -18,6 +18,7 @@
   abstract = 	 {This paper studies the algorithmic stability and generalizability of decentralized stochastic gradient descent (D-SGD). We prove that the consensus model learned by D-SGD is \mathcal{O}{(N^{-1}+ m^{-1} +\lambda^2)}\mathcal{O}{(N^{-1}+ m^{-1} +\lambda^2)}-stable in expectation in the non-convex non-smooth setting, where NN is the total sample size, mm is the worker number, and 1+\lambda1+\lambda is the spectral gap that measures the connectivity of the communication topology. These results then deliver an \mathcal{O}{(N^{-(1+\alpha)/2}+ m^{-(1+\alpha)/2}+\lambda^{1+\alpha} + \phi_S)}\mathcal{O}{(N^{-(1+\alpha)/2}+ m^{-(1+\alpha)/2}+\lambda^{1+\alpha} + \phi_S)} in-average generalization bound, which is non-vacuous even when \lambda\lambda is closed to 11, in contrast to vacuous as suggested by existing literature on the projected version of D-SGD. Our theory indicates that the generalizability of D-SGD is positively correlated with the spectral gap, and can explain why consensus control in initial training phase can ensure better generalization. Experiments of VGG-11 and ResNet-18 on CIFAR-10, CIFAR-100 and Tiny-ImageNet justify our theory. To our best knowledge, this is the first work on the topology-aware generalization of vanilla D-SGD.},
   tldr =  {<strong>One-sentence summary: The first work on the topology-aware generalization analysis of vanilla D-SGD.</strong>},
   slides = {https://github.com/Raiden-Zhu/Generalization-of-DSGD/blob/main/Slides_ICML2022_Generalization_of_D_SGD.pdf},
+  code = {https://github.com/Raiden-Zhu/Generalization-of-DSGD}, 
   dimensions={true},
   selected={true},
   bibtex_show={true},
@@ -43,6 +44,7 @@
   tldr =  {<strong>One-sentence summary: The first work on the surprising sharpness-aware minimization nature of decentralized learning. We provide a completely new perspective to understand decentralization, which helps to bridge the gap between theory and practice in decentralized learning.</strong>},
   slides = {https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM/blob/main/Slides_ICML_2023_Decentralized_SGD_and_Average_direction_SAM_are_Asymptotically_Equivalent%20.pdf},
   poster = {https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM/blob/main/Poster_ICML2023_D_SGD_as_SAM.pdf},
+  code = {https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM}, 
   dimensions={true},
   selected={true},
   bibtex_show={true},
@@ -57,6 +59,7 @@
   year={2023},
   abstract = {Value Decomposition (VD) aims to deduce the contributions of agents for decentralized policies in the presence of only global rewards, and has recently emerged as a powerful credit assignment paradigm for tackling cooperative Multi-Agent Reinforcement Learning (MARL) problems. One of the main challenges in VD is to promote diverse behaviors among agents, while existing methods directly encourage the diversity of learned agent networks with various strategies. However, we argue that these dedicated designs for agent networks are still limited by the indistinguishable VD network, leading to homogeneous agent behaviors and thus downgrading the cooperation capability. In this paper, we propose a novel Contrastive Identity-Aware learning (CIA) method, explicitly boosting the credit-level distinguishability of the VD network to break the bottleneck of multi-agent diversity. Specifically, our approach leverages contrastive learning to maximize the mutual information between the temporal credits and identity representations of different agents, encouraging the full expressiveness of credit assignment and further the emergence of individualities. The algorithm implementation of the proposed CIA module is simple yet effective that can be readily incorporated into various VD architectures. Experiments on the SMAC benchmarks and across different VD backbones demonstrate that the proposed method yields results superior to the state-of-the-art counterparts. Our code is available at this https URL.},
   pdf = 	 {https://arxiv.org/pdf/2211.12712},
+  code = {https://github.com/liushunyu/CIA}, 
   dimensions={true},
   bibtex_show={true},
   preview={contrastive_aware.png}
@@ -83,7 +86,8 @@
   dimensions={true},
   selected={true},
   bibtex_show={true},
-  preview={KDD.png}
+  preview={KDD.png},
+  code = {https://github.com/chenchkx/SuperNorm} 
 }
 
 
