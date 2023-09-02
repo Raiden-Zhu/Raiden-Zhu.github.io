@@ -62,14 +62,26 @@
   preview={contrastive_aware.png}
 }
 
-@inproceedings{chen2023improving,
-  title={Improving Expressivity of GNNs with Subgraph-specific Factor Embedded Normalization},
-  author={Chen, Kaixuan and Liu, Shunyu and Zhu, Tongtian and Qiao, Ji and Su, Yun and Tian, Yingjie and others},
-  booktitle={ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)},
-  year={2023},
-  dimensions={true},
-  selected={true},
-  bibtex_show={true}
+
+@inproceedings{10.1145/3580305.3599388,
+author = {Chen, Kaixuan and Liu, Shunyu and Zhu, Tongtian and Qiao, Ji and Su, Yun and Tian, Yingjie and Zheng, Tongya and Zhang, Haofei and Feng, Zunlei and Ye, Jingwen and Song, Mingli},
+title = {Improving Expressivity of GNNs with Subgraph-Specific Factor Embedded Normalization},
+year = {2023},
+isbn = {9798400701030},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3580305.3599388},
+doi = {10.1145/3580305.3599388},
+abstract = {Graph Neural Networks~(GNNs) have emerged as a powerful category of learning architecture for handling graph-structured data. However, existing GNNs typically ignore crucial structural characteristics in node-induced subgraphs, which thus limits their expressiveness for various downstream tasks. In this paper, we strive to strengthen the representative capabilities of GNNs by devising a dedicated plug-and-play normalization scheme, termed as SUbgraph-sPEcific FactoR Embedded Normalization (SuperNorm), that explicitly considers the intra-connection information within each node-induced subgraph. To this end, we embed the subgraph-specific factor at the beginning and the end of the standard BatchNorm, as well as incorporate graph instance-specific statistics for improved distinguishable capabilities. In the meantime, we provide theoretical analysis to support that, with the elaborated SuperNorm, an arbitrary GNN is at least as powerful as the 1-WL test in distinguishing non-isomorphism graphs. Furthermore, the proposed SuperNorm scheme is also demonstrated to alleviate the over-smoothing phenomenon. Experimental results related to predictions of graph, node, and link properties on the eight popular datasets demonstrate the effectiveness of the proposed method. The code is available at https://github.com/chenchkx/SuperNorm.},
+booktitle = {Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+pages = {237–249},
+numpages = {13},
+keywords = {graph normalization, subgraph-specific factor, graph isomorphism test, oversmoothing issue, graph neural networks},
+location = {Long Beach, CA, USA},
+series = {KDD '23},
+dimensions={true},
+selected={true},
+bibtex_show={true}
 }
 
 
