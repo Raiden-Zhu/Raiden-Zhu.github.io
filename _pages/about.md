@@ -28,6 +28,8 @@ My current research focuses on examining the theoretical foundations of **decent
 
 ### <span style="font-family: 'Open Sans'; font-weight: bold;">🦄 Research Interest</span>
 
+<em>"Seek truth and beauty."</em>
+
 In the science aspect, my primary research interest lies in understanding the mechanisms underpining the practical success of deep learning. 
 <!-- My ultimate goal is to understand the emergence of intelligence (both machine intelligence and biological intelligence). -->
 In the technology aspect, I am passionate about developing machine learning methodologies inspired by principles. 
