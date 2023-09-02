@@ -18,6 +18,7 @@
   abstract = 	 {This paper studies the algorithmic stability and generalizability of decentralized stochastic gradient descent (D-SGD). We prove that the consensus model learned by D-SGD is \mathcal{O}{(N^{-1}+ m^{-1} +\lambda^2)}\mathcal{O}{(N^{-1}+ m^{-1} +\lambda^2)}-stable in expectation in the non-convex non-smooth setting, where NN is the total sample size, mm is the worker number, and 1+\lambda1+\lambda is the spectral gap that measures the connectivity of the communication topology. These results then deliver an \mathcal{O}{(N^{-(1+\alpha)/2}+ m^{-(1+\alpha)/2}+\lambda^{1+\alpha} + \phi_S)}\mathcal{O}{(N^{-(1+\alpha)/2}+ m^{-(1+\alpha)/2}+\lambda^{1+\alpha} + \phi_S)} in-average generalization bound, which is non-vacuous even when \lambda\lambda is closed to 11, in contrast to vacuous as suggested by existing literature on the projected version of D-SGD. Our theory indicates that the generalizability of D-SGD is positively correlated with the spectral gap, and can explain why consensus control in initial training phase can ensure better generalization. Experiments of VGG-11 and ResNet-18 on CIFAR-10, CIFAR-100 and Tiny-ImageNet justify our theory. To our best knowledge, this is the first work on the topology-aware generalization of vanilla D-SGD.},
   tldr =  {<strong>One-sentence summary: The first work on the topology-aware generalization analysis of vanilla D-SGD.</strong>},
   slides = {https://github.com/Raiden-Zhu/Generalization-of-DSGD/blob/main/Slides_ICML2022_Generalization_of_D_SGD.pdf},
+  poster = {https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM/blob/main/Poster_ICML2023_D_SGD_as_SAM.pdf},
   code = {https://github.com/Raiden-Zhu/Generalization-of-DSGD}, 
   dimensions={true},
   selected={true},
@@ -87,6 +88,23 @@
   bibtex_show={true},
   preview={KDD.png},
   code = {https://github.com/chenchkx/SuperNorm} 
+}
+
+@InProceedings{wang2023adversarial,
+  abbr={ECAI 2023},
+  title = 	 {Adversarial Erasing with Pruned Elements: Towards Better Graph Lottery Ticket},
+  author =       {Wang, Yuwen and Liu, Shunyu and Chen, Kaixuan and Zhu, Tongtian and Qiao, Ji and Shi, Mengjie and Wan, Yuanyu and Song, Mingli},
+  booktitle = 	 {European Conference on Artificial Intelligence},
+  year = 	 {2023},
+  series = 	 {Proceedings of European Conference on Artificial Intelligence},
+  publisher =    {ECAI},
+  pdf = 	 {https://arxiv.org/abs/2308.02916},
+  abstract = 	 {Graph Lottery Ticket (GLT), a combination of core subgraph and sparse subnetwork, has been proposed to mitigate the computational cost of deep Graph Neural Networks (GNNs) on large input graphs while preserving original performance. However, the winning GLTs in exisiting studies are obtained by applying iterative magnitude-based pruning (IMP) without re-evaluating and re-considering the pruned information, which disregards the dynamic changes in the significance of edges/weights during graph/model structure pruning, and thus limits the appeal of the winning tickets. In this paper, we formulate a conjecture, i.e., existing overlooked valuable information in the pruned graph connections and model parameters which can be re-grouped into GLT to enhance the final performance. Specifically, we propose an adversarial complementary erasing (ACE) framework to explore the valuable information from the pruned components, thereby developing a more powerful GLT, referred to as the ACE-GLT. The main idea is to mine valuable information from pruned edges/weights after each round of IMP, and employ the ACE technique to refine the GLT processing. Finally, experimental results demonstrate that our ACE-GLT outperforms existing methods for searching GLT in diverse tasks.},
+  slides = {TBD},
+  code = {https://github.com/Wangyuwen0627/ACE-GLT}, 
+  dimensions={true},
+  bibtex_show={true},
+  preview={2023ecai-wang2023adversarial.png}
 }
 
 
