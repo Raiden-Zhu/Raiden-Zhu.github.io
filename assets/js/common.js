@@ -15,4 +15,7 @@ $('a.bibtex').click(function() {
         $(this).parent().parent().find(".tldr.hidden.open").toggleClass('open');
     });
     $('a').removeClass('waves-effect waves-light');
+    
+    // Trigger the click event on page load
+    $('a.tldr').trigger('click');
 });
