@@ -34,7 +34,7 @@ In the science aspect, my primary research interest lies in understanding the me
 <!-- My ultimate goal is to understand the emergence of intelligence (both machine intelligence and biological intelligence). -->
 In the technology aspect, I am passionate about developing machine learning methodologies inspired by principles. 
 
-My current research focuses include:
+My current research focus include:
 - Generalization Theory of Decentralized Learning.
 - Developing Fast & Generalizable Decentralized Algorithm.
 
