@@ -36,7 +36,7 @@ In the technology aspect, I am passionate about developing machine learning meth
 
 My current research focus include:
 - Generalization Theory of Decentralized Learning.
-- Developing Fast & Generalizable Decentralized Algorithm.
+- Developing Fast & Generalizable Decentralized Algorithms.
 
 Please always feel free to contact (via [**email**](mailto:raiden@zju.edu.cn) or [**WeChat**](https://raw.githubusercontent.com/Raiden-Zhu/Raiden-Zhu.github.io/master/assets/img/WeChat_QR_code.jpg)) if you have any questions, are interested in collaborating, or just want to chat.  <!-- For regular updates and insights, feel free to follow my [**Twitter**](https://twitter.com/Raiden13238619) as well. -->
 
