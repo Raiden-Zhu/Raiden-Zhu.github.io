@@ -4,7 +4,7 @@ title: Decentralized SGD and Average-direction SAM are Asymptotically Equivalent
 date: 2023-04-25 10:14:00-0400
 description: an example of a blog post with table of contents on a sidebar
 tags: Implicit_Bias Decentralized_Learning
-categories: sample-posts
+categories: 
 giscus_comments: true
 related_posts: false
 toc:
