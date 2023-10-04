@@ -859,7 +859,7 @@ d-article d-contents {
   padding-left: 2em;
   padding-right: 3em;
   border-right: 1px solid var(--global-divider-color);
-  width: max(100%, 300px);
+  width: max(100%, 400px);
   margin-right: 0px;
   margin-top: 0em;
   display: grid;
