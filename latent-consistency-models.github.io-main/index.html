@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Latent Consistency Models: Synthesizing High-Resolution Images with Few-step Inference">
+  <meta name="keywords" content="LCM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latent Consistency Models: Synthesizing High-Resolution Images with Few-step Inference</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2 publication-title">Latent Consistency Models: Synthesizing High-Resolution Images with Few-step Inference</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://luosiallen.github.io">Simian Luo*</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=MSdTQToAAAAJ&hl=en">Yiqin Tan*</a>,</span>
+            <span class="author-block">
+              <a href="http://people.iiis.tsinghua.edu.cn/~huang/">Longbo Huang†</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.iiis.tsinghua.edu.cn/~jianli/">Jian Li†</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://hangzhaomit.github.io/">Hang Zhao†</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Institute for Interdisciplinary Information Sciences, Tsinghua University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2310.04378.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2310.04378.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/luosiallen/latent-consistency-model"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/SimianLuo/Latent_Consistency_Model"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>🔥 Hugging Face 🤗 Demo </span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/SimianLuo/LCM_Dreamshaper_v7"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Hugging Face 🤗 Model </span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+    <div class="ours-new">
+        <h4 class="title is-5"><i><font color="#FF0000">" LCMs: The next generation of generative models after Latent Diffusion Models (LDMs). "</font></i></h4>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Latent Diffusion models (LDMs) have achieved remarkable results in synthesizing high-resolution images. However, the iterative sampling is computationally intensive and leads to slow generation.
+          <p>
+            Inspired by Consistency Models, 
+            we propose Latent Consistency Models (<strong>LCMs</strong>), enabling swift inference with minimal steps on any pre-trained LDMs, including Stable Diffusion. 
+            Viewing the guided reverse diffusion process as solving an <strong>augmented probability flow ODE (PF-ODE)</strong>, LCMs are designed to directly predict the solution of such ODE in latent space, mitigating the need for numerous iterations and allowing rapid, high-fidelity sampling. 
+          </p>
+          <p>
+            Efficiently distilled from pre-trained classifier-free guided diffusion models, a high-quality 768×768 2~4-step LCM takes only <strong>32 A100 GPU hours</strong> for training.
+            Furthermore, we introduce Latent Consistency Fine-tuning (LCF), a novel method that is tailored for fine-tuning LCMs on customized image datasets. Evaluation on the LAION-5B-Aesthetics dataset demonstrates that LCMs achieve state-of-the-art text-to-image generation performance with few-step inference.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Few-Step Generated Images</h2>
+        <div class="content has-text-justified">
+          <p>
+            Images generated by Latent Consistency Models (LCMs). LCMs can be distilled from any pre-trained Stable Diffusion (SD) in only 4,000 training steps <strong>(~32 A100 GPU Hours)</strong> for generating high quality <strong>768 x 768</strong> resolution images in <strong>2~4 steps or even one step </strong>, significantly accelerating text-to-image generation. We employ LCM to distill the Dreamshaper-V7 version of SD in just 4,000 training iterations.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div>
+          <img src="./static/images/Teaser_v4.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+
+      
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+  
+      <!-- Animation. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">More Generation Results (4-Steps)</h2>
+          <div class="content has-text-justified">
+            <p>
+              More generated images results with LCM <strong>4-Step inference (768 x 768 Resolution)</strong>. We employ LCM to distill the Dreamshaper-V7 version of SD in just 4,000 training iterations.
+            </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div>
+            <img src="./static/images/more_results.png"
+                  class="interpolation-image"
+                  alt="Interpolate start reference image."/>
+            </div>
+          </div>
+          <br/>
+          <!--/ Interpolating. -->
+  
+  
+        </div>
+      </div>
+      <!--/ Animation. -->
+  
+  
+  
+        
+    </section>
+  
+    <section class="section">
+      <div class="container is-max-desktop">
+    
+        <div class="columns is-centered">
+    
+        <!-- Animation. -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">More Generation Results (2-Steps)</h2>
+            <div class="content has-text-justified">
+              <p>
+                More generated images results with LCM <strong>2-Step inference (768 x 768 Resolution)</strong>. We employ LCM to distill the Dreamshaper-V7 version of SD in just 4,000 training iterations.
+              </p>
+            </div>
+            <div class="columns is-vcentered interpolation-panel">
+              <div>
+              <img src="./static/images/more_results_step2.png"
+                    class="interpolation-image"
+                    alt="Interpolate start reference image."/>
+              </div>
+            </div>
+            <br/>
+            <!--/ Interpolating. -->
+    
+    
+          </div>
+        </div>
+        <!--/ Animation. -->
+    
+    
+    
+          
+      </section>
+
+
+
+  <!-- <section class="section">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Latent Consistency Fine-tuning</h2>
+        <div class="content has-text-justified">
+          <p>
+            4-step LCMs using Latent Consistency Fine-tuning (LCF) on two customized datasets: Pokemon Dataset (left), Simpsons Dataset (right). Through LCF, LCM produces images with customized styles.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div>
+          <img src="./static/images/LCT_v1.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image.", width="50%"/>
+        </div>
+        </div>
+        <br/>
+
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Latent Consistency Fine-tuning (LCF)</h2>
+
+        <div class="container is-max-desktop content">
+          <p>
+            <strong>LCF is a fine-tuning method designed for pretrained LCM. LCF enables efficient few-step inference on customized datasets without teacher diffusion model, presenting a viable alternative to directly finetune a pretrained LCM. </strong>
+          </p>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            4-step LCMs using Latent Consistency Fine-tuning (LCF) on two customized datasets: Pokemon Dataset (left), Simpsons Dataset (right). Through LCF, LCM produces images with customized styles.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div>
+          <img src="./static/images/LCT_v1.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{luo2023latent,
+      title={Latent Consistency Models: Synthesizing High-Resolution Images with Few-Step Inference}, 
+      author={Simian Luo and Yiqin Tan and Longbo Huang and Jian Li and Hang Zhao},
+      year={2023},
+      eprint={2310.04378},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is constructed using the source code provided by <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and we are grateful for their template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
