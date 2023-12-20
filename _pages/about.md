@@ -18,7 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the Computer Science Department of [<span style="font-weight: bold; color: #B509AC;">Zhejiang University</span>](https://www.zju.edu.cn/english/) (ZJU), supervised by Professors [Mingli Song](https://person.zju.edu.cn/en/msong) and [Chun Chen](https://person.zju.edu.cn/en/0082004). <!-- I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [<span style="font-weight: bold; color: #B509AC;">Peking University</span>](https://english.pku.edu.cn/) (PKU) in 2021. --> 
+<!--[<span style="font-weight: bold; color: #B509AC;">Zhejiang University</span>](https://www.zju.edu.cn/english/)-->
+
+Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the Computer Science Department of Zhejiang University (ZJU), supervised by Professors [Mingli Song](https://person.zju.edu.cn/en/msong) and [Chun Chen](https://person.zju.edu.cn/en/0082004). <!-- I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [<span style="font-weight: bold; color: #B509AC;">Peking University</span>](https://english.pku.edu.cn/) (PKU) in 2021. --> 
 I was a research intern at JD Explore Academy (JDE), working on the generalization theory of decentralized learning,  mentored by Doctor [Fengxiang He](https://fengxianghe.github.io/) and Professor [Dacheng Tao](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
 My current research focuses on the theoretical aspects of **decentralized learning**. I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning algorithms. 
 
