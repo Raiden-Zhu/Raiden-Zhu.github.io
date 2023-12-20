@@ -20,9 +20,9 @@ social: true  # includes social icons at the bottom of the page
 
 <!--[<span style="font-weight: bold; color: #B509AC;">Zhejiang University</span>](https://www.zju.edu.cn/english/)-->
 
-Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a PhD student at the Computer Science Department of [Zhejiang University (ZJU)](https://www.zju.edu.cn/english/), supervised by Professors [Mingli Song](https://person.zju.edu.cn/en/msong) and [Chun Chen](https://person.zju.edu.cn/en/0082004). <!-- I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [<span style="font-weight: bold; color: #B509AC;">Peking University</span>](https://english.pku.edu.cn/) (PKU) in 2021. --> 
+_Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a PhD student at the Computer Science Department of [Zhejiang University (ZJU)](https://www.zju.edu.cn/english/), supervised by Professors [Mingli Song](https://person.zju.edu.cn/en/msong) and [Chun Chen](https://person.zju.edu.cn/en/0082004). <!-- I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [<span style="font-weight: bold; color: #B509AC;">Peking University</span>](https://english.pku.edu.cn/) (PKU) in 2021. --> 
 I was a research intern at [JD Explore Academy (JDE)](https://jdcorporateblog.com/jd-unveils-four-new-enterprise-level-products/jd-explore-academy/), working on the generalization theory of decentralized learning,  mentored by Doctor [Fengxiang He](https://fengxianghe.github.io/) and Professor [Dacheng Tao](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
-My current research focuses on the **science of deep learning** and the **theory of decentralized learning**. I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning algorithms. 
+My current research focuses on the science of deep learning and the theory of decentralized learning. I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning algorithms. _
 
 <i class="fas fa-book"></i> [**Semantic Scholar**](https://www.semanticscholar.org/author/Tongtian-Zhu/2173757802) &nbsp;&nbsp; <i class="ai ai-google-scholar"></i> [**Google Scholar**](https://scholar.google.com/citations?user=QvBDUsIAAAAJ&hl=en) &nbsp;&nbsp; <!--<i class="fa fa-twitter"></i> [**Twitter**](https://twitter.com/Raiden13238619/) &nbsp;&nbsp;--> <i class="fa fa-envelope"></i> [**Email**](mailto:raiden@zju.edu.cn) &nbsp;&nbsp; <i class="fa fa-weixin"></i> [**WeChat**](https://raw.githubusercontent.com/Raiden-Zhu/Raiden-Zhu.github.io/master/assets/img/WeChat_QR_code.jpg) &nbsp;&nbsp;  <i class="fa fa-github"></i> [**GitHub**](https://github.com/Raiden-Zhu) &nbsp;&nbsp; <i class="fab fa-zhihu"></i> [**Zhihu**](https://www.zhihu.com/people/you-li-70-94) 
 
@@ -38,7 +38,8 @@ In the technology aspect, I am passionate about developing machine learning meth
 
 My current research focus includes:
 - **Science of deep learning** (e.g., [training dynamics of common gradient methods on complex loss landscape](https://arxiv.org/abs/2306.02913));
-- **Theory of decentralized learning** (e.g., [generalization](https://arxiv.org/abs/2206.12680), privacy).
+- **Theory of decentralized learning** (e.g., [generalization](https://arxiv.org/abs/2206.12680), privacy);
+- **Efficient & trustworthy algorithms for decentralized learning**.
 
 Please always feel free to contact (via [**email**](mailto:raiden@zju.edu.cn) or [**WeChat**](https://raw.githubusercontent.com/Raiden-Zhu/Raiden-Zhu.github.io/master/assets/img/WeChat_QR_code.jpg)) if you have any questions, are interested in collaborating, or just want to chat.  <!-- For regular updates and insights, feel free to follow my [**Twitter**](https://twitter.com/Raiden13238619) as well. -->
 
