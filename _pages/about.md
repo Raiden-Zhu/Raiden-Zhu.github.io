@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 
 <!--[<span style="font-weight: bold; color: #B509AC;">Zhejiang University</span>](https://www.zju.edu.cn/english/)-->
 
-Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a second-year PhD student at the Computer Science Department of Zhejiang University (ZJU), supervised by Professors [Mingli Song](https://person.zju.edu.cn/en/msong) and [Chun Chen](https://person.zju.edu.cn/en/0082004). <!-- I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [<span style="font-weight: bold; color: #B509AC;">Peking University</span>](https://english.pku.edu.cn/) (PKU) in 2021. --> 
+Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a PhD student at the Computer Science Department of Zhejiang University (ZJU), supervised by Professors [Mingli Song](https://person.zju.edu.cn/en/msong) and [Chun Chen](https://person.zju.edu.cn/en/0082004). <!-- I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [<span style="font-weight: bold; color: #B509AC;">Peking University</span>](https://english.pku.edu.cn/) (PKU) in 2021. --> 
 I was a research intern at JD Explore Academy (JDE), working on the generalization theory of decentralized learning,  mentored by Doctor [Fengxiang He](https://fengxianghe.github.io/) and Professor [Dacheng Tao](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
 My current research focuses on the theoretical aspects of **decentralized learning**. I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning algorithms. 
 
@@ -38,7 +38,7 @@ In the technology aspect, I am passionate about developing machine learning meth
 
 My current research focus includes:
 - Science of deep learning (e.g., [the training dynamics of common gradient algorithms on complex loss landscape](https://arxiv.org/abs/2306.02913));
-- Theory (e.g., [generalization](https://arxiv.org/abs/2206.12680), privacy) of decentralized learning;
+- Theory (e.g., [generalization](https://arxiv.org/abs/2206.12680), privacy) of decentralized learning.
 
 Please always feel free to contact (via [**email**](mailto:raiden@zju.edu.cn) or [**WeChat**](https://raw.githubusercontent.com/Raiden-Zhu/Raiden-Zhu.github.io/master/assets/img/WeChat_QR_code.jpg)) if you have any questions, are interested in collaborating, or just want to chat.  <!-- For regular updates and insights, feel free to follow my [**Twitter**](https://twitter.com/Raiden13238619) as well. -->
 
