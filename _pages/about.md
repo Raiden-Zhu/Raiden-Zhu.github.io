@@ -35,8 +35,8 @@ In the science aspect, my primary research interest lies in understanding the me
 In the technology aspect, I am passionate about developing machine learning methodologies inspired by principles. 
 
 My current research focus includes:
-- Science of Deep Learning (e.g., [training dynamics of gradient algorithms on complex loss landscape](https://arxiv.org/abs/2306.02913));
-- Theory (e.g., [generalization](https://arxiv.org/abs/2206.12680), privacy) of Decentralized Learning;
+- Science of deep learning (e.g., [the training dynamics of common gradient algorithms on complex loss landscape](https://arxiv.org/abs/2306.02913));
+- Theory (e.g., [generalization](https://arxiv.org/abs/2206.12680), privacy) of decentralized learning;
 
 Please always feel free to contact (via [**email**](mailto:raiden@zju.edu.cn) or [**WeChat**](https://raw.githubusercontent.com/Raiden-Zhu/Raiden-Zhu.github.io/master/assets/img/WeChat_QR_code.jpg)) if you have any questions, are interested in collaborating, or just want to chat.  <!-- For regular updates and insights, feel free to follow my [**Twitter**](https://twitter.com/Raiden13238619) as well. -->
 
