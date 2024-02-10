@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am awarded as a Merit PhD student/Triple A PhD student of Zhejiang University on 2021-2022 (top 10%)!
+I am awarded as a Merit PhD student/Triple A PhD student of Zhejiang University on 2021-2022!
