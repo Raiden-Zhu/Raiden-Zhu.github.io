@@ -37,7 +37,7 @@ In the science aspect, my primary research interest lies in understanding the me
 In the technology aspect, I am passionate about developing machine learning methodologies inspired by principles. 
 
 My current research focus includes:
-- **Science of deep learning** (e.g., symmetry in neural networks loss landscape, [training dynamics of gradient methods](https://arxiv.org/abs/2306.02913));
+- **Science of deep learning** (e.g., symmetries in neural networks' weight space, [training dynamics of gradient methods](https://arxiv.org/abs/2306.02913));
 - **Theory of decentralized learning** (e.g., [generalization](https://arxiv.org/abs/2206.12680), privacy);
 - **Efficient & trustworthy algorithms for decentralized learning**.
 
