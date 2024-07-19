@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: Publications
 description: My current research focuses on examining the theoretical foundations of decentralized learning (or swarm learning). I am also dedicated to utilizing elegant theoretical insights to construct fast and generalizable decentralized learning algorithms. Please refer to my publicatios below.
-years: [2023, 2022]
+years: [2024, 2023, 2022]
 nav: true
 nav_order: 1
 ---
