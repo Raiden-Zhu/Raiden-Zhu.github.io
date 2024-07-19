@@ -34,7 +34,7 @@ My current research mainly focuses on science of deep learning. I am also intere
 
 In the science aspect, my primary research interest lies in understanding the mechanisms underpining the practical success of deep learning. 
 <!-- My ultimate goal is to understand the emergence of intelligence (both machine intelligence and biological intelligence). -->
-In the technology aspect, I am passionate about developing machine learning methodologies inspired by principles. 
+In the technology aspect, I am interested in developing machine learning methodologies inspired by principles. 
 
 My current research focus includes:
 - **Science of deep learning** (e.g., symmetries in neural networks' weight space, [training dynamics of gradient methods](https://arxiv.org/abs/2306.02913));
