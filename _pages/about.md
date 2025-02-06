@@ -32,7 +32,7 @@ I am open to both academic and industry opportunities. If you have matched oppor
 
 <small><em>"Seek truth and beauty."</em></small>
 
-My primary research interest lies in understanding the fundamental mechanisms behind the practical success of deep learning, including LLMs. I am also interested in developing machine learning methodologies inspired by principles.
+My primary research interest lies in understanding the fundamental mechanisms underpinning the practical success of deep learning, including LLMs. I am also interested in developing machine learning methodologies inspired by principles.
 
 My current research focus includes:
 - **Science of deep learning** (e.g., [symmetries](https://arxiv.org/abs/2406.09189) in neural networks' weight space, [training dynamics of gradient methods](https://arxiv.org/abs/2306.02913));
