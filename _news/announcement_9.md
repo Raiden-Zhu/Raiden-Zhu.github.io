@@ -6,3 +6,7 @@ related_posts: false
 ---
 
 Our paper "[DICE: Data Influence Cascade in Decentralized Learning](https://openreview.net/forum?id=2TIYkqieKw)" is accpeted at **ICLR 2025** 🎉!
+
+<div style="text-align: center;">
+  <img src="./assets/img/publication_preview/influence.png" alt="DSGD-SAM" width="60%"/>
+</div>
