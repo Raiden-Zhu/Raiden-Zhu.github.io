@@ -274,6 +274,7 @@ scholar:
 
   style: apa
   locale: en
+  order: descending
 
   source: /_bibliography/
   bibliography: papers.bib
