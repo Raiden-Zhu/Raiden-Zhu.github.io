@@ -49,6 +49,34 @@
     <!-- 新增：引入 Bulma CSS 以支持按钮样式 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
+    <!-- 新增：自定义 CSS 以匹配原始网页按钮样式 -->
+    <style>
+      .custom-buttons {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.5rem; /* 按钮间距 */
+      }
+      .custom-button {
+        display: inline-flex;
+        align-items: center;
+        background-color: #333; /* 黑色背景 */
+        color: white !important; /* 白色文本 */
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        font-size: 0.9rem; /* 调整字体大小 */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* 匹配简洁字体 */
+        transition: background-color 0.3s;
+      }
+      .custom-button:hover {
+        background-color: #555; /* 悬停变深灰 */
+      }
+      .custom-button i {
+        margin-right: 0.5rem; /* 图标与文本间距 */
+      }
+    </style>
+    
     <!-- jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -208,11 +236,12 @@
     <!-- Content -->
     <div class="post distill">
 
-<d-title>
+      <d-title>
         <h1>Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</h1>
         <p>an example of a distill-style blog post and main elements</p>
-        <!-- 新增：添加按钮区域 -->
-        <div class="buttons">
+        <!-- 新增：添加自定义按钮区域 -->
+        <div class="custom-buttons">
+          
           
           
           
