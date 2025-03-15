@@ -49,21 +49,28 @@
     <!-- 引入 Font Awesome 用于图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- 调整：优化按钮样式，添加居中和边框 -->
+    <!-- 调整：优化按钮样式，强制居中 -->
     <style>
       .custom-buttons {
         margin-top: 1rem;
         display: flex;
         gap: 0.5rem; /* 按钮间距 */
-        justify-content: center; /* 新增：按钮居中 */
+        justify-content: center; /* 按钮居中 */
+        width: 100%; /* 新增：强制占满父容器 */
+      }
+      /* 新增：强制覆盖父容器样式 */
+      d-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .custom-button {
         display: inline-flex;
         align-items: center;
         background-color: #333; /* 黑色背景 */
         color: white !important; /* 白色文本 */
-        border: 1px solid #555; /* 新增：细边框 */
-        border-radius: 20px; /* 调整：更大圆角 */
+        border: 1px solid #555; /* 细边框 */
+        border-radius: 20px; /* 更大圆角 */
         padding: 0.5rem 1rem;
         text-decoration: none;
         font-size: 0.9rem; /* 调整字体大小 */
@@ -76,7 +83,7 @@
       .custom-button i {
         margin-right: 0.5rem; /* 图标与文本间距 */
       }
-      /* 新增：作者信息样式 */
+      /* 作者信息样式 */
       .custom-byline {
         text-align: center;
         margin-top: 0.5rem;
@@ -92,6 +99,14 @@
         color: #666; /* 灰色机构和会议信息 */
         font-size: 0.9rem;
         margin-bottom: 0.3rem;
+      }
+      .custom-byline .affiliations sup {
+        font-size: 0.7rem; /* 上标编号大小 */
+        margin-left: 2px;
+      }
+      .custom-byline .affiliation-item sup {
+        font-size: 0.7rem;
+        margin-right: 4px;
       }
       .custom-byline .equal-contribution {
         font-style: italic;
@@ -145,41 +160,41 @@
       "authors": [
         {
           "author": "Tongtian Zhu",
-          "authorURL": "https://raiden-zhu.github.io/",
+          "authorURL": "https://example.com/tongtian-zhu",
           "affiliations": [
             {
               "name": "Zhejiang University",
-              "url": ""
+              "url": "https://example.com/zhejiang-university"
             }
           ]
         },
         {
           "author": "Wenhao Li",
-          "authorURL": "",
+          "authorURL": "https://example.com/wenhao-li",
           "affiliations": [
             {
               "name": "Zhejiang University",
-              "url": ""
+              "url": "https://example.com/zhejiang-university"
             }
           ]
         },
         {
           "author": "Can Wang",
-          "authorURL": "https://scholar.google.com/citations?user=C63q3HoAAAAJ&hl=en",
+          "authorURL": "https://example.com/can-wang",
           "affiliations": [
             {
               "name": "Zhejiang University",
-              "url": ""
+              "url": "https://example.com/zhejiang-university"
             }
           ]
         },
         {
           "author": "Fengxiang He",
-          "authorURL": "https://fengxianghe.github.io/",
+          "authorURL": "https://example.com/fengxiang-he",
           "affiliations": [
             {
               "name": "The University of Edinburgh",
-              "url": ""
+              "url": "https://example.com/edinburgh-university"
             }
           ]
         }
@@ -285,32 +300,36 @@
         </div>
       </d-title>
 
-      <!-- 调整：替换 <d-byline> 为自定义作者信息 -->
+      <!-- 调整：优化作者信息 -->
       <div class="custom-byline">
         <div class="authors">
           
-            <a href="https://raiden-zhu.github.io/" rel="external nofollow noopener" target="_blank">Tongtian Zhu</a>,
+            <a href="https://example.com/tongtian-zhu" rel="external nofollow noopener" target="_blank">Tongtian Zhu<sup>1</sup></a>,
           
-            <a href="">Wenhao Li</a>,
+            <a href="https://example.com/wenhao-li" rel="external nofollow noopener" target="_blank">Wenhao Li<sup>1</sup></a>,
           
-            <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=en" rel="external nofollow noopener" target="_blank">Can Wang</a>,
+            <a href="https://example.com/can-wang" rel="external nofollow noopener" target="_blank">Can Wang<sup>1</sup></a>,
           
-            <a href="https://fengxianghe.github.io/" rel="external nofollow noopener" target="_blank">Fengxiang He</a>
+            <a href="https://example.com/fengxiang-he" rel="external nofollow noopener" target="_blank">Fengxiang He<sup>2</sup></a>
           
         </div>
         <div class="affiliations">
           
-            Zhejiang University,
           
-            Zhejiang University,
+            
+            <span class="affiliation-item"><sup>1</sup>Zhejiang University,</span>
           
-            Zhejiang University,
-          
-            The University of Edinburgh
+            
+            <span class="affiliation-item"><sup>2</sup>The University of Edinburgh</span>
           
         </div>
         
-        <div class="equal-contribution">*Indicates Equal Contribution</div>
+          <div class="conference">International Conference on Learning Representations (ICLR)</div>
+        
+        <!-- 调整：动态显示 Equal Contribution -->
+        
+        
+        
       </div>
 
       <d-article>
