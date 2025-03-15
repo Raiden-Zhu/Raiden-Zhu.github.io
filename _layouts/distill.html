@@ -7,21 +7,28 @@
     <!-- 引入 Font Awesome 用于图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- 调整：优化按钮样式，添加居中和边框 -->
+    <!-- 调整：优化按钮样式，强制居中 -->
     <style>
       .custom-buttons {
         margin-top: 1rem;
         display: flex;
         gap: 0.5rem; /* 按钮间距 */
-        justify-content: center; /* 新增：按钮居中 */
+        justify-content: center; /* 按钮居中 */
+        width: 100%; /* 新增：强制占满父容器 */
+      }
+      /* 新增：强制覆盖父容器样式 */
+      d-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .custom-button {
         display: inline-flex;
         align-items: center;
         background-color: #333; /* 黑色背景 */
         color: white !important; /* 白色文本 */
-        border: 1px solid #555; /* 新增：细边框 */
-        border-radius: 20px; /* 调整：更大圆角 */
+        border: 1px solid #555; /* 细边框 */
+        border-radius: 20px; /* 更大圆角 */
         padding: 0.5rem 1rem;
         text-decoration: none;
         font-size: 0.9rem; /* 调整字体大小 */
@@ -34,7 +41,7 @@
       .custom-button i {
         margin-right: 0.5rem; /* 图标与文本间距 */
       }
-      /* 新增：作者信息样式 */
+      /* 作者信息样式 */
       .custom-byline {
         text-align: center;
         margin-top: 0.5rem;
@@ -50,6 +57,14 @@
         color: #666; /* 灰色机构和会议信息 */
         font-size: 0.9rem;
         margin-bottom: 0.3rem;
+      }
+      .custom-byline .affiliations sup {
+        font-size: 0.7rem; /* 上标编号大小 */
+        margin-left: 2px;
+      }
+      .custom-byline .affiliation-item sup {
+        font-size: 0.7rem;
+        margin-right: 4px;
       }
       .custom-byline .equal-contribution {
         font-style: italic;
@@ -134,22 +149,33 @@
         </div>
       </d-title>
 
-      <!-- 调整：替换 <d-byline> 为自定义作者信息 -->
+      <!-- 调整：优化作者信息 -->
       <div class="custom-byline">
         <div class="authors">
           {% for author in page.authors %}
-            <a href="{{ author.url }}">{{ author.name }}{% if author.equal_contribution %},*{% endif %}</a>{% if forloop.last == false %},{% endif %}
+            <a href="{{ author.url }}">{{ author.name }}{% if author.affiliation_index %}<sup>{{ author.affiliation_index }}</sup>{% endif %}{% if author.equal_contribution %},*{% endif %}</a>{% if forloop.last == false %},{% endif %}
           {% endfor %}
         </div>
         <div class="affiliations">
-          {% for author in page.authors %}
-            {{ author.affiliations.name }}{% if forloop.last == false %},{% endif %}
+          {% assign affiliations = page.authors | map: "affiliations" | uniq %}
+          {% for aff in affiliations %}
+            {% assign index = forloop.index %}
+            <span class="affiliation-item"><sup>{{ index }}</sup>{{ aff.name }}{% if forloop.last == false %},{% endif %}</span>
           {% endfor %}
         </div>
         {% if page.conference %}
           <div class="conference">{{ page.conference }}</div>
         {% endif %}
-        <div class="equal-contribution">*Indicates Equal Contribution</div>
+        <!-- 调整：动态显示 Equal Contribution -->
+        {% assign has_equal_contribution = false %}
+        {% for author in page.authors %}
+          {% if author.equal_contribution %}
+            {% assign has_equal_contribution = true %}
+          {% endif %}
+        {% endfor %}
+        {% if has_equal_contribution %}
+          <div class="equal-contribution">*Indicates Equal Contribution</div>
+        {% endif %}
       </div>
 
       <d-article>
