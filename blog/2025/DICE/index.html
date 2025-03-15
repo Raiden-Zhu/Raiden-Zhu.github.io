@@ -64,6 +64,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-image: url('https://Raiden-Zhu.github.io/assets/img/publication_preview/influence.png'); /* 修改：应用到 d-title */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.8; /* 可根据需要调整不透明度 */
+        padding: 2rem 0; /* 增加内边距 */
+        margin-bottom: 1rem;
+        min-height: 300px; /* 确保有足够高度 */
+        width: 100%; /* 占满宽度 */
+        background-color: red !important; /* 修改：测试背景是否可见 */
       }
       .custom-button {
         display: inline-flex;
@@ -84,17 +94,9 @@
       .custom-button i {
         margin-right: 0.5rem; /* 图标与文本间距 */
       }
+      /* 移除未使用的 .header-section 样式 */
       /* 调整：使用变量设置背景图片 */
-      .header-section {
-        background-color: red !important; /* 测试背景是否可见 */
-        background-image: url('https://Raiden-Zhu.github.io/assets/img/publication_preview/influence.png'); /* 使用变量，默认为空 */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.8; /* 可根据需要调整不透明度 */
-        padding: 2rem 0; /* 增加内边距 */
-        margin-bottom: 1rem;
-      }
+      /* .header-section { ... } 已移除 */
       /* 作者信息样式 */
       .custom-byline {
         text-align: center;
