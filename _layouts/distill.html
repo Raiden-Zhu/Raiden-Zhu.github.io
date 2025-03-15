@@ -4,6 +4,9 @@
   <head>
     {%- include head.html %}
 
+    <!-- 新增：引入 Bulma CSS 以支持按钮样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
     {% include scripts/jquery.html %}
     {% include scripts/mathjax.html %}
     <!-- Distill js -->
@@ -62,9 +65,21 @@
     <!-- Content -->
     <div class="post distill">
 
-      <d-title>
+<d-title>
         <h1>{{ page.title }}</h1>
         <p>{{ page.description }}</p>
+        <!-- 新增：添加按钮区域 -->
+        <div class="buttons">
+          {% if page.paper_url %}
+            <a href="{{ page.paper_url }}" class="button is-primary">Paper</a>
+          {% endif %}
+          {% if page.code_url %}
+            <a href="{{ page.code_url }}" class="button is-link">Code</a>
+          {% endif %}
+          {% if page.arxiv_url %}
+            <a href="{{ page.arxiv_url }}" class="button is-info">arXiv</a>
+          {% endif %}
+        </div>
       </d-title>
 
       <d-byline></d-byline>
