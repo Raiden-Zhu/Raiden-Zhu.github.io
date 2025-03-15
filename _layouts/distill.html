@@ -44,6 +44,7 @@
       }
       /* 调整：使用变量设置背景图片 */
       .header-section {
+        background-color: red !important; /* 测试背景是否可见 */
         background-image: url('{{ page.background_image | default: "" }}'); /* 使用变量，默认为空 */
         background-size: cover;
         background-position: center;
@@ -51,11 +52,6 @@
         opacity: 0.8; /* 可根据需要调整不透明度 */
         padding: 2rem 0; /* 增加内边距 */
         margin-bottom: 1rem;
-      }
-      /* 新增 */
-      .post.distill {
-        overflow: visible !important;
-        background: transparent !important;
       }
       /* 作者信息样式 */
       .custom-byline {
