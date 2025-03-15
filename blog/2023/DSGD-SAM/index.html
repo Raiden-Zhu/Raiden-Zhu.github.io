@@ -49,85 +49,83 @@
     <!-- 引入 Font Awesome 用于图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- 调整：移除具体图片URL，使用变量 -->
     <style>
       .custom-buttons {
         margin-top: 1rem;
-        margin-bottom: 1rem; /* 新增：按钮下方空一行 */
+        margin-bottom: 1rem;
         display: flex;
         gap: 0.5rem;
         justify-content: center;
         width: 100%;
       }
-      /* 强制覆盖父容器样式 */
+      /* 调整：移除背景相关样式 */
       d-title {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url(''); /* 修改：应用到 d-title */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.8; /* 可根据需要调整不透明度 */
-        padding: 2rem 0; /* 增加内边距 */
-        margin-bottom: 1rem;
-        min-height: 300px; /* 确保有足够高度 */
-        width: 100%; /* 占满宽度 */
-        background-color: red !important; /* 修改：测试背景是否可见 */
       }
       .custom-button {
         display: inline-flex;
         align-items: center;
-        background-color: #333; /* 黑色背景 */
-        color: white !important; /* 白色文本 */
-        border: 1px solid #555; /* 细边框 */
-        border-radius: 20px; /* 更大圆角 */
+        background-color: #333;
+        color: white !important;
+        border: 1px solid #555;
+        border-radius: 20px;
         padding: 0.5rem 1rem;
         text-decoration: none;
-        font-size: 0.9rem; /* 调整字体大小 */
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* 匹配简洁字体 */
+        font-size: 0.9rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         transition: background-color 0.3s;
       }
       .custom-button:hover {
-        background-color: #555; /* 悬停变深灰 */
+        background-color: #555;
       }
       .custom-button i {
-        margin-right: 0.5rem; /* 图标与文本间距 */
+        margin-right: 0.5rem;
       }
-      /* 移除未使用的 .header-section 样式 */
-      /* 调整：使用变量设置背景图片 */
-      /* .header-section { ... } 已移除 */
+      /* 修改：新增 header-section 样式 */
+      .header-section {
+        background-image: url('');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5; /* 修改：降低不透明度 */
+        padding: 2rem 0;
+        margin-bottom: 1rem;
+        min-height: 400px; /* 修改：增加高度以覆盖更大区域 */
+        width: 100%;
+      }
       /* 作者信息样式 */
       .custom-byline {
         text-align: center;
         margin-top: 0.5rem;
-        font-size: 1.3rem; /* 调整：作者字体更大 */
+        font-size: 1.3rem;
       }
       .custom-byline .authors a {
-        color: #B509AC; /* 调整：作者字体颜色 */
+        color: #B509AC;
         text-decoration: none;
       }
       .custom-byline .authors a:hover {
-        font-weight: bold; /* 悬停加粗 */
+        font-weight: bold;
       }
       .custom-byline .authors sup {
-        font-size: 0.7rem; /* 上标编号大小 */
+        font-size: 0.7rem;
         margin-left: 2px;
-        color: #B509AC; /* 匹配作者颜色 */
+        color: #B509AC;
       }
       .custom-byline .affiliations {
-        font-size: 1rem; /* 调整：机构字体比作者小 */
+        font-size: 1rem;
         color: #666;
         margin-bottom: 0.3rem;
       }
       .custom-byline .conference {
-        font-size: 1.8rem; /* 调整：conference 字体与作者一致 */
+        font-size: 1.8rem;
         color: #9E9E9E;
-        font-weight: bold; /* 恒定加粗 */
+        font-weight: bold;
         margin-bottom: 0.3rem;
       }
       .custom-byline .affiliations sup {
-        font-size: 0.7rem; /* 上标编号大小 */
+        font-size: 0.7rem;
         margin-left: 2px;
       }
       .custom-byline .affiliation-item sup {
@@ -299,40 +297,41 @@
     <!-- Content -->
     <div class="post distill">
 
-      <d-title>
-        <h1>Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</h1>
-        <!-- 调整：移除 description -->
-        <!-- <p>an example of a distill-style blog post and main elements</p> -->
-      </d-title>
+      <!-- 修改：添加 header-section 包裹 d-title 和 custom-byline -->
+      <div class="header-section">
+        <d-title>
+          <h1>Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</h1>
+        </d-title>
 
-      <!-- 调整：优化作者信息 -->
-      <div class="custom-byline">
-        <div class="authors">
-          
-            <a href="https://en.wikipedia.org/wiki/Albert_Einstein" rel="external nofollow noopener" target="_blank">Albert Einstein<sup></sup></a>,
-          
-            <a href="https://en.wikipedia.org/wiki/Boris_Podolsky" rel="external nofollow noopener" target="_blank">Boris Podolsky<sup></sup></a>,
-          
-            <a href="https://en.wikipedia.org/wiki/Nathan_Rosen" rel="external nofollow noopener" target="_blank">Nathan Rosen<sup></sup></a>
-          
-        </div>
-        <div class="affiliations">
-          
-          
+        <!-- 调整：优化作者信息 -->
+        <div class="custom-byline">
+          <div class="authors">
             
-            <span class="affiliation-item"><sup>1</sup>IAS, Princeton</span>
+              <a href="https://en.wikipedia.org/wiki/Albert_Einstein" rel="external nofollow noopener" target="_blank">Albert Einstein<sup></sup></a>,
+            
+              <a href="https://en.wikipedia.org/wiki/Boris_Podolsky" rel="external nofollow noopener" target="_blank">Boris Podolsky<sup></sup></a>,
+            
+              <a href="https://en.wikipedia.org/wiki/Nathan_Rosen" rel="external nofollow noopener" target="_blank">Nathan Rosen<sup></sup></a>
+            
+          </div>
+          <div class="affiliations">
+            
+            
+              
+              <span class="affiliation-item"><sup>1</sup>IAS, Princeton</span>
+            
+          </div>
+          
+          <div class="custom-buttons">
+            
+            
+            
+            
+          </div>
+          
+          
           
         </div>
-        
-        <div class="custom-buttons">
-          
-          
-          
-          
-        </div>
-        
-        
-        
       </div>
 
       <d-article>
