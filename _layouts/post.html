@@ -39,18 +39,6 @@ layout: default
     </p>
   </header>
 
-<div class="buttons">
-  {% if page.paper_url %}
-    <a href="{{ page.paper_url }}" class="button is-primary">Paper</a>
-  {% endif %}
-  {% if page.code_url %}
-    <a href="{{ page.code_url }}" class="button is-link">Code</a>
-  {% endif %}
-  {% if page.arxiv_url %}
-    <a href="{{ page.arxiv_url }}" class="button is-info">arXiv</a>
-  {% endif %}
-</div>
-
   <article class="post-content">
     {{ content }}
   </article>
