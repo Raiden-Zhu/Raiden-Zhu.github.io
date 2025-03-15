@@ -49,7 +49,7 @@
     <!-- 引入 Font Awesome 用于图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- 调整：优化样式 -->
+    <!-- 调整：移除具体图片URL，使用变量 -->
     <style>
       .custom-buttons {
         margin-top: 1rem;
@@ -83,13 +83,13 @@
       .custom-button i {
         margin-right: 0.5rem; /* 图标与文本间距 */
       }
-      /* 新增：背景图片区域 */
+      /* 调整：使用变量设置背景图片 */
       .header-section {
-        background-image: url('/assets/img/publication_preview/influence.png'); /* 替换为你的图片URL */
+        background-image: url(''); /* 使用变量，默认为空 */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.5; /* 调整不透明度（0到1之间） */
+        opacity: 0.8; /* 可根据需要调整不透明度 */
         padding: 2rem 0; /* 增加内边距 */
         margin-bottom: 1rem;
       }
@@ -111,15 +111,16 @@
         margin-left: 2px;
         color: #B509AC; /* 匹配作者颜色 */
       }
-      .custom-byline .affiliations,
-      .custom-byline .conference,
-      .custom-byline .equal-contribution {
-        color: #666; /* 灰色机构和会议信息 */
-        font-size: 1rem; /* 调整：conference 字体与作者一致 */
+      .custom-byline .affiliations {
+        font-size: 1rem; /* 调整：机构字体比作者小 */
+        color: #666;
         margin-bottom: 0.3rem;
       }
       .custom-byline .conference {
-        font-weight: bold; /* 调整：conference 恒定加粗 */
+        font-size: 1.3rem; /* 调整：conference 字体与作者一致 */
+        color: #666;
+        font-weight: bold; /* 恒定加粗 */
+        margin-bottom: 0.3rem;
       }
       .custom-byline .affiliations sup {
         font-size: 0.7rem; /* 上标编号大小 */
@@ -131,6 +132,7 @@
       }
       .custom-byline .equal-contribution {
         font-style: italic;
+        color: #666;
       }
     </style>
     
