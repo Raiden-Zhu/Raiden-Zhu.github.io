@@ -46,6 +46,9 @@
     
 
 
+    <!-- 新增：引入 Bulma CSS 以支持按钮样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
     <!-- jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -215,9 +218,21 @@
     <!-- Content -->
     <div class="post distill">
 
-      <d-title>
+<d-title>
         <h1>DICE: Data Influence Cascade in Decentralized Learning</h1>
         <p>an example of a distill-style blog post and main elements</p>
+        <!-- 新增：添加按钮区域 -->
+        <div class="buttons">
+          
+            <a href="/files/DICE_paper.pdf" class="button is-primary">Paper</a>
+          
+          
+            <a href="https://github.com/Raiden-Zhu/DICE-code" class="button is-link" rel="external nofollow noopener" target="_blank">Code</a>
+          
+          
+            <a href="https://arxiv.org/abs/xxxx.xxxx" class="button is-info" rel="external nofollow noopener" target="_blank">arXiv</a>
+          
+        </div>
       </d-title>
 
       <d-byline></d-byline>
