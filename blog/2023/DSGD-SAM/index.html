@@ -56,9 +56,9 @@
         display: flex;
         gap: 0.5rem; /* 按钮间距 */
         justify-content: center; /* 按钮居中 */
-        width: 100%; /* 新增：强制占满父容器 */
+        width: 100%; /* 强制占满父容器 */
       }
-      /* 新增：强制覆盖父容器样式 */
+      /* 强制覆盖父容器样式 */
       d-title {
         display: flex;
         flex-direction: column;
@@ -87,11 +87,19 @@
       .custom-byline {
         text-align: center;
         margin-top: 0.5rem;
-        font-size: 1rem;
-        color: #1a73e8; /* 蓝色作者名 */
+        font-size: 1.1rem; /* 调整：作者字体稍大 */
       }
-      .custom-byline .authors {
-        margin-bottom: 0.3rem;
+      .custom-byline .authors a {
+        color: #1a73e8; /* 蓝色作者名 */
+        text-decoration: none;
+      }
+      .custom-byline .authors a:hover {
+        font-weight: bold; /* 调整：悬停加粗 */
+      }
+      .custom-byline .authors sup {
+        font-size: 0.7rem; /* 上标编号大小 */
+        margin-left: 2px;
+        color: #1a73e8; /* 匹配作者颜色 */
       }
       .custom-byline .affiliations,
       .custom-byline .conference,
@@ -272,10 +280,10 @@
     <!-- Content -->
     <div class="post distill">
 
-      <d-title>
+<d-title>
         <h1>Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</h1>
-        <p>an example of a distill-style blog post and main elements</p>
-        <!-- 调整：按钮区域 -->
+        <!-- 调整：移除 description -->
+        <!-- <p>an example of a distill-style blog post and main elements</p> -->
         <div class="custom-buttons">
           
           
@@ -288,11 +296,11 @@
       <div class="custom-byline">
         <div class="authors">
           
-            <a href="https://en.wikipedia.org/wiki/Albert_Einstein" rel="external nofollow noopener" target="_blank">Albert Einstein</a>,
+            <a href="https://en.wikipedia.org/wiki/Albert_Einstein" rel="external nofollow noopener" target="_blank">Albert Einstein<sup></sup></a>,
           
-            <a href="https://en.wikipedia.org/wiki/Boris_Podolsky" rel="external nofollow noopener" target="_blank">Boris Podolsky</a>,
+            <a href="https://en.wikipedia.org/wiki/Boris_Podolsky" rel="external nofollow noopener" target="_blank">Boris Podolsky<sup></sup></a>,
           
-            <a href="https://en.wikipedia.org/wiki/Nathan_Rosen" rel="external nofollow noopener" target="_blank">Nathan Rosen</a>
+            <a href="https://en.wikipedia.org/wiki/Nathan_Rosen" rel="external nofollow noopener" target="_blank">Nathan Rosen<sup></sup></a>
           
         </div>
         <div class="affiliations">
@@ -303,7 +311,6 @@
           
         </div>
         
-        <!-- 调整：动态显示 Equal Contribution -->
         
         
         
