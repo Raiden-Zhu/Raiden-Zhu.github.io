@@ -83,17 +83,27 @@
       .custom-button i {
         margin-right: 0.5rem;
       }
-      /* 修改：新增 header-section 样式 */
+      /* 修改：使用伪元素控制背景不透明度 */
       .header-section {
+        position: relative;
+        min-height: 400px;
+        width: 100%;
+        padding: 2rem 0;
+        margin-bottom: 1rem;
+      }
+      .header-section:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-image: url('');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.5; /* 修改：降低不透明度 */
-        padding: 2rem 0;
-        margin-bottom: 1rem;
-        min-height: 400px; /* 修改：增加高度以覆盖更大区域 */
-        width: 100%;
+        opacity: 0.5; /* 修改：降低背景不透明度 */
+        z-index: -1; /* 确保背景在内容下方 */
       }
       /* 作者信息样式 */
       .custom-byline {
