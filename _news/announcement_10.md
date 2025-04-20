@@ -6,3 +6,8 @@ related_posts: false
 ---
 
 I’ll be in Singapore 🦁🌴 this April for ICLR 2025! Can’t wait to meet new and old friends. Ping me if you’d like to chat ☕️!
+
+I'll be presenting our DICE paper—would love to connect and discuss new ideas.
+
+📍 Hall 3 + Hall 2B, #519    🗓️ April 24, 10:00 AM
+
