@@ -11,3 +11,7 @@ I'll be presenting our DICE paper at:
 
 📍 Hall 3 + Hall 2B, #519    🗓️ April 24, 10:00 AM
 
+<div style="text-align: center;">
+  <img src="./assets/img/publication_preview/Poster_DICE.png" alt="DICE" width="60%"/>
+</div>
+
