@@ -9,7 +9,7 @@ I’ll be in Singapore 🦁🌴 this April for ICLR 2025! Can’t wait to meet n
 
 I'll be presenting our DICE paper at:
 
-📍 Hall 3 + Hall 2B, #519    🗓️ April 24, 10:00 AM
+📍 Hall 3 + Hall 2B, #337    🗓️ April 24, 10:00 AM
 
 <div style="text-align: center;">
   <img src="./assets/img/publication_preview/Poster_DICE.png" alt="DICE" width="70%"/>
