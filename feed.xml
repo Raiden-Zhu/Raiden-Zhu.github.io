@@ -1,9 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-10T10:58:47+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-10T13:09:01+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">DICE: Data Influence Cascade in Decentralized Learning</title><link href="Raiden-Zhu.github.io/blog/2025/DICE/" rel="alternate" type="text/html" title="DICE: Data Influence Cascade in Decentralized Learning" /><published>2025-03-15T00:00:00+00:00</published><updated>2025-03-15T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
 
 <p>🗓️ <strong>2025-07-10</strong> — Updated main results</p>
+
+<h2 id="key-insights">Key Insights</h2>
+
+<div class="custom-box">
+  <h4>Key Insights from DICE</h4>
+  <p>Our theory uncovers the intricate interplay of factors shaping data influence in decentralized networks:</p>
+  <ul>
+    <li><b>1. Asymmetric Influence and Topological Importance:</b> The influence of identical data is not uniform across nodes. Instead, "nodes with greater topological significance exert stronger influence". This highlights how the <b>communication graph-related term</b> dictates the power and reach of a participant's contribution.</li>
+    <li><b>2. The Role of Loss Curvature and Intermediate Nodes:</b> Intermediate nodes are not passive relays; they "contribute to an 'influence chain'". The <b>curvature-related term</b> (the Hessian) shows that the local loss landscape of these nodes actively modulates, dampens, or amplifies the influence as it propagates[cite: 971, 972].</li>
+    <li><b>3. Influence Cascades with Damped Decay:</b> Data influence "cascades with 'damped decay' induced by parameter $W$". This decay, which can be exponential with the number of hops, is governed by the product of both communication weights and the Hessian-related terms.</li>
+  </ul>
+</div>
 
 <h2 id="main-results">Main Results</h2>
 
@@ -49,6 +61,8 @@
 </div>
 
 <h2 id="background">Background</h2>
+
+<h3 id="motivation-quantifying-contribution-in-decentralized-learning">Motivation: Quantifying Contribution in Decentralized Learning</h3>
 
 <p>Training frontier AI models is becoming astronomically expensive, with costs running into the hundreds of millions of dollars.[1] This trend risks centralizing AI power within a handful of tech giants, locking out academia and smaller players. <strong>Decentralized Learning</strong> offers a compelling escape route, where data and compute are crowdsourced across a peer-to-peer (P2P) network.[2] Think of it like a computational barn-raising, where a community comes together to build something no single member could alone.</p>
 
