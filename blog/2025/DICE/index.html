@@ -389,7 +389,7 @@
 
 <p><strong>Theorem (Approximation of r-hop DICE-GT)</strong></p>
 
-<p>The r-hop DICE-GT influence \(\mathcal{I}_{\mathrm{DICE-GT}}^{(r)}(\boldsymbol{z}\_j^t, \boldsymbol{z}^{\prime})\) can be approximated as follows:</p>
+<p>The r-hop DICE-GT influence \(\mathcal{I}_{\mathrm{DICE-GT}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}^{\prime})\) can be approximated as follows:</p>
 
 \[\begin{equation}
 \begin{split}
@@ -405,7 +405,7 @@
 \end{split}
 \end{equation}\]
 
-<p>where \(\Delta\_j(\boldsymbol{\theta}\_j^t,\boldsymbol{z}\_j^t) = \mathcal{O}\_j(\boldsymbol{\theta}\_j^t,\boldsymbol{z}\_j^t)-\boldsymbol{\theta}\_j^t\), \(k\_0 = j\). Here \(P\_j^{(\rho)}\) denotes the set of all sequences \((k\_1, \dots, k\_{\rho})\) such that \(k\_s \in \mathcal{N}_{\mathrm{out}}^{(1)}(k\_{s-1})\) for \(s=1,\dots,\rho\) and \(\boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s}; \boldsymbol{z}_{k_s}^{t+s})\) is the Hessian matrix of \(L\) with respect to \(\boldsymbol{\theta}\) evaluated at \(\boldsymbol{\theta}_{k\_s}^{t+s}\) and data \(\boldsymbol{z}_{k\_s}^{t+s}\).</p>
+<p>where \(\Delta_j(\boldsymbol{\theta}_j^t,\boldsymbol{z}_j^t) = \mathcal{O}_j(\boldsymbol{\theta}_j^t,\boldsymbol{z}_j^t)-\boldsymbol{\theta}_j^t\), \(k_0 = j\). Here \(P_j^{(\rho)}\) denotes the set of all sequences \((k_1, \dots, k_{\rho})\) such that \(k_s \in \mathcal{N}_{\mathrm{out}}^{(1)}(k_{s-1})\) for \(s=1,\dots,\rho\) and \(\boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s}; \boldsymbol{z}_{k_s}^{t+s})\) is the Hessian matrix of \(L\) with respect to \(\boldsymbol{\theta}\) evaluated at \(\boldsymbol{\theta}_{k_s}^{t+s}\) and data \(\boldsymbol{z}_{k_s}^{t+s}\).</p>
 
 <p>For the cases when \(\rho = 0\) and \(\rho = 1\), the relevant product expressions are defined as identity matrices, thereby ensuring that the r-hop DICE-E remains well-defined.</p>
 
@@ -438,7 +438,7 @@ With this new perspective, we built DICE to formally model the influence cascade
 Our key theoretical result, **Theorem 2**, gives a precise mathematical characterization of this multi-hop influence cascade.
 
 \<div class="l-page"\>
-\<img src="[https://raiden-zhu.github.io/assets/img/publication\_preview/theorem.png](https://www.google.com/search?q=https://raiden-zhu.github.io/assets/img/publication_preview/theorem.png)" alt="Theorem 2" style="max-width: 100%; height: auto;"\>
+\<img src="[https://raiden-zhu.github.io/assets/img/publication_preview/theorem.png](https://www.google.com/search?q=https://raiden-zhu.github.io/assets/img/publication_preview/theorem.png)" alt="Theorem 2" style="max-width: 100%; height: auto;"\>
 \<p style="text-align: center; font-style: italic;"\>The formal mathematical definition of r-hop DICE-E from Theorem 2.\</p\>
 \</div\>
 
@@ -470,7 +470,7 @@ This simple tool unlocks some powerful applications:
   * **Detecting Bad Actors:** Malicious data (e.g., with flipped labels) or "free-riding" nodes that don't contribute meaningfully can be easily spotted. Their proximal influence scores will be negative or near-zero, making them stand out clearly. This allows participants to dynamically prune low-quality neighbors and secure the network.[1, 3, 4]
 
 \<div class="l-page"\>
-\<img src="[https://raiden-zhu.github.io/assets/img/publication\_preview/anomaly\_detection.png](https://www.google.com/search?q=https://raiden-zhu.github.io/assets/img/publication_preview/anomaly_detection.png)" alt="Anomaly Detection with DICE" style="max-width: 100%; height: auto;"\>
+\<img src="[https://raiden-zhu.github.io/assets/img/publication_preview/anomaly_detection.png](https://www.google.com/search?q=https://raiden-zhu.github.io/assets/img/publication_preview/anomaly_detection.png)" alt="Anomaly Detection with DICE" style="max-width: 100%; height: auto;"\>
 \<p style="text-align: center; font-style: italic;"\>Malicious nodes (red) are clearly distinguished from normal nodes (blue) by their high proximal influence scores, which indicate a negative impact on test loss.\</p\>
 \</div\>
 
