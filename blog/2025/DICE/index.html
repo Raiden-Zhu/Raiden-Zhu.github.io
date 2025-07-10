@@ -199,55 +199,9 @@
   color: white;
   text-align: center;
   font-size: 16px;
-}
-/* --- New copy button styles --- */ .citation-box {
-  padding: 1.5em;
-  margin: 2em 0;
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-left: 5px solid #007bff;
-  border-radius: 5px;
-}
-.citation-box h4 {
-  margin-top: 0;
-  color: #0056b3;
-}
-.bibtex-container {
-  position: relative;
+} /* --- Code block with copy button --- */ .code-container {
+  position: relative; /* This is crucial for positioning the button */
   margin-top: 1em;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-}
-.bibtex-code {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
-  line-height: 1.4;
-  white-space: pre-wrap;
-  word-break: break-all;
-  margin: 0;
-  color: #333;
-  background: none;
-}
-.copy-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  font-size: 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-.copy-btn:hover {
-  background-color: #0056b3;
-}
-.copy-btn.copied {
-  background-color: #28a745;
 }
 
     </style>
@@ -476,19 +430,20 @@
 
 <h2 id="citation">Citation</h2>
 
-<div class="citation-box">
+<div class="custom-box">
   <h4>Cite Our Paper 😀</h4>
   <p>If you find our work insightful, we would greatly appreciate it if you could cite our paper.</p>
   
-  <div class="bibtex-container">
-    <button class="copy-btn" onclick="copyBibtex()">Copy</button>
-    <pre class="bibtex-code" id="bibtex-text">@inproceedings{zhu2025dice,
-  title="{DICE: Data Influence Cascade in Decentralized Learning}",
-  author="Tongtian Zhu and Wenhao Li and Can Wang and Fengxiang He",
-  booktitle="The Thirteenth International Conference on Learning Representations",
-  year="2025",
-  url="https://openreview.net/forum?id=2TIYkqieKw"
-}</pre>
+  <div class="code-container">
+
+<figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">zhu2025dice</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">"{DICE: Data Influence Cascade in Decentralized Learning}"</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">"Tongtian Zhu and Wenhao Li and Can Wang and Fengxiang He"</span><span class="p">,</span>
+  <span class="na">booktitle</span><span class="p">=</span><span class="s">"The Thirteenth International Conference on Learning Representations"</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">"2025"</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">=</span><span class="s">"https://openreview.net/forum?id=2TIYkqieKw"</span>
+<span class="p">}</span></code></pre></figure>
+
   </div>
 </div>
 
@@ -562,56 +517,6 @@ DICE is more than just a data valuation method; it's a toolkit for **decentraliz
 This work lays the foundation for robust incentive mechanisms, a critical step toward unlocking the massive potential of decentralized learning. Looking ahead, we believe DICE provides a dynamic, contribution-based pricing model that could power the next generation of **decentralized AI ecosystems**, including data markets, parameter markets, and compute markets, fostering a more open and equitable AI future.[1]
 
  -->
-
-<!-- copy buttons -->
-<script>
-function copyBibtex() {
-  const bibtexText = document.getElementById('bibtex-text').textContent;
-  const button = document.querySelector('.copy-btn');
-  
-  // 使用现代 Clipboard API
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(bibtexText).then(() => {
-      showCopied(button);
-    }).catch(() => {
-      // 降级到传统方法
-      fallbackCopy(bibtexText, button);
-    });
-  } else {
-    // 降级到传统方法
-    fallbackCopy(bibtexText, button);
-  }
-}
-
-function fallbackCopy(text, button) {
-  const textArea = document.createElement('textarea');
-  textArea.value = text;
-  textArea.style.position = 'fixed';
-  textArea.style.left = '-9999px';
-  document.body.appendChild(textArea);
-  textArea.select();
-  
-  try {
-    document.execCommand('copy');
-    showCopied(button);
-  } catch (err) {
-    button.textContent = 'Failed';
-    setTimeout(() => button.textContent = 'Copy', 2000);
-  }
-  
-  document.body.removeChild(textArea);
-}
-
-function showCopied(button) {
-  button.textContent = 'Copied!';
-  button.classList.add('copied');
-  setTimeout(() => {
-    button.textContent = 'Copy';
-    button.classList.remove('copied');
-  }, 2000);
-}
-</script>
-
 
       </d-article>
 
