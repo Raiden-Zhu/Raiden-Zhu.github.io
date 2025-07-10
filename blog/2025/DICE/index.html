@@ -408,14 +408,14 @@
 
 <div class="custom-box">
   <h4>Key Insights from DICE</h4>
-  <p>Our theory uncovers the intricate interplay of factors shaping data influence in decentralized networks:</p>
+  <p>Our theory uncovers the intricate interplay of factors that shape data influence in decentralized networks:</p>
   <ul>
     <li>
-<b>1. Asymmetric Influence and Topological Importance:</b> The influence of identical data is not uniform across nodes. Instead, "nodes with greater topological significance exert stronger influence". This highlights how the <b>communication graph-related term</b> dictates the power and reach of a participant's contribution.</li>
+<b>1. Asymmetric Influence and Topological Importance:</b> The influence of identical data is not uniform across the network. Instead, nodes with greater topological significance exert stronger influence. This asymmetry highlights how the <b>communication graph</b> is a critical factor in determining the contribution of participants.</li>
     <li>
-<b>2. The Role of Loss Curvature and Intermediate Nodes:</b> Intermediate nodes are not passive relays; they "contribute to an 'influence chain'". The <b>curvature-related term</b> (the Hessian) shows that the local loss landscape of these nodes actively modulates, dampens, or amplifies the influence as it propagates[cite: 971, 972].</li>
+<b>2. The Role of Loss Curvature and Intermediate Nodes:</b> Intermediate nodes actively contribute to an <i>"influence chain"</i>. The local loss landscape of these models also actively shapes the influence as it propagates through the network.</li>
     <li>
-<b>3. Influence Cascades with Damped Decay:</b> Data influence "cascades with 'damped decay' induced by parameter $W$". This decay, which can be exponential with the number of hops, is governed by the product of both communication weights and the Hessian-related terms.</li>
+<b>3. Influence Cascades with Damped Decay:</b> Data influence cascades with <i>"damped decay"</i> induced by parameter $W$. This decay, which can be exponential with the number of hops, ensures that influence is <i>"localized"</i> and does not propagate indefinitely.</li>
   </ul>
 </div>
 
@@ -464,13 +464,33 @@
 
 <h2 id="background">Background</h2>
 
-<h3 id="motivation-quantifying-contribution-in-decentralized-learning">Motivation: Quantifying Contribution in Decentralized Learning</h3>
+<h3 id="the-motivation-quantifying-contribution-in-decentralized-learning">The Motivation: Quantifying Contribution in Decentralized Learning</h3>
 
-<p>Training frontier AI models is becoming astronomically expensive, with costs running into the hundreds of millions of dollars.[1] This trend risks centralizing AI power within a handful of tech giants, locking out academia and smaller players. <strong>Decentralized Learning</strong> offers a compelling escape route, where data and compute are crowdsourced across a peer-to-peer (P2P) network.[2] Think of it like a computational barn-raising, where a community comes together to build something no single member could alone.</p>
+<p>Decentralized learning offers a promising approach to crowdsource computational workloads across geographically distributed compute nodes connected through P2P networks. However, in these systems, “proper incentives are still in absence, considerably discouraging participation”. Our vision is that a fair incentive mechanism relies on the fair attribution of contributions from participating nodes. This leads to the fundamental problem:</p>
 
-<p>But this collaborative utopia hits a snag: <strong>incentives</strong>. Why would anyone contribute their data and compute without a fair way to measure and reward their effort? This is the core problem we tackle. We need a reliable “Proof-of-Work” for collaborative learning, and that starts with accurately valuing each contribution.</p>
+<blockquote>
+  <p><strong>How to quantify individual contributions in decentralized learning?</strong></p>
+</blockquote>
+
+<h3 id="why-centralized-influence-estimation-is-not-applicable">Why Centralized Influence Estimation is Not Applicable</h3>
+
+<p>Quantifying data influence has been well studied in the centralized paradigm. These methods, however, are not applicable to decentralized learning. The challenges are non-trivial, arising from the unique characteristics of decentralized networks. We identify two key observations:</p>
+
+<ol>
+  <li>
+<strong>Neighbors as “Customers”:</strong> In decentralized learning, neighbors who serve as customers hold the rights to determine data influence. This aligns with the “customer-centric principle (Drucker, 1985) in determining value”.</li>
+  <li>
+<strong>Dynamic, Cascading Influence:</strong> Data influence is not static; it “spreads across participants through gossips during training”. The influence of data on one node propagates to its neighbors and cascades to multi-hop neighbors. We term this mechanism as <strong>cascading influence</strong>.</li>
+</ol>
+
+<p>Existing estimators, designed for a single, static model, cannot account for this recursive propagation and are therefore unsuitable.</p>
 
 <!-- 
+Training frontier AI models is becoming astronomically expensive, with costs running into the hundreds of millions of dollars.This trend risks centralizing AI power within a handful of tech giants, locking out academia and smaller players. **Decentralized Learning** offers a compelling escape route, where data and compute are crowdsourced across a peer-to-peer (P2P) network.[2] Think of it like a computational barn-raising, where a community comes together to build something no single member could alone.
+
+But this collaborative utopia hits a snag: **incentives**. Why would anyone contribute their data and compute without a fair way to measure and reward their effort? This is the core problem we tackle. We need a reliable "Proof-of-Work" for collaborative learning, and that starts with accurately valuing each contribution.
+
+
 Our work, **DICE (Data Influence Cascade in Decentralized Learning)**, introduces a framework to do just that, by tracing how the influence of a single piece of data cascades through the entire network.
 
 
