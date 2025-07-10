@@ -199,6 +199,32 @@
   color: white;
   text-align: center;
   font-size: 16px;
+} /* --- Code block with copy button --- */ .code-container {
+  position: relative; /* This is crucial for positioning the button */
+  margin-top: 1em;
+}
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.code-container:hover .copy-button {
+  opacity: 1; /* Show button clearly on hover */
+}
+.copy-button:active {
+  background-color: #333;
+}
+.copy-button.copied {
+  background-color: #007bff; /* Blue color for success */
 }
 
     </style>
@@ -390,7 +416,7 @@
           <nav class="l-text figcaption">
           <h3>Contents</h3>
             <div><a href="#main-results">Main Results</a></div>
-            <div><a href="#citations">Citations</a></div>
+            <div><a href="#citation">Citation</a></div>
             
           </nav>
         </d-contents>
@@ -430,6 +456,9 @@
 <div class="custom-box">
   <h4>Cite Our Paper 😀</h4>
   <p>If you find our work insightful, we would greatly appreciate it if you could cite our paper.</p>
+  
+  <div class="code-container">
+    <button class="copy-button" aria-label="Copy code to clipboard">Copy</button>
 
 <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">zhu2025dice</span><span class="p">,</span>
   <span class="na">title</span><span class="p">=</span><span class="s">"{DICE: Data Influence Cascade in Decentralized Learning}"</span><span class="p">,</span>
@@ -439,6 +468,7 @@
   <span class="na">url</span><span class="p">=</span><span class="s">"https://openreview.net/forum?id=2TIYkqieKw"</span>
 <span class="p">}</span></code></pre></figure>
 
+  </div>
 </div>
 
 <h2 id="background">Background</h2>
