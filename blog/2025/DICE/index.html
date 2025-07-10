@@ -360,7 +360,7 @@
               <a href="https://github.com/Raiden-Zhu/ICLR-2025-DICE" class="custom-button" rel="external nofollow noopener" target="_blank"><i class="fab fa-github"></i>Code</a>
             
             
-              <a href="https://arxiv.org/abs/xxxx.xxxx" class="custom-button" rel="external nofollow noopener" target="_blank"><i class="fas fa-times"></i>arXiv</a>
+              <a href="https://arxiv.org/abs/2507.06931" class="custom-button" rel="external nofollow noopener" target="_blank"><i class="fas fa-times"></i>arXiv</a>
             
           </div>
           
@@ -383,27 +383,29 @@
 
 <h2 id="main-results">Main Results</h2>
 
-<blockquote>
-  <p><strong>Theorem (Approximation of r-hop DICE-GT)</strong></p>
+<p><strong>Theorem (Approximation of r-hop DICE-GT)</strong></p>
 
-  <p>The r-hop DICE-GT influence $\mathcal{I}_{\text{DICE-GT}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}^{\prime})$ can be approximated as follows:</p>
+<p>The r-hop DICE-GT influence $\mathcal{I}_{\text{DICE-GT}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}^{\prime})$ can be approximated as follows:</p>
 
 \[\begin{align}
 \mathcal{I}_{\text{DICE-E}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}^{\prime})
-= - &amp;\sum_{\rho=0}^{r} \sum_{ (k_1, \dots, k_{\rho}) \in P_j^{(\rho)} } \eta^{t} q_{k_\rho} 
-\underbrace{ \left( \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} \right) }_{\text{communication graph-related term}} \\
-&amp; \times
-\underbrace{ \nabla L\bigl(\boldsymbol{\theta}_{k_{\rho}}^{t+\rho}; \boldsymbol{z}^{\prime}\bigr)^\top }_{\text{test gradient}} \\
-&amp; \times
-\underbrace{ \left( \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s-1}; \boldsymbol{z}_{k_s}^{t+s-1}) \right) \right) }_{\text{curvature-related term}} \\
-&amp; \times
+= - \sum_{\rho=0}^{r} \sum_{ (k_1, \dots, k_{\rho}) \in P_j^{(\rho)} } \eta^{t} q_{k_\rho} 
+\underbrace{ \left( \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} \right) }_{\text{communication graph-related term}} 
+\times
+\underbrace{ \nabla L\bigl(\boldsymbol{\theta}_{k_{\rho}}^{t+\rho}; \boldsymbol{z}^{\prime}\bigr)^\top }_{\text{test gradient}} 
+\times
+\underbrace{ \left( \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s-1}; \boldsymbol{z}_{k_s}^{t+s-1}) \right) \right) }_{\text{curvature-related term}} 
+\times
 \underbrace{ \Delta_j(\boldsymbol{\theta}_j^t,\boldsymbol{z}_j^t) }_{\text{optimization-related term}}
 \end{align}\]
 
-  <p>where $\Delta_j(\boldsymbol{\theta}<em>j^t,\boldsymbol{z}_j^t) = \mathcal{O}_j(\boldsymbol{\theta}_j^t,\boldsymbol{z}_j^t)-\boldsymbol{\theta}_j^t$, $k_0 = j$. Here $P_j^{(\rho)}$ denotes the set of all sequences $(k_1, \dots, k</em>{\rho})$ such that $k_s \in \mathcal{N}<em>{\text{out}}^{(1)}(k</em>{s-1})$ for $s=1,\dots,\rho$ and $\boldsymbol{H}(\boldsymbol{\theta}<em>{k_s}^{t+s}; \boldsymbol{z}</em>{k_s}^{t+s})$ is the Hessian matrix of $L$ with respect to $\boldsymbol{\theta}$ evaluated at $\boldsymbol{\theta}<em>{k_s}^{t+s}$ and data $\boldsymbol{z}</em>{k_s}^{t+s}$.</p>
+<p>where $\Delta_j(\boldsymbol{\theta}<em>j^t,\boldsymbol{z}_j^t) = \mathcal{O}_j(\boldsymbol{\theta}_j^t,\boldsymbol{z}_j^t)-\boldsymbol{\theta}_j^t$, $k_0 = j$. Here $P_j^{(\rho)}$ denotes the set of all sequences $(k_1, \dots, k</em>{\rho})$ such that $k_s \in \mathcal{N}<em>{\text{out}}^{(1)}(k</em>{s-1})$ for $s=1,\dots,\rho$ and $\boldsymbol{H}(\boldsymbol{\theta}<em>{k_s}^{t+s}; \boldsymbol{z}</em>{k_s}^{t+s})$ is the Hessian matrix of $L$ with respect to $\boldsymbol{\theta}$ evaluated at $\boldsymbol{\theta}<em>{k_s}^{t+s}$ and data $\boldsymbol{z}</em>{k_s}^{t+s}$.</p>
 
-  <p>For the cases when $\rho = 0$ and $\rho = 1$, the relevant product expressions are defined as identity matrices, thereby ensuring that the r-hop DICE-E remains well-defined.</p>
-</blockquote>
+<p>For the cases when $\rho = 0$ and $\rho = 1$, the relevant product expressions are defined as identity matrices, thereby ensuring that the r-hop DICE-E remains well-defined.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find our work useful, please consider citing the paper:</p>
 
 <h2 id="background">Background</h2>
 
