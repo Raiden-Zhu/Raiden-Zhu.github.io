@@ -1,105 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-10T07:11:30+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-10T07:20:00+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">DICE: Data Influence Cascade in Decentralized Learning</title><link href="Raiden-Zhu.github.io/blog/2025/DICE/" rel="alternate" type="text/html" title="DICE: Data Influence Cascade in Decentralized Learning" /><published>2025-03-15T00:00:00+00:00</published><updated>2025-03-15T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
 
 <h2 id="main-results">Main Results</h2>
+
+<p><strong>Theorem (Approximation of r-hop DICE-GT)</strong></p>
+
+<p>The r-hop DICE-GT influence $\mathcal{I}_{\text{DICE-GT}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}^{\prime})$ can be approximated as follows:</p>
+
+\[\begin{align}
+\mathcal{I}_{\text{DICE-E}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}^{\prime})
+= - &amp;\sum_{\rho=0}^{r} \sum_{ (k_1, \dots, k_{\rho}) \in P_j^{(\rho)} } \eta^{t} q_{k_\rho} 
+\underbrace{ \left( \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} \right) }_{\text{communication graph-related term}} \\
+&amp; \times
+\underbrace{ \nabla L\bigl(\boldsymbol{\theta}_{k_{\rho}}^{t+\rho}; \boldsymbol{z}^{\prime}\bigr)^\top }_{\text{test gradient}} \\
+&amp; \times
+\underbrace{ \left( \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s-1}; \boldsymbol{z}_{k_s}^{t+s-1}) \right) \right) }_{\text{curvature-related term}} \\
+&amp; \times
+\underbrace{ \Delta_j(\boldsymbol{\theta}_j^t,\boldsymbol{z}_j^t) }_{\text{optimization-related term}}
+\end{align}\]
+
+<p>where $\Delta_j(\boldsymbol{\theta}<em>j^t,\boldsymbol{z}_j^t) = \mathcal{O}_j(\boldsymbol{\theta}_j^t,\boldsymbol{z}_j^t)-\boldsymbol{\theta}_j^t$, $k_0 = j$. Here $P_j^{(\rho)}$ denotes the set of all sequences $(k_1, \dots, k</em>{\rho})$ such that $k_s \in \mathcal{N}<em>{\text{out}}^{(1)}(k</em>{s-1})$ for $s=1,\dots,\rho$ and $\boldsymbol{H}(\boldsymbol{\theta}<em>{k_s}^{t+s}; \boldsymbol{z}</em>{k_s}^{t+s})$ is the Hessian matrix of $L$ with respect to $\boldsymbol{\theta}$ evaluated at $\boldsymbol{\theta}<em>{k_s}^{t+s}$ and data $\boldsymbol{z}</em>{k_s}^{t+s}$.</p>
+
+<p>For the cases when $\rho = 0$ and $\rho = 1$, the relevant product expressions are defined as identity matrices, thereby ensuring that the r-hop DICE-E remains well-defined.</p>
+
+<h2 id="background">Background</h2>
 
 <p>Training frontier AI models is becoming astronomically expensive, with costs running into the hundreds of millions of dollars.[1] This trend risks centralizing AI power within a handful of tech giants, locking out academia and smaller players. <strong>Decentralized Learning</strong> offers a compelling escape route, where data and compute are crowdsourced across a peer-to-peer (P2P) network.[2] Think of it like a computational barn-raising, where a community comes together to build something no single member could alone.</p>
 
 <p>But this collaborative utopia hits a snag: <strong>incentives</strong>. Why would anyone contribute their data and compute without a fair way to measure and reward their effort? This is the core problem we tackle. We need a reliable “Proof-of-Work” for collaborative learning, and that starts with accurately valuing each contribution.</p>
 
-<p>Our work, <strong>DICE (Data Influence Cascade in Decentralized Learning)</strong>, introduces a framework to do just that, by tracing how the influence of a single piece of data cascades through the entire network.</p>
+<!-- 
+Our work, **DICE (Data Influence Cascade in Decentralized Learning)**, introduces a framework to do just that, by tracing how the influence of a single piece of data cascades through the entire network.
 
-<h2 id="background">Background</h2>
 
-<h2 id="why-old-tools-dont-work">Why Old Tools Don’t Work</h2>
+## Why Old Tools Don't Work
 
-<p>In the centralized world, data valuation is often handled by methods like Leave-one-out (LOO) or the famous Influence Functions from Koh and Liang.[1] These tools work by asking a simple question: “How does the model’s performance change if we remove this one data point?”</p>
+In the centralized world, data valuation is often handled by methods like Leave-one-out (LOO) or the famous Influence Functions from Koh and Liang.[1] These tools work by asking a simple question: "How does the model's performance change if we remove this one data point?"
 
-<p>But these methods stumble in a decentralized setting. There’s no single, global model to measure against; every participant has their own. More importantly, influence isn’t a static, one-off calculation. It’s a dynamic process. An update on one node <em>flows</em> to its neighbors during training, who then pass it on to <em>their</em> neighbors. It’s a cascade.</p>
+But these methods stumble in a decentralized setting. There's no single, global model to measure against; every participant has their own. More importantly, influence isn't a static, one-off calculation. It's a dynamic process. An update on one node *flows* to its neighbors during training, who then pass it on to *their* neighbors. It's a cascade.
 
-<p>This forced us to rethink what “value” even means here. We found an answer in a surprising place: the customer-centric philosophy of management guru Peter Drucker.[1] He argued that the value of a product is determined by what the <em>customer</em> gets out of it. In our world, when a node shares its model update, its neighbors are the customers. The value of that contribution, therefore, should be judged by the nodes that receive it.</p>
+This forced us to rethink what "value" even means here. We found an answer in a surprising place: the customer-centric philosophy of management guru Peter Drucker.[1] He argued that the value of a product is determined by what the *customer* gets out of it. In our world, when a node shares its model update, its neighbors are the customers. The value of that contribution, therefore, should be judged by the nodes that receive it.
 
-<h2 id="dice-following-the-datas-ripple-effect">DICE: Following the Data’s Ripple Effect</h2>
+## DICE: Following the Data's Ripple Effect
 
-<p>With this new perspective, we built DICE to formally model the influence cascade. We developed a ground-truth definition of influence that accounts for its spread across multiple hops in the network, and then derived a practical, gradient-based method to estimate it.</p>
+With this new perspective, we built DICE to formally model the influence cascade. We developed a ground-truth definition of influence that accounts for its spread across multiple hops in the network, and then derived a practical, gradient-based method to estimate it.
 
-<p>Our key theoretical result, <strong>Theorem 2</strong>, gives a precise mathematical characterization of this multi-hop influence cascade.</p>
+Our key theoretical result, **Theorem 2**, gives a precise mathematical characterization of this multi-hop influence cascade.
 
-<p>&lt;div class=”l-page”&gt;
-&lt;img src=”<a href="https://www.google.com/search?q=https://raiden-zhu.github.io/assets/img/publication_preview/theorem.png">https://raiden-zhu.github.io/assets/img/publication_preview/theorem.png</a>” alt=”Theorem 2” style=”max-width: 100%; height: auto;”&gt;
-&lt;p style=”text-align: center; font-style: italic;”&gt;The formal mathematical definition of r-hop DICE-E from Theorem 2.&lt;/p&gt;
-&lt;/div&gt;</p>
+\<div class="l-page"\>
+\<img src="[https://raiden-zhu.github.io/assets/img/publication\_preview/theorem.png](https://www.google.com/search?q=https://raiden-zhu.github.io/assets/img/publication_preview/theorem.png)" alt="Theorem 2" style="max-width: 100%; height: auto;"\>
+\<p style="text-align: center; font-style: italic;"\>The formal mathematical definition of r-hop DICE-E from Theorem 2.\</p\>
+\</div\>
 
-<h2 id="the-physics-of-influence">The Physics of Influence</h2>
+## The Physics of Influence
 
-<p>The formula looks intimidating, but it describes a beautiful physical process. We can break it down into four intuitive parts that govern how influence is born, travels, gets shaped, and is finally measured.</p>
+The formula looks intimidating, but it describes a beautiful physical process. We can break it down into four intuitive parts that govern how influence is born, travels, gets shaped, and is finally measured.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Component</th>
-      <th style="text-align: left">Role</th>
-      <th style="text-align: left">Intuition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"><strong>Optimization Term</strong></td>
-      <td style="text-align: left">The Initial Push</td>
-      <td style="text-align: left">This is the initial “nudge” a data point gives to its own local model. It’s the stone dropping into the water, creating the first disturbance.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong>Communication Term</strong></td>
-      <td style="text-align: left">The Propagation Path</td>
-      <td style="text-align: left">This term tracks the path the influence takes through the network, determined by the communication weights between nodes. It defines how the ripple spreads.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong>Curvature Term</strong></td>
-      <td style="text-align: left">The Influence Modulator</td>
-      <td style="text-align: left">This is the most subtle part. Intermediate nodes aren’t just passive relays; their own learning state (the curvature of their loss landscape) actively shapes, dampens, or amplifies the influence passing through them. They are like lenses focusing or scattering the signal.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong>Test Gradient Term</strong></td>
-      <td style="text-align: left">The Measurement Probe</td>
-      <td style="text-align: left">This measures the final effect. After the influence has propagated, how much did it actually change the model’s performance on a test point at the destination? This is how we see the ripple’s impact on the other side of the pond.</td>
-    </tr>
-  </tbody>
-</table>
+| Component | Role | Intuition |
+| :--- | :--- | :--- |
+| **Optimization Term** | The Initial Push | This is the initial "nudge" a data point gives to its own local model. It's the stone dropping into the water, creating the first disturbance. |
+| **Communication Term** | The Propagation Path | This term tracks the path the influence takes through the network, determined by the communication weights between nodes. It defines how the ripple spreads. |
+| **Curvature Term** | The Influence Modulator | This is the most subtle part. Intermediate nodes aren't just passive relays; their own learning state (the curvature of their loss landscape) actively shapes, dampens, or amplifies the influence passing through them. They are like lenses focusing or scattering the signal. |
+| **Test Gradient Term** | The Measurement Probe | This measures the final effect. After the influence has propagated, how much did it actually change the model's performance on a test point at the destination? This is how we see the ripple's impact on the other side of the pond. |
 
-<h2 id="key-insights-from-the-theory">Key Insights from the Theory</h2>
+## Key Insights from the Theory
 
-<p>This framework doesn’t just give us a formula; it reveals the underlying dynamics of decentralized systems:</p>
+This framework doesn't just give us a formula; it reveals the underlying dynamics of decentralized systems:
 
-<ol>
-  <li><strong>Topology is Power:</strong> Your position in the network graph dictates your influence. Nodes that are better connected act as amplifiers, spreading their data’s impact far and wide.[1]</li>
-  <li><strong>The Network is an Active Medium:</strong> The path influence takes is not inert. The learning state of every intermediate node actively modulates the signal, meaning a data point’s value is dynamic and depends on the state of the entire network at that moment.[1]</li>
-  <li><strong>Influence Fades:</strong> Just like a real ripple, influence naturally decays as it travels across the network. The combined effects of communication and curvature create a “damped decay”.[1]</li>
-</ol>
+1.  **Topology is Power:** Your position in the network graph dictates your influence. Nodes that are better connected act as amplifiers, spreading their data's impact far and wide.[1]
+2.  **The Network is an Active Medium:** The path influence takes is not inert. The learning state of every intermediate node actively modulates the signal, meaning a data point's value is dynamic and depends on the state of the entire network at that moment.[1]
+3.  **Influence Fades:** Just like a real ripple, influence naturally decays as it travels across the network. The combined effects of communication and curvature create a "damped decay".[1]
 
-<h2 id="from-theory-to-practice">From Theory to Practice</h2>
+## From Theory to Practice
 
-<p>The full multi-hop theory is powerful, but for everyday use, we can distill it into a lightweight and efficient tool we call <strong>Proximal Influence</strong>. This simply measures the direct, one-hop influence a neighbor’s data has on your model. Because it only uses information that is already being shared during standard decentralized training (like gradients), it’s incredibly efficient to compute.[1]</p>
+The full multi-hop theory is powerful, but for everyday use, we can distill it into a lightweight and efficient tool we call **Proximal Influence**. This simply measures the direct, one-hop influence a neighbor's data has on your model. Because it only uses information that is already being shared during standard decentralized training (like gradients), it's incredibly efficient to compute.[1]
 
-<p>This simple tool unlocks some powerful applications:</p>
+This simple tool unlocks some powerful applications:
 
-<ul>
-  <li><strong>Detecting Bad Actors:</strong> Malicious data (e.g., with flipped labels) or “free-riding” nodes that don’t contribute meaningfully can be easily spotted. Their proximal influence scores will be negative or near-zero, making them stand out clearly. This allows participants to dynamically prune low-quality neighbors and secure the network.[1, 3, 4]</li>
-</ul>
+  * **Detecting Bad Actors:** Malicious data (e.g., with flipped labels) or "free-riding" nodes that don't contribute meaningfully can be easily spotted. Their proximal influence scores will be negative or near-zero, making them stand out clearly. This allows participants to dynamically prune low-quality neighbors and secure the network.[1, 3, 4]
 
-<p>&lt;div class=”l-page”&gt;
-&lt;img src=”<a href="https://www.google.com/search?q=https://raiden-zhu.github.io/assets/img/publication_preview/anomaly_detection.png">https://raiden-zhu.github.io/assets/img/publication_preview/anomaly_detection.png</a>” alt=”Anomaly Detection with DICE” style=”max-width: 100%; height: auto;”&gt;
-&lt;p style=”text-align: center; font-style: italic;”&gt;Malicious nodes (red) are clearly distinguished from normal nodes (blue) by their high proximal influence scores, which indicate a negative impact on test loss.&lt;/p&gt;
-&lt;/div&gt;</p>
+\<div class="l-page"\>
+\<img src="[https://raiden-zhu.github.io/assets/img/publication\_preview/anomaly\_detection.png](https://www.google.com/search?q=https://raiden-zhu.github.io/assets/img/publication_preview/anomaly_detection.png)" alt="Anomaly Detection with DICE" style="max-width: 100%; height: auto;"\>
+\<p style="text-align: center; font-style: italic;"\>Malicious nodes (red) are clearly distinguished from normal nodes (blue) by their high proximal influence scores, which indicate a negative impact on test loss.\</p\>
+\</div\>
 
-<ul>
-  <li><strong>Building Fair Systems:</strong> To ensure everyone is pulling their weight, we can define <strong>Reciprocity Factors</strong>. These factors compare the mutual influence between two nodes. If node A is helping node B much more than B is helping A, the reciprocity factor will make this imbalance obvious. This builds trust and encourages fair collaboration.</li>
-</ul>
+  * **Building Fair Systems:** To ensure everyone is pulling their weight, we can define **Reciprocity Factors**. These factors compare the mutual influence between two nodes. If node A is helping node B much more than B is helping A, the reciprocity factor will make this imbalance obvious. This builds trust and encourages fair collaboration.
 
-<h2 id="the-big-picture-building-fairer-ai">The Big Picture: Building Fairer AI</h2>
+## The Big Picture: Building Fairer AI
 
-<p>DICE is more than just a data valuation method; it’s a toolkit for <strong>decentralized governance</strong>. It gives network participants the tools to ensure <strong>security</strong> (by spotting bad actors) and <strong>fairness</strong> (by measuring reciprocity).</p>
+DICE is more than just a data valuation method; it's a toolkit for **decentralized governance**. It gives network participants the tools to ensure **security** (by spotting bad actors) and **fairness** (by measuring reciprocity).
 
-<p>This work lays the foundation for robust incentive mechanisms, a critical step toward unlocking the massive potential of decentralized learning. Looking ahead, we believe DICE provides a dynamic, contribution-based pricing model that could power the next generation of <strong>decentralized AI ecosystems</strong>, including data markets, parameter markets, and compute markets, fostering a more open and equitable AI future.[1]</p>]]></content><author><name>Tongtian Zhu</name></author><category term="Data_Influence" /><summary type="html"><![CDATA[We introduce DICE, the first comprehensive framework for measuring data influence in fully decentralized learning.]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/redirect/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-30T00:00:00+00:00</published><updated>2023-10-30T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/redirect</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/redirect/"><![CDATA[<p>tags: Implicit_Bias Decentralized_Learning</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Blog for our DSGD-SAM paper]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-05T00:00:00+00:00</published><updated>2023-10-05T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/DSGD-SAM</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/"><![CDATA[<h2 id="equations">Equations</h2>
+This work lays the foundation for robust incentive mechanisms, a critical step toward unlocking the massive potential of decentralized learning. Looking ahead, we believe DICE provides a dynamic, contribution-based pricing model that could power the next generation of **decentralized AI ecosystems**, including data markets, parameter markets, and compute markets, fostering a more open and equitable AI future.[1]
+
+ -->]]></content><author><name>Tongtian Zhu</name></author><category term="Data_Influence" /><summary type="html"><![CDATA[We introduce DICE, the first comprehensive framework for measuring data influence in fully decentralized learning.]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/redirect/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-30T00:00:00+00:00</published><updated>2023-10-30T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/redirect</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/redirect/"><![CDATA[<p>tags: Implicit_Bias Decentralized_Learning</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Blog for our DSGD-SAM paper]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-05T00:00:00+00:00</published><updated>2023-10-05T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/DSGD-SAM</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/"><![CDATA[<h2 id="equations">Equations</h2>
 
 <p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine.
 You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>.
