@@ -544,40 +544,109 @@ This work lays the foundation for robust incentive mechanisms, a critical step t
 
 <!-- copy buttons -->
 <script>
-// Corrected script with standard spaces
 document.addEventListener('DOMContentLoaded', function () {
   const allCodeContainers = document.querySelectorAll('.code-container');
 
   allCodeContainers.forEach(container => {
     const copyButton = container.querySelector('.copy-button');
-    const highlightBlock = container.querySelector('.highlight');
     
-    if (!copyButton || !highlightBlock) {
+    if (!copyButton) {
+      console.log('Copy button not found in container');
       return;
     }
 
     copyButton.addEventListener('click', () => {
-      const codeElement = highlightBlock.querySelector('pre > code');
+      // 尝试多种可能的代码元素选择器
+      let codeElement = container.querySelector('.highlight pre code') || 
+                       container.querySelector('.highlight code') ||
+                       container.querySelector('pre code') ||
+                       container.querySelector('code') ||
+                       container.querySelector('.highlight pre') ||
+                       container.querySelector('pre');
+      
       if (!codeElement) {
+        console.log('Code element not found');
+        // 如果还是找不到，尝试查找包含文本的任何元素
+        const allElements = container.querySelectorAll('*');
+        for (let elem of allElements) {
+          if (elem.innerText && elem.innerText.includes('@inproceedings')) {
+            codeElement = elem;
+            break;
+          }
+        }
+      }
+      
+      if (!codeElement) {
+        console.error('No code element found to copy');
         return;
       }
       
-      const codeToCopy = codeElement.innerText;
+      const codeToCopy = codeElement.innerText || codeElement.textContent;
+      
+      if (!codeToCopy.trim()) {
+        console.error('No text content found to copy');
+        return;
+      }
 
-      navigator.clipboard.writeText(codeToCopy).then(() => {
-        copyButton.innerText = 'Copied!';
-        copyButton.classList.add('copied');
-        
-        setTimeout(() => {
-          copyButton.innerText = 'Copy';
-          copyButton.classList.remove('copied');
-        }, 2000);
-      }).catch(err => {
-        console.error('Clipboard API failed: ', err);
-        copyButton.innerText = 'Error';
-      });
+      // 使用现代的Clipboard API
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(codeToCopy).then(() => {
+          copyButton.innerText = 'Copied!';
+          copyButton.classList.add('copied');
+          
+          setTimeout(() => {
+            copyButton.innerText = 'Copy';
+            copyButton.classList.remove('copied');
+          }, 2000);
+        }).catch(err => {
+          console.error('Clipboard API failed: ', err);
+          fallbackCopyTextToClipboard(codeToCopy, copyButton);
+        });
+      } else {
+        // 降级方案
+        fallbackCopyTextToClipboard(codeToCopy, copyButton);
+      }
     });
   });
+
+  // 降级复制函数
+  function fallbackCopyTextToClipboard(text, button) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.top = '0';
+    textArea.style.left = '0';
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    textArea.style.padding = '0';
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    textArea.style.background = 'transparent';
+    
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        button.innerText = 'Copied!';
+        button.classList.add('copied');
+        setTimeout(() => {
+          button.innerText = 'Copy';
+          button.classList.remove('copied');
+        }, 2000);
+      } else {
+        button.innerText = 'Failed';
+      }
+    } catch (err) {
+      console.error('Fallback copy failed: ', err);
+      button.innerText = 'Error';
+    }
+    
+    document.body.removeChild(textArea);
+  }
 });
 </script>
 

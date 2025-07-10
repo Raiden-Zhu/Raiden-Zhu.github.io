@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-10T10:31:31+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-10T10:36:14+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">DICE: Data Influence Cascade in Decentralized Learning</title><link href="Raiden-Zhu.github.io/blog/2025/DICE/" rel="alternate" type="text/html" title="DICE: Data Influence Cascade in Decentralized Learning" /><published>2025-03-15T00:00:00+00:00</published><updated>2025-03-15T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
@@ -122,40 +122,109 @@ This work lays the foundation for robust incentive mechanisms, a critical step t
 
 <!-- copy buttons -->
 <script>
-// Corrected script with standard spaces
 document.addEventListener('DOMContentLoaded', function () {
   const allCodeContainers = document.querySelectorAll('.code-container');
 
   allCodeContainers.forEach(container => {
     const copyButton = container.querySelector('.copy-button');
-    const highlightBlock = container.querySelector('.highlight');
     
-    if (!copyButton || !highlightBlock) {
+    if (!copyButton) {
+      console.log('Copy button not found in container');
       return;
     }
 
     copyButton.addEventListener('click', () => {
-      const codeElement = highlightBlock.querySelector('pre > code');
+      // 尝试多种可能的代码元素选择器
+      let codeElement = container.querySelector('.highlight pre code') || 
+                       container.querySelector('.highlight code') ||
+                       container.querySelector('pre code') ||
+                       container.querySelector('code') ||
+                       container.querySelector('.highlight pre') ||
+                       container.querySelector('pre');
+      
       if (!codeElement) {
+        console.log('Code element not found');
+        // 如果还是找不到，尝试查找包含文本的任何元素
+        const allElements = container.querySelectorAll('*');
+        for (let elem of allElements) {
+          if (elem.innerText && elem.innerText.includes('@inproceedings')) {
+            codeElement = elem;
+            break;
+          }
+        }
+      }
+      
+      if (!codeElement) {
+        console.error('No code element found to copy');
         return;
       }
       
-      const codeToCopy = codeElement.innerText;
+      const codeToCopy = codeElement.innerText || codeElement.textContent;
+      
+      if (!codeToCopy.trim()) {
+        console.error('No text content found to copy');
+        return;
+      }
 
-      navigator.clipboard.writeText(codeToCopy).then(() => {
-        copyButton.innerText = 'Copied!';
-        copyButton.classList.add('copied');
-        
-        setTimeout(() => {
-          copyButton.innerText = 'Copy';
-          copyButton.classList.remove('copied');
-        }, 2000);
-      }).catch(err => {
-        console.error('Clipboard API failed: ', err);
-        copyButton.innerText = 'Error';
-      });
+      // 使用现代的Clipboard API
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(codeToCopy).then(() => {
+          copyButton.innerText = 'Copied!';
+          copyButton.classList.add('copied');
+          
+          setTimeout(() => {
+            copyButton.innerText = 'Copy';
+            copyButton.classList.remove('copied');
+          }, 2000);
+        }).catch(err => {
+          console.error('Clipboard API failed: ', err);
+          fallbackCopyTextToClipboard(codeToCopy, copyButton);
+        });
+      } else {
+        // 降级方案
+        fallbackCopyTextToClipboard(codeToCopy, copyButton);
+      }
     });
   });
+
+  // 降级复制函数
+  function fallbackCopyTextToClipboard(text, button) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.top = '0';
+    textArea.style.left = '0';
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    textArea.style.padding = '0';
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    textArea.style.background = 'transparent';
+    
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        button.innerText = 'Copied!';
+        button.classList.add('copied');
+        setTimeout(() => {
+          button.innerText = 'Copy';
+          button.classList.remove('copied');
+        }, 2000);
+      } else {
+        button.innerText = 'Failed';
+      }
+    } catch (err) {
+      console.error('Fallback copy failed: ', err);
+      button.innerText = 'Error';
+    }
+    
+    document.body.removeChild(textArea);
+  }
 });
 </script>]]></content><author><name>Tongtian Zhu</name></author><category term="Data_Influence" /><summary type="html"><![CDATA[We introduce DICE, the first comprehensive framework for measuring data influence in fully decentralized learning.]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/redirect/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-30T00:00:00+00:00</published><updated>2023-10-30T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/redirect</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/redirect/"><![CDATA[<p>tags: Implicit_Bias Decentralized_Learning</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Blog for our DSGD-SAM paper]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-05T00:00:00+00:00</published><updated>2023-10-05T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/DSGD-SAM</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/"><![CDATA[<h2 id="equations">Equations</h2>
 
