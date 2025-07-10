@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-10T10:43:59+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">DICE: Data Influence Cascade in Decentralized Learning</title><link href="Raiden-Zhu.github.io/blog/2025/DICE/" rel="alternate" type="text/html" title="DICE: Data Influence Cascade in Decentralized Learning" /><published>2025-03-15T00:00:00+00:00</published><updated>2025-03-15T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-10T10:50:34+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html"></title><link href="Raiden-Zhu.github.io/blog/2025/2025-03-15-DICE/" rel="alternate" type="text/html" title="" /><published>2025-07-10T10:50:34+00:00</published><updated>2025-07-10T10:50:34+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/2025-03-15-DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/2025-03-15-DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
 
@@ -31,21 +31,19 @@
 
 <h2 id="citation">Citation</h2>
 
-<div class="custom-box">
+<div class="citation-box">
   <h4>Cite Our Paper 😀</h4>
   <p>If you find our work insightful, we would greatly appreciate it if you could cite our paper.</p>
   
-  <div class="code-container">
-    <button class="copy-button" aria-label="Copy code to clipboard">Copy</button>
-
-<figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">zhu2025dice</span><span class="p">,</span>
-  <span class="na">title</span><span class="p">=</span><span class="s">"{DICE: Data Influence Cascade in Decentralized Learning}"</span><span class="p">,</span>
-  <span class="na">author</span><span class="p">=</span><span class="s">"Tongtian Zhu and Wenhao Li and Can Wang and Fengxiang He"</span><span class="p">,</span>
-  <span class="na">booktitle</span><span class="p">=</span><span class="s">"The Thirteenth International Conference on Learning Representations"</span><span class="p">,</span>
-  <span class="na">year</span><span class="p">=</span><span class="s">"2025"</span><span class="p">,</span>
-  <span class="na">url</span><span class="p">=</span><span class="s">"https://openreview.net/forum?id=2TIYkqieKw"</span>
-<span class="p">}</span></code></pre></figure>
-
+  <div class="bibtex-container">
+    <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+    <pre class="bibtex-code" id="bibtex-text">@inproceedings{zhu2025dice,
+  title="{DICE: Data Influence Cascade in Decentralized Learning}",
+  author="Tongtian Zhu and Wenhao Li and Can Wang and Fengxiang He",
+  booktitle="The Thirteenth International Conference on Learning Representations",
+  year="2025",
+  url="https://openreview.net/forum?id=2TIYkqieKw"
+}</pre>
   </div>
 </div>
 
@@ -122,142 +120,52 @@ This work lays the foundation for robust incentive mechanisms, a critical step t
 
 <!-- copy buttons -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM loaded, searching for elements...');
+function copyBibtex() {
+  const bibtexText = document.getElementById('bibtex-text').textContent;
+  const button = document.querySelector('.copy-btn');
   
-  const copyButtons = document.querySelectorAll('.copy-button');
-  console.log('Found copy buttons:', copyButtons.length);
-  
-  copyButtons.forEach((button, index) => {
-    console.log(`Setting up button ${index + 1}`);
-    
-    button.addEventListener('click', function(e) {
-      console.log('Copy button clicked!');
-      
-      // 查找容器
-      const container = button.closest('.code-container');
-      if (!container) {
-        console.error('Container not found');
-        return;
-      }
-      
-      // 查找figure.highlight元素（Jekyll生成的结构）
-      const highlight = container.querySelector('figure.highlight');
-      let textToCopy = '';
-      
-      if (highlight) {
-        // 从figure.highlight中提取代码文本
-        const codeElement = highlight.querySelector('pre code') || 
-                           highlight.querySelector('code') || 
-                           highlight.querySelector('pre');
-        
-        if (codeElement) {
-          textToCopy = codeElement.textContent || codeElement.innerText;
-          console.log('Found code text:', textToCopy.substring(0, 50) + '...');
-        }
-      }
-      
-      // 如果上面方法失败，尝试直接从highlight获取
-      if (!textToCopy.trim()) {
-        textToCopy = highlight ? (highlight.textContent || highlight.innerText) : '';
-        console.log('Fallback: got text from highlight element');
-      }
-      
-      // 最后的fallback：从整个容器获取
-      if (!textToCopy.trim()) {
-        // 移除按钮文本，只获取代码内容
-        const containerClone = container.cloneNode(true);
-        const buttonInClone = containerClone.querySelector('.copy-button');
-        if (buttonInClone) {
-          buttonInClone.remove();
-        }
-        textToCopy = containerClone.textContent || containerClone.innerText;
-        console.log('Final fallback: got text from container');
-      }
-      
-      if (!textToCopy.trim()) {
-        console.error('No text found to copy');
-        button.textContent = 'No text found';
-        return;
-      }
-      
-      // 清理文本（移除多余的空白字符）
-      textToCopy = textToCopy.trim();
-      
-      // 执行复制
-      copyToClipboard(textToCopy, button);
+  // 使用现代 Clipboard API
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(bibtexText).then(() => {
+      showCopied(button);
+    }).catch(() => {
+      // 降级到传统方法
+      fallbackCopy(bibtexText, button);
     });
-  });
+  } else {
+    // 降级到传统方法
+    fallbackCopy(bibtexText, button);
+  }
+}
+
+function fallbackCopy(text, button) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-9999px';
+  document.body.appendChild(textArea);
+  textArea.select();
   
-  function copyToClipboard(text, button) {
-    console.log('Attempting to copy text of length:', text.length);
-    
-    // 现代浏览器使用Clipboard API
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(text).then(() => {
-        console.log('✅ Clipboard API success');
-        showSuccess(button);
-      }).catch(err => {
-        console.error('❌ Clipboard API failed:', err);
-        fallbackCopy(text, button);
-      });
-    } else {
-      console.log('🔄 Using fallback copy method');
-      fallbackCopy(text, button);
-    }
+  try {
+    document.execCommand('copy');
+    showCopied(button);
+  } catch (err) {
+    button.textContent = 'Failed';
+    setTimeout(() => button.textContent = 'Copy', 2000);
   }
   
-  function fallbackCopy(text, button) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    
-    // 设置样式使其不可见但仍能被选中
-    textArea.style.position = 'fixed';
-    textArea.style.top = '0';
-    textArea.style.left = '-9999px';
-    textArea.style.width = '2em';
-    textArea.style.height = '2em';
-    textArea.style.padding = '0';
-    textArea.style.border = 'none';
-    textArea.style.outline = 'none';
-    textArea.style.boxShadow = 'none';
-    textArea.style.background = 'transparent';
-    
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-    
-    try {
-      const success = document.execCommand('copy');
-      console.log('Fallback copy result:', success);
-      
-      if (success) {
-        showSuccess(button);
-      } else {
-        button.textContent = 'Copy failed';
-        setTimeout(() => button.textContent = 'Copy', 2000);
-      }
-    } catch (err) {
-      console.error('Fallback copy error:', err);
-      button.textContent = 'Copy error';
-      setTimeout(() => button.textContent = 'Copy', 2000);
-    }
-    
-    document.body.removeChild(textArea);
-  }
-  
-  function showSuccess(button) {
-    const originalText = button.textContent;
-    button.textContent = 'Copied!';
-    button.classList.add('copied');
-    
-    setTimeout(() => {
-      button.textContent = originalText;
-      button.classList.remove('copied');
-    }, 2000);
-  }
-});
-</script>]]></content><author><name>Tongtian Zhu</name></author><category term="Data_Influence" /><summary type="html"><![CDATA[We introduce DICE, the first comprehensive framework for measuring data influence in fully decentralized learning.]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/redirect/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-30T00:00:00+00:00</published><updated>2023-10-30T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/redirect</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/redirect/"><![CDATA[<p>tags: Implicit_Bias Decentralized_Learning</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Blog for our DSGD-SAM paper]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-05T00:00:00+00:00</published><updated>2023-10-05T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/DSGD-SAM</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/"><![CDATA[<h2 id="equations">Equations</h2>
+  document.body.removeChild(textArea);
+}
+
+function showCopied(button) {
+  button.textContent = 'Copied!';
+  button.classList.add('copied');
+  setTimeout(() => {
+    button.textContent = 'Copy';
+    button.classList.remove('copied');
+  }, 2000);
+}
+</script>]]></content><author><name></name></author></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/redirect/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-30T00:00:00+00:00</published><updated>2023-10-30T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/redirect</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/redirect/"><![CDATA[<p>tags: Implicit_Bias Decentralized_Learning</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Blog for our DSGD-SAM paper]]></summary></entry><entry><title type="html">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</title><link href="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/" rel="alternate" type="text/html" title="Decentralized SGD and Average-direction SAM are Asymptotically Equivalent" /><published>2023-10-05T00:00:00+00:00</published><updated>2023-10-05T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2023/DSGD-SAM</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2023/DSGD-SAM/"><![CDATA[<h2 id="equations">Equations</h2>
 
 <p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine.
 You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>.
