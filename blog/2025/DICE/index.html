@@ -393,12 +393,12 @@
 
 \[\begin{equation}
 \begin{split}
-&amp;\: \mathcal{I}_{\mathrm{DICE-E}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}^{\prime})\\
-= - &amp;\sum_{\rho=0}^{r} \sum_{ (k_1, \dots, k_{\rho}) \in P_j^{(\rho)} } \eta^{t} q_{k_\rho} 
+&amp;\mathcal{I}_{\mathrm{DICE-E}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}^{\prime})\\
+= \:  - &amp;\sum_{\rho=0}^{r} \sum_{ (k_1, \dots, k_{\rho}) \in P_j^{(\rho)} } \eta^{t} q_{k_\rho} 
 \underbrace{ \left( \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} \right) }_{\text{communication graph-related term}}
 \times
 \underbrace{ \nabla L\bigl(\boldsymbol{\theta}_{k_{\rho}}^{t+\rho}; \boldsymbol{z}^{\prime}\bigr)^\top }_{\text{test gradient}} \\
-&amp; \times
+&amp; \:  \times
 \underbrace{ \left( \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s-1}; \boldsymbol{z}_{k_s}^{t+s-1}) \right) \right) }_{\text{curvature-related term}}
 \times
 \underbrace{ \Delta_j(\boldsymbol{\theta}_j^t,\boldsymbol{z}_j^t) }_{\text{optimization-related term}}
