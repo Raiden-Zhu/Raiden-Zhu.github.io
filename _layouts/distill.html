@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<!-- _layouts/distill.html -->
 <html>
   <head>
     {%- include head.html %}
 
-    <!-- 引入 Font Awesome 用于图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
@@ -106,21 +104,36 @@
         font-style: italic;
         color: #666;
       }
+
+      /* START: Add these lines for Hugging Face Logo sizing */
+      .custom-button .button-icon-img {
+        height: 1.2em; /* 调整这个值来控制 Logo 的高度 */
+        width: auto; /* 保持宽高比 */
+        vertical-align: middle; /* 垂直居中对齐文本 */
+        margin-right: 0.4em; /* Logo 和文本之间的间距 */
+      }
+
+      /* Optional: 如果你想专门调整 Hugging Face 按钮的样式 */
+      .custom-button.huggingface-button {
+        /* 你可以在这里添加 Hugging Face 按钮的特定样式 */
+      }
+      /* END: Add these lines */
+
     </style>
-    
+
     {% include scripts/jquery.html %}
     {% include scripts/mathjax.html %}
-    <!-- Distill js -->
     <script src="{{ '/assets/js/distillpub/template.v2.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/distillpub/transforms.v2.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/distillpub/overrides.js' | relative_url }}"></script>
     {% if page._styles %}
-    <!-- Page/Post style -->
     <style type="text/css">
       {{ page._styles }}
     </style>
     {%- endif %}
   </head>
+
+  </html>
 
   <d-front-matter>
     <script async type="text/json">{
