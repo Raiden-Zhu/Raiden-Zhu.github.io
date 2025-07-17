@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- _layouts/distill.html --><html>
+<html>
   <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
@@ -46,7 +46,6 @@
     
 
 
-    <!-- 引入 Font Awesome 用于图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <style>
@@ -148,8 +147,23 @@
         font-style: italic;
         color: #666;
       }
+
+      /* START: Add these lines for Hugging Face Logo sizing */
+      .custom-button .button-icon-img {
+        height: 1.2em; /* 调整这个值来控制 Logo 的高度 */
+        width: auto; /* 保持宽高比 */
+        vertical-align: middle; /* 垂直居中对齐文本 */
+        margin-right: 0.4em; /* Logo 和文本之间的间距 */
+      }
+
+      /* Optional: 如果你想专门调整 Hugging Face 按钮的样式 */
+      .custom-button.huggingface-button {
+        /* 你可以在这里添加 Hugging Face 按钮的特定样式 */
+      }
+      /* END: Add these lines */
+
     </style>
-    
+
     <!-- jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -164,12 +178,10 @@
   <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
   <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    <!-- Distill js -->
     <script src="/assets/js/distillpub/template.v2.js"></script>
     <script src="/assets/js/distillpub/transforms.v2.js"></script>
     <script src="/assets/js/distillpub/overrides.js"></script>
     
-    <!-- Page/Post style -->
     <style type="text/css">
       .fake-img {
   background: #bbb;
@@ -188,7 +200,7 @@
     </style>
   </head>
 
-  <body>
+  </html><html><body>
 <d-front-matter>
     <script async type="text/json">{
       "title": "Decentralized SGD and Average-direction SAM are Asymptotically Equivalent",
@@ -783,5 +795,4 @@ This line is only separated by a single newline, so it’s a separate line in th
 </script>
 
   
-</body>
-</html>
+</body></html>
