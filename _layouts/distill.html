@@ -224,6 +224,9 @@
             {% if page.slides_url %}
               <a href="{{ page.slides_url }}" class="custom-button"><i class="far fa-file-powerpoint"></i>Slides</a>
             {% endif %}
+            {% if page.video_url %}
+              <a href="{{ page.video_url }}" class="custom-button"><i class="fas fa-video"></i>Video (Chinese)</a>
+            {% endif %}
             {% if page.huggingface_url %}
               <a href="{{ page.huggingface_url }}" class="custom-button">
                 <img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png" alt="Hugging Face Logo" class="button-icon-img">
