@@ -203,8 +203,8 @@
               <a href="{{ page.arxiv_url }}" class="custom-button"><i class="fas fa-times"></i>arXiv</a>
             {% endif %}
             {% if page.huggingface_url %}
-              <a href="{{ page.huggingface_url }}" class="custom-button huggingface-button">
-                <img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg" alt="Hugging Face Logo" class="button-icon-img">
+              <a href="{{ page.huggingface_url }}" class="custom-button">
+                <img src="/path/to/your/huggingface_logo.svg" alt="Hugging Face Logo" class="button-icon-img">
                 Hugging Face
               </a>
             {% endif %}
@@ -212,20 +212,6 @@
               <a href="{{ page.huggingface_blog_url }}" class="custom-button"><i class="fas fa-blog"></i>HF Blog</a>
             {% endif %}
           </div>
-          
-          <style>
-            /* Basic styling for the image within the button */
-            .custom-button .button-icon-img {
-              height: 1em; /* Adjust as needed to match font size */
-              vertical-align: middle; /* Align with text */
-              margin-right: 0.5em; /* Space between icon and text */
-            }
-          
-            /* Optional: Adjust for Hugging Face specific button if needed */
-            .custom-button.huggingface-button {
-              /* You can add specific styles here for the Hugging Face button */
-            }
-          </style>
           {% assign has_equal_contribution = false %}
           {% for author in page.authors %}
             {% if author.equal_contribution %}
