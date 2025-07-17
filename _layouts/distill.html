@@ -202,6 +202,12 @@
             {% if page.arxiv_url %}
               <a href="{{ page.arxiv_url }}" class="custom-button"><i class="fas fa-times"></i>arXiv</a>
             {% endif %}
+            {% if page.huggingface_url %}
+              <a href="{{ page.huggingface_url }}" class="custom-button"><i class="fas fa-hand-holding-heart"></i>Hugging Face</a>
+            {% endif %}
+            {% if page.huggingface_blog_url %}
+              <a href="{{ page.huggingface_blog_url }}" class="custom-button"><i class="fas fa-blog"></i>HF Blog</a>
+            {% endif %}
           </div>
           {% assign has_equal_contribution = false %}
           {% for author in page.authors %}
