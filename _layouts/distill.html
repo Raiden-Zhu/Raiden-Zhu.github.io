@@ -215,6 +215,12 @@
             {% if page.arxiv_url %}
               <a href="{{ page.arxiv_url }}" class="custom-button"><i class="fas fa-times"></i>arXiv</a>
             {% endif %}
+            {% if page.poster_url %}
+              <a href="{{ page.poster_url }}" class="custom-button"><i class="fas fa-file-image"></i>Poster</a> {# 或 fas fa-thumbtack #}
+            {% endif %}
+            {% if page.slides_url %}
+              <a href="{{ page.slides_url }}" class="custom-button"><i class="fab fa-slideshare"></i>Slides</a>
+            {% endif %}
             {% if page.huggingface_url %}
               <a href="{{ page.huggingface_url }}" class="custom-button">
                 <img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png" alt="Hugging Face Logo" class="button-icon-img">
