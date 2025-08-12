@@ -662,6 +662,40 @@ footer.sticky-bottom {
   border-color: var(--global-text-color);
 }
 
+@media (max-width: 575px) {
+  .publications ol.bibliography li .preview {
+    margin-bottom: 0.5rem;
+  }
+  .publications ol.bibliography li .abbr {
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  .publications ol.bibliography li .col-sm-3.abbr {
+    width: 30%;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  .publications ol.bibliography li .col-sm-8 {
+    width: 65%;
+    float: left;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+@media (max-width: 400px) {
+  .publications ol.bibliography li .col-sm-3.abbr {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .publications ol.bibliography li .col-sm-8 {
+    float: none;
+    width: 100%;
+  }
+}
 figure.highlight {
   margin: 0 0 1rem;
 }
