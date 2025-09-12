@@ -36,8 +36,10 @@ Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a Ph.D. candid
 
 <small><em>"Seek truth and beauty."</em></small>
 
-My research vision is to understand the fundamental mechanisms underpinning the practical success of deep learning, including (M)LLMs, and to develop a theoretically grounded, incentivized, democratic, and scalable decentralized learning framework as a foundation for next-generation general intelligence.
-Currently, my research lies at the intersection of these two directions:
+<!--My research vision is to understand the fundamental mechanisms underpinning the practical success of deep learning, including (M)LLMs, and to develop a theoretically grounded, incentivized, democratic, and scalable decentralized learning framework as a foundation for next-generation general intelligence.
+Currently, my research lies at the intersection of these two directions: -->
+
+Currently, my research lies at the intersection of these two directions: 
 
 - **Decentralized learning** (e.g., [generalization](https://arxiv.org/abs/2206.12680), [training dynamics](https://arxiv.org/abs/2306.02913), [data influence](https://openreview.net/forum?id=2TIYkqieKw), [communication allocation](https://openreview.net/forum?id=lWGMbJRCtQ), [benchmarking](https://openreview.net/forum?id=hDfD4HcDo0));
 - **Science of learning** (e.g., [symmetries](https://arxiv.org/abs/2406.09189), [training dynamics/implicit bias](https://arxiv.org/abs/2306.02913), [emergence of mergeability](https://openreview.net/forum?id=lWGMbJRCtQ));
