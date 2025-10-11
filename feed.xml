@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-11T11:13:09+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-11T11:50:21+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">DICE: Data Influence Cascade in Decentralized Learning</title><link href="Raiden-Zhu.github.io/blog/2025/DICE/" rel="alternate" type="text/html" title="DICE: Data Influence Cascade in Decentralized Learning" /><published>2025-03-15T00:00:00+00:00</published><updated>2025-03-15T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
@@ -11,12 +11,12 @@
 
 <h3 id="the-rise-of-decentralized-learning">The Rise of Decentralized Learning</h3>
 
-<p>Training state-of-the-art AI models has become astronomically expensive, with costs soaring into hundreds of millions of dollars. This escalating expense risks concentrating AI capabilities within a handful of tech giants, potentially excluding academic institutions and smaller organizations from frontier AI research. <strong>Decentralized Learning (DL)</strong> offers a compelling alternative paradigm: crowdsourcing both data and computational resources across a peer-to-peer (P2P) network of distributed nodes.</p>
+<p>Training state-of-the-art AI models has become astronomically expensive, risking concentration of AI capabilities within a handful of tech giants. <strong>Decentralized Learning (DL)</strong> offers a compelling alternative: crowdsourcing both data and computational resources across a peer-to-peer (P2P) network. Unlike centralized or federated approaches relying on a central server, decentralized learning enables direct peer-to-peer model exchanges through gossip protocols, democratizing access to large-scale machine learning while naturally preserving data privacy.</p>
 
-<p>Unlike traditional centralized or federated approaches that rely on a central server, decentralized learning enables direct peer-to-peer model exchanges through gossip protocols. Think of it as a computational community effort—where participants collaboratively build something no single member could achieve alone. This architecture not only democratizes access to large-scale machine learning but also naturally preserves data privacy since raw data never leaves local nodes.</p>
-
-<p>[IMAGE_PLACEHOLDER_1]
-<em>Figure: Architectural comparison between centralized (server-based) and decentralized (peer-to-peer) learning paradigms.</em></p>
+<div class="l-page">
+  <img src="https://raiden-zhu.github.io/assets/img/publication_preview/topology_text.png" alt="Decentralized Learning Architecture" style="max-width: 100%; height: auto;" />
+  <p style="text-align: center; font-style: italic;">Figure: Architectural comparison between centralized (server-based) and decentralized (peer-to-peer) learning paradigms.</p>
+</div>
 
 <hr />
 
@@ -38,11 +38,15 @@
 
 <p>The solution requires a robust framework for <strong>quantifying individual contributions</strong> in decentralized learning. Only with accurate contribution measurement can we design fair incentive mechanisms that reward participants proportionally to their actual impact on the collective learning outcome.</p>
 
+<p><strong>But how should we measure contributions?</strong> While superficial metrics like GPU uptime or data quantity are easy to track, they fail to capture what truly matters: <em>the actual impact on learning outcomes</em>. A node providing 1000 low-quality or mislabeled data points contributes far less than one providing 100 high-quality, informative samples. Similarly, a node with high uptime but poor data has limited real value.</p>
+
+<p>This insight leads us to <strong>data influence</strong>—a principled approach to measuring the causal impact of each data point on model performance. Data influence directly quantifies how much a specific piece of training data affects the final model’s predictions, making it an ideal metric for contribution assessment in collaborative learning.</p>
+
 <hr />
 
 <h3 id="why-traditional-data-influence-methods-fall-short">Why Traditional Data Influence Methods Fall Short</h3>
 
-<p>The problem of measuring data contribution has been extensively studied in centralized machine learning. Classical approaches include <strong>leave-one-out (LOO)</strong> retraining and <strong>influence functions</strong> (Koh &amp; Liang, 2017), which estimate a data point’s value by measuring how model performance changes when that data is removed.</p>
+<p>Data influence estimation has been extensively studied in centralized machine learning. Classical approaches include <strong>leave-one-out (LOO)</strong> retraining and <strong>influence functions</strong> (Koh &amp; Liang, 2017), which estimate a data point’s value by measuring how model performance changes when that data is removed.</p>
 
 <p>However, these centralized methods fundamentally <strong>fail in decentralized settings</strong> due to two critical distinctions:</p>
 
@@ -111,6 +115,16 @@
 
 <p>For the cases when \(\rho = 0\) and \(\rho = 1\), the relevant product expressions are defined as identity matrices, thereby ensuring that the r-hop DICE-E remains well-defined.</p>
 
+<div class="custom-box">
+  <h4>Key Insights from DICE</h4>
+  <p>Our theory uncovers the intricate interplay of factors that shape data influence in decentralized learning:</p>
+  <ul>
+    <li><span class="highlight-label"><b>1. Asymmetric Influence and Topological Importance:</b></span> <span class="highlight-yellow">The influence of identical data is not uniform across the network.</span> Instead, nodes with greater topological significance exert stronger influence. </li>
+    <li><span class="highlight-label"><b>2. The Role of Intermediate Nodes and Loss Landscape:</b></span> Intermediate nodes actively contribute to an <span class="highlight-yellow"><i>"influence chain"</i></span>. The local loss landscape of these models also actively shapes the influence as it propagates through the network.</li> 
+    <li><span class="highlight-label"><b>3. Influence Cascades with Damped Decay:</b></span> Data influence cascades with <i>"damped decay"</i> induced by mixing parameter W. This decay, which can be exponential with the number of hops, ensures that influence is <span class="highlight-yellow"><i>"localized"</i></span>.</li>
+  </ul>
+</div>
+
 <hr />
 
 <h3 id="deconstructing-the-theory-from-ground-truth-to-practical-estimator">Deconstructing the Theory: From Ground Truth to Practical Estimator</h3>
@@ -119,7 +133,7 @@
 
 <hr />
 
-<h4 id="layer-1-defining-the-ground-truth-"><strong>Layer 1: Defining the Ground Truth</strong> 🎯</h4>
+<h3 id="layer-1-defining-the-ground-truth-"><strong>Layer 1: Defining the Ground Truth</strong> 🎯</h3>
 
 <p>Before we can approximate influence, we must first define what we’re approximating—the ideal, “gold standard” measure of data influence. In decentralized learning, this requires carefully reasoning about causality: <em>What would change if a particular data point were removed?</em></p>
 
@@ -145,7 +159,7 @@
 
 <hr />
 
-<h4 id="layer-2-building-a-computable-bridge-"><strong>Layer 2: Building a Computable Bridge</strong> 🌉</h4>
+<h3 id="layer-2-building-a-computable-bridge-"><strong>Layer 2: Building a Computable Bridge</strong> 🌉</h3>
 
 <p>The ground-truth definitions are conceptually clear but computationally intractable. We need an approximation that can be computed efficiently using only information available during standard training. This is where gradient-based influence estimation enters.</p>
 
@@ -169,7 +183,7 @@
 
 <hr />
 
-<h4 id="layer-3-dissecting-the-main-theorem-"><strong>Layer 3: Dissecting the Main Theorem</strong> 🔬</h4>
+<h3 id="layer-3-dissecting-the-main-theorem-"><strong>Layer 3: Dissecting the Main Theorem</strong> 🔬</h3>
 
 <p>Now we return to our main theorem with fresh eyes. The multi-hop approximation \(\mathcal{I}_{\mathrm{DICE-E}}^{(r)}\) extends Proposition 1 to capture how influence propagates and transforms as it cascades through multiple hops. The complex formula can be understood through four distinct components, each playing a specific physical role:</p>
 
@@ -178,13 +192,30 @@
 
 <div class="custom-box" style="background-color: #f0f8ff; border-left-color: #0066cc;">
   <h4>🧩 The Four Pillars of Cascading Influence</h4>
+  
+  <p><strong>1. Optimization Term 💧</strong> — <em>Source of Influence</em></p>
+  <p style="margin-left: 1.5em;">
+    <strong>Mathematical Form:</strong> $$ \Delta_j(\boldsymbol{\theta}_j^t, \boldsymbol{z}_j^t) $$<br />
+    <strong>Intuition:</strong> The initial "push" that data gives to its local model. This is the stone dropping into water, creating the first disturbance.
+  </p>
 
-  | Component | Mathematical Form | Physical Role | Intuition |
-  |-----------|-------------------|---------------|-----------|
-  | **Optimization Term** 💧 | $$ \Delta_j(\boldsymbol{\theta}_j^t, \boldsymbol{z}_j^t) $$ | **Source of Influence** | The initial "push" that data gives to its local model. This is the stone dropping into water, creating the first disturbance. |
-  | **Communication Term** 🌐 | $$ \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} $$ | **Propagation Path** | Tracks the specific path influence takes through the network topology. The mixing matrix $$ \boldsymbol{W} $$ determines which nodes influence flows to and how much weight each edge carries. |
-  | **Curvature Term** 🔍 | $$ \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s-1}; \boldsymbol{z}_{k_s}^{t+s-1}) \right) $$ | **Influence Modulator** | Intermediate nodes aren't passive relays—their loss landscape curvature (Hessian $$ \boldsymbol{H} $$) actively shapes, dampens, or amplifies the passing influence signal. |
-  | **Test Gradient** 📏 | $$ \nabla L(\boldsymbol{\theta}_{k_\rho}^{t+\rho}; \boldsymbol{z}') $$ | **Impact Measurement** | The "probe" that measures final influence by checking how much the cascaded update affects test loss at the destination node. |
+  <p><strong>2. Communication Term 🌐</strong> — <em>Propagation Path</em></p>
+  <p style="margin-left: 1.5em;">
+    <strong>Mathematical Form:</strong> $$ \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} $$<br />
+    <strong>Intuition:</strong> Tracks the specific path influence takes through the network topology. The mixing matrix $$ \boldsymbol{W} $$ determines which nodes influence flows to and how much weight each edge carries.
+  </p>
+
+  <p><strong>3. Curvature Term 🔍</strong> — <em>Influence Modulator</em></p>
+  <p style="margin-left: 1.5em;">
+    <strong>Mathematical Form:</strong> $$ \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s-1}; \boldsymbol{z}_{k_s}^{t+s-1}) \right) $$<br />
+    <strong>Intuition:</strong> Intermediate nodes aren't passive relays—their loss landscape curvature (Hessian $$ \boldsymbol{H} $$) actively shapes, dampens, or amplifies the passing influence signal.
+  </p>
+
+  <p><strong>4. Test Gradient 📏</strong> — <em>Impact Measurement</em></p>
+  <p style="margin-left: 1.5em;">
+    <strong>Mathematical Form:</strong> $$ \nabla L(\boldsymbol{\theta}_{k_\rho}^{t+\rho}; \boldsymbol{z}') $$<br />
+    <strong>Intuition:</strong> The "probe" that measures final influence by checking how much the cascaded update affects test loss at the destination node.
+  </p>
 
   <p style="margin-top: 1em;"><strong>The Complete Picture:</strong> Data influence is born at the source node (optimization), travels through the network topology (communication), gets modulated by intermediate nodes' learning landscapes (curvature), and is ultimately measured by its impact on test performance (test gradient). Each component is essential—remove any one, and the cascade breaks down.</p>
 </div>
@@ -205,7 +236,7 @@
 
 <hr />
 
-<h4 id="layer-4-from-theory-to-practiceproximal-influence-"><strong>Layer 4: From Theory to Practice—Proximal Influence</strong> ⚡</h4>
+<h3 id="layer-4-from-theory-to-practiceproximal-influence-"><strong>Layer 4: From Theory to Practice—Proximal Influence</strong> ⚡</h3>
 
 <p>The full multi-hop theory is powerful but can be expensive to compute for large \(r\). For practical applications, we introduce a lightweight metric that captures the most immediate and significant influence relationships.</p>
 
@@ -242,16 +273,6 @@
 </div>
 
 <hr />
-
-<div class="custom-box">
-  <h4>Key Insights from DICE</h4>
-  <p>Our theory uncovers the intricate interplay of factors that shape data influence in decentralized learning:</p>
-  <ul>
-    <li><span class="highlight-label"><b>1. Asymmetric Influence and Topological Importance:</b></span> <span class="highlight-yellow">The influence of identical data is not uniform across the network.</span> Instead, nodes with greater topological significance exert stronger influence. </li>
-    <li><span class="highlight-label"><b>2. The Role of Intermediate Nodes and Loss Landscape:</b></span> Intermediate nodes actively contribute to an <span class="highlight-yellow"><i>"influence chain"</i></span>. The local loss landscape of these models also actively shapes the influence as it propagates through the network.</li> 
-    <li><span class="highlight-label"><b>3. Influence Cascades with Damped Decay:</b></span> Data influence cascades with <i>"damped decay"</i> induced by mixing parameter W. This decay, which can be exponential with the number of hops, ensures that influence is <span class="highlight-yellow"><i>"localized"</i></span>.</li>
-  </ul>
-</div>
 
 <h2 id="citation">Citation</h2>
 
