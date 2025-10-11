@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-11T12:45:41+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-11T12:59:24+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">DICE: Data Influence Cascade in Decentralized Learning</title><link href="Raiden-Zhu.github.io/blog/2025/DICE/" rel="alternate" type="text/html" title="DICE: Data Influence Cascade in Decentralized Learning" /><published>2025-03-15T00:00:00+00:00</published><updated>2025-03-15T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
 
-<p>🗓️ <strong>2025-07-10</strong> — Updated main results</p>
+<p>🗓️ <strong>2025-07-10</strong> - Updated main results</p>
 
 <hr />
 
@@ -26,7 +26,7 @@
   <p><strong>Why would rational participants contribute their valuable data and computational resources without a fair and transparent way to measure and reward their efforts?</strong></p>
 </blockquote>
 
-<p>Without addressing this question, decentralized learning risks suffering from the “tragedy of the commons”—participants may free-ride on others’ contributions while minimizing their own efforts. This challenge is particularly acute in decentralized settings because:</p>
+<p>Without addressing this question, decentralized learning risks suffering from the “tragedy of the commons”-participants may free-ride on others’ contributions while minimizing their own efforts. This challenge is particularly acute in decentralized settings because:</p>
 
 <ol>
   <li><strong>No central authority exists</strong> to monitor or enforce fair participation</li>
@@ -38,7 +38,7 @@
 
 <p><strong>But how should we measure contributions?</strong> While superficial metrics like GPU uptime or data quantity are easy to track, they fail to capture what truly matters: <em>the actual impact on learning outcomes</em>. A node providing 1000 low-quality or mislabeled data points contributes far less than one providing 100 high-quality, informative samples. Similarly, a node with high uptime but poor data has limited real value.</p>
 
-<p>This insight leads us to <strong>data influence</strong>—a principled approach to measuring the causal impact of each data point on model performance. Data influence directly quantifies how much a specific piece of training data affects the final model’s predictions, making it an ideal metric for contribution assessment in collaborative learning.</p>
+<p>This insight leads us to <strong>data influence</strong>-a principled approach to measuring the causal impact of each data point on model performance. Data influence directly quantifies how much a specific piece of training data affects the final model’s predictions, making it an ideal metric for contribution assessment in collaborative learning.</p>
 
 <h3 id="why-traditional-data-influence-methods-fall-short">Why Traditional Data Influence Methods Fall Short</h3>
 
@@ -48,7 +48,7 @@
 
 <p><strong>1. Multiple Models, Not One:</strong> In decentralized learning, there is no single global model. Each participant maintains their own local model, and the notion of “model performance” becomes ambiguous. Whose model should we evaluate? How do we aggregate influence across different models?</p>
 
-<p><strong>2. Dynamic, Cascading Influence:</strong> More fundamentally, data influence in decentralized learning is not static—it <strong>cascades</strong> through the network. When a node performs a local update using its data, this change propagates to its neighbors through gossip communication. These neighbors then pass the influence to <em>their</em> neighbors, creating a <strong>ripple effect</strong> that spreads across the entire network over time.</p>
+<p><strong>2. Dynamic, Cascading Influence:</strong> More fundamentally, data influence in decentralized learning is not static-it <strong>cascades</strong> through the network. When a node performs a local update using its data, this change propagates to its neighbors through gossip communication. These neighbors then pass the influence to <em>their</em> neighbors, creating a <strong>ripple effect</strong> that spreads across the entire network over time.</p>
 
 <div class="custom-box" style="background-color: #fff9e6; border-left-color: #ff9800;">
   <h4>💡 The Ripple Effect Analogy</h4>
@@ -64,7 +64,7 @@
 
 <p>This work introduces <strong>DICE (Data Influence Cascade in dEcentralized learning)</strong>, the first comprehensive framework for measuring data influence in fully decentralized learning systems. Our key contributions span three dimensions:</p>
 
-<p><strong>Conceptually</strong>, we establish a customer-centric perspective for defining data value in decentralized settings. Inspired by management theory <d-cite key="drucker1985innovation"></d-cite>, we recognize that when a node shares its model update, <em>its neighbors are the customers</em>. Therefore, data influence should be measured by the impact on these receiving nodes’ test performance—not by the contributing node itself.</p>
+<p><strong>Conceptually</strong>, we establish a customer-centric perspective for defining data value in decentralized settings. Inspired by management theory <d-cite key="drucker1985innovation"></d-cite>, we recognize that when a node shares its model update, <em>its neighbors are the customers</em>. Therefore, data influence should be measured by the impact on these receiving nodes’ test performance-not by the contributing node itself.</p>
 
 <p><strong>Theoretically</strong>, we develop a rigorous mathematical framework that:</p>
 <ul>
@@ -125,7 +125,7 @@
 
 <h3 id="layer-1-defining-the-ground-truth-"><strong>Layer 1: Defining the Ground Truth</strong> 🎯</h3>
 
-<p>Before we can approximate influence, we must first define what we’re approximating—the ideal, “gold standard” measure of data influence. In decentralized learning, this requires carefully reasoning about causality: <em>What would change if a particular data point were removed?</em></p>
+<p>Before we can approximate influence, we must first define what we’re approximating-the ideal, “gold standard” measure of data influence. In decentralized learning, this requires carefully reasoning about causality: <em>What would change if a particular data point were removed?</em></p>
 
 <p><strong>Definition 1 (One-hop Ground-truth Influence)</strong></p>
 
@@ -139,13 +139,13 @@
 
 <p><strong>Definition 2 (Multi-hop Ground-truth Influence)</strong></p>
 
-<p>The influence doesn’t stop at immediate neighbors—it cascades through the network. The \(r\)-hop ground-truth influence extends the counterfactual reasoning recursively:</p>
+<p>The influence doesn’t stop at immediate neighbors-it cascades through the network. The \(r\)-hop ground-truth influence extends the counterfactual reasoning recursively:</p>
 
 \[\mathcal{I}_{\mathrm{DICE-GT}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}') = \sum_{k \in \mathcal{N}_{\mathrm{out}}^{(r)}(j)} q_k \left[ L(\boldsymbol{\theta}_k^{t+r,-j}; \boldsymbol{z}') - L(\boldsymbol{\theta}_k^{t+r}; \boldsymbol{z}') \right]\]
 
 <p>where \(\mathcal{N}_{\mathrm{out}}^{(r)}(j)\) denotes all nodes reachable from \(j\) within \(r\) hops, and \(q_k\) is a weighting factor (e.g., sampling probability).</p>
 
-<p><strong>Intuition</strong>: This aggregates influence across all nodes within an \(r\)-hop neighborhood. The counterfactual \(\boldsymbol{\theta}_k^{t+r,-j}\) requires retraining the <em>entire network</em> for \(r\) rounds without \(\boldsymbol{z}_j^t\)—an exponentially expensive operation that makes direct computation infeasible in practice.</p>
+<p><strong>Intuition</strong>: This aggregates influence across all nodes within an \(r\)-hop neighborhood. The counterfactual \(\boldsymbol{\theta}_k^{t+r,-j}\) requires retraining the <em>entire network</em> for \(r\) rounds without \(\boldsymbol{z}_j^t\)-an exponentially expensive operation that makes direct computation infeasible in practice.</p>
 
 <h3 id="layer-2-building-a-computable-bridge-"><strong>Layer 2: Building a Computable Bridge</strong> 🌉</h3>
 
@@ -176,13 +176,13 @@
 <div class="custom-box" style="background-color: #f0f8ff; border-left-color: #0066cc; padding: 1.2em;">
   <h4 style="margin-bottom: 0.8em;">🧩 The Four Pillars of Cascading Influence</h4>
   
-  <p style="margin-bottom: 0.5em;"><strong>1. Optimization Term 💧 — Source of Influence:</strong> $$ \Delta_j(\boldsymbol{\theta}_j^t, \boldsymbol{z}_j^t) $$ | The initial "push" that data gives to its local model.</p>
+  <p style="margin-bottom: 0.5em;"><strong>1. Optimization Term 💧 - Source of Influence:</strong> $$ \Delta_j(\boldsymbol{\theta}_j^t, \boldsymbol{z}_j^t) $$ | The initial "push" that data gives to its local model.</p>
 
-  <p style="margin-bottom: 0.5em;"><strong>2. Communication Term 🌐 — Propagation Path:</strong> $$ \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} $$ | Tracks the path influence takes through the network topology.</p>
+  <p style="margin-bottom: 0.5em;"><strong>2. Communication Term 🌐 - Propagation Path:</strong> $$ \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} $$ | Tracks the path influence takes through the network topology.</p>
 
-  <p style="margin-bottom: 0.5em;"><strong>3. Curvature Term 🔍 — Influence Modulator:</strong> $$ \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H} \right) $$ | Loss landscape curvature actively shapes, dampens, or amplifies the passing influence signal.</p>
+  <p style="margin-bottom: 0.5em;"><strong>3. Curvature Term 🔍 - Influence Modulator:</strong> $$ \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H} \right) $$ | Loss landscape curvature actively shapes, dampens, or amplifies the passing influence signal.</p>
 
-  <p style="margin-bottom: 0.5em;"><strong>4. Test Gradient 📏 — Impact Measurement:</strong> $$ \nabla L(\boldsymbol{\theta}_{k_\rho}^{t+\rho}; \boldsymbol{z}') $$ | The "probe" that measures final influence by checking how the cascaded update affects test loss at the destination.</p>
+  <p style="margin-bottom: 0.5em;"><strong>4. Test Gradient 📏 - Impact Measurement:</strong> $$ \nabla L(\boldsymbol{\theta}_{k_\rho}^{t+\rho}; \boldsymbol{z}') $$ | The "probe" that measures final influence by checking how the cascaded update affects test loss at the destination.</p>
 
   <p style="margin-top: 0.8em; padding-top: 0.8em; border-top: 1px solid #d0e0f0;"><strong>The Complete Picture:</strong> Data influence is born at the source node (optimization), travels through the network topology (communication), gets modulated by intermediate nodes' learning landscapes (curvature), and is ultimately measured by its impact on test performance (test gradient).</p>
 </div>
@@ -194,7 +194,7 @@
     <p><strong>Topology Determines Power</strong>: The communication term reveals that network position matters enormously. Nodes with high out-degree or centrality can amplify their data’s influence across the network. This explains why identical data at different nodes can have vastly different global impact.</p>
   </li>
   <li>
-    <p><strong>Curvature Creates Damped Decay</strong>: The curvature term acts as a natural “friction” on influence propagation. When \(\eta \boldsymbol{H} \approx \boldsymbol{I}\), the term \((\boldsymbol{I} - \eta \boldsymbol{H})\) becomes small, creating exponential decay with the number of hops. This ensures influence remains <strong>localized</strong> rather than spreading indefinitely.</p>
+    <p><strong>Influence Cascades with Damped Decay</strong>: The communication matrix \(\boldsymbol{W}\) creates a natural damping effect on influence propagation. Since each entry of \(\boldsymbol{W}\) is at most 1 (and typically less), the multiplicative cascade \(\prod \boldsymbol{W}\) leads to exponential decay with the number of hops. Additionally, the curvature term acts as a modulating “friction” that further shapes how influence propagates. Together, these ensure influence remains <strong>localized</strong> rather than spreading indefinitely.</p>
   </li>
   <li>
     <p><strong>Dynamic, State-Dependent Influence</strong>: Unlike centralized settings where data influence is static, DICE reveals that influence in decentralized learning is fundamentally <em>dynamic</em>. The same data can have different influence at different times, depending on the evolving loss landscapes of intermediate nodes.</p>
@@ -203,7 +203,7 @@
 
 <hr />
 
-<h3 id="layer-4-from-theory-to-practiceproximal-influence-"><strong>Layer 4: From Theory to Practice—Proximal Influence</strong> ⚡</h3>
+<h3 id="layer-4-from-theory-to-practice-proximal-influence-"><strong>Layer 4: From Theory to Practice-Proximal Influence</strong> ⚡</h3>
 
 <p>The full multi-hop theory is powerful but can be expensive to compute for large \(r\). For practical applications, we introduce a lightweight metric that captures the most immediate and significant influence relationships.</p>
 
@@ -233,7 +233,7 @@
   
   <p><strong>Solution with Proximal Influence:</strong> Each node computes proximal influence for all its neighbors. Honest nodes observe that malicious neighbors consistently produce <em>negative</em> influence (increasing test loss rather than decreasing it). By setting a simple threshold (e.g., exclude neighbors with influence &lt; 0), honest nodes can autonomously prune malicious connections.</p>
   
-  <p><strong>Result:</strong> Within a few communication rounds, malicious nodes become isolated, and the network self-heals—all without centralized coordination. This demonstrates DICE's power for building <strong>robust, self-governing decentralized systems</strong>.</p>
+  <p><strong>Result:</strong> Within a few communication rounds, malicious nodes become isolated, and the network self-heals-all without centralized coordination. This demonstrates DICE's power for building <strong>robust, self-governing decentralized systems</strong>.</p>
 </div>
 
 <h2 id="citation">Citation</h2>
