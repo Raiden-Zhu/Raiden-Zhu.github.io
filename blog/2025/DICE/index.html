@@ -769,6 +769,51 @@ d-contents nav ul {
   </div>
 </div>
 
+<script type="text/javascript">
+  // Force TOC to left side - execute immediately
+  (function() {
+    function moveTOC() {
+      var toc = document.querySelector('d-contents');
+      if (toc && window.innerWidth >= 1024) {
+        toc.style.position = 'fixed';
+        toc.style.left = '20px';
+        toc.style.top = '50%';
+        toc.style.transform = 'translateY(-50%)';
+        toc.style.width = '260px';
+        toc.style.maxHeight = '85vh';
+        toc.style.overflowY = 'auto';
+        toc.style.zIndex = '1000';
+        toc.style.gridColumn = 'unset';
+        toc.style.right = 'unset';
+        toc.style.margin = '0';
+        
+        var article = document.querySelector('d-article');
+        if (article) {
+          article.style.marginLeft = '300px';
+          article.style.paddingLeft = '20px';
+        }
+        console.log('TOC moved to left side');
+      }
+    }
+    
+    // Execute immediately and with delays
+    moveTOC();
+    setTimeout(moveTOC, 100);
+    setTimeout(moveTOC, 500);
+    setTimeout(moveTOC, 1000);
+    setTimeout(moveTOC, 2000);
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', moveTOC);
+    }
+    
+    window.addEventListener('load', function() {
+      moveTOC();
+      setTimeout(moveTOC, 500);
+    });
+  })();
+</script>
+
 <!--
 
 ## Background

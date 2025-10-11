@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-11T16:16:34+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-11T16:23:33+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">DICE: Data Influence Cascade in Decentralized Learning</title><link href="Raiden-Zhu.github.io/blog/2025/DICE/" rel="alternate" type="text/html" title="DICE: Data Influence Cascade in Decentralized Learning" /><published>2025-03-15T00:00:00+00:00</published><updated>2025-03-15T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
@@ -258,6 +258,51 @@
 
   </div>
 </div>
+
+<script type="text/javascript">
+  // Force TOC to left side - execute immediately
+  (function() {
+    function moveTOC() {
+      var toc = document.querySelector('d-contents');
+      if (toc && window.innerWidth >= 1024) {
+        toc.style.position = 'fixed';
+        toc.style.left = '20px';
+        toc.style.top = '50%';
+        toc.style.transform = 'translateY(-50%)';
+        toc.style.width = '260px';
+        toc.style.maxHeight = '85vh';
+        toc.style.overflowY = 'auto';
+        toc.style.zIndex = '1000';
+        toc.style.gridColumn = 'unset';
+        toc.style.right = 'unset';
+        toc.style.margin = '0';
+        
+        var article = document.querySelector('d-article');
+        if (article) {
+          article.style.marginLeft = '300px';
+          article.style.paddingLeft = '20px';
+        }
+        console.log('TOC moved to left side');
+      }
+    }
+    
+    // Execute immediately and with delays
+    moveTOC();
+    setTimeout(moveTOC, 100);
+    setTimeout(moveTOC, 500);
+    setTimeout(moveTOC, 1000);
+    setTimeout(moveTOC, 2000);
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', moveTOC);
+    }
+    
+    window.addEventListener('load', function() {
+      moveTOC();
+      setTimeout(moveTOC, 500);
+    });
+  })();
+</script>
 
 <!--
 
