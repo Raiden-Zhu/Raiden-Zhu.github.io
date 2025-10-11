@@ -193,12 +193,23 @@
     grid-column-gap: 32px;
   }
 }
-/* --- Fix TOC Position (Keep on Left Side) --- */ d-contents {
-  grid-column: page-start / text-start !important;
-  justify-self: start !important;
-  align-self: start !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
+/* --- Fix TOC Position (Force on Left Side) --- */ d-contents {
+  position: fixed !important;
+  left: 20px !important;
+  top: 200px !important;
+  width: 220px !important;
+  max-width: 220px !important;
+  grid-column: unset !important;
+  z-index: 1000 !important;
+}
+/* Ensure TOC doesn't overlap with main content on smaller screens */ @media(max-width: 1400px) {
+  d-contents {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: auto !important;
+    margin-bottom: 2em !important;
+  }
 }
 /* --- Main Article Layout --- */ d-article {
   max-width: 100%;
@@ -483,7 +494,7 @@
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
 
-<p>🗓️ <strong>2025-10-11</strong> - Added comprehensive background context and practical applications</p>
+<p>🗓️ <strong>2025-10-11</strong> - Added background context and practical applications</p>
 
 <p>🗓️ <strong>2025-07-10</strong> - Updated main results</p>
 
