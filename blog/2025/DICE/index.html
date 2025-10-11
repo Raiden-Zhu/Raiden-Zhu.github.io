@@ -493,7 +493,44 @@ d-contents nav ul {
           </nav>
         </d-contents>
 
-        <p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;"></p>
+        <script>
+  // Force move TOC to left side after page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    function moveTOC() {
+      const toc = document.querySelector('d-contents');
+      if (toc && window.innerWidth >= 1024) {
+        // Force apply left-side styles with JavaScript
+        toc.style.position = 'fixed';
+        toc.style.left = '20px';
+        toc.style.top = '50%';
+        toc.style.transform = 'translateY(-50%)';
+        toc.style.width = '260px';
+        toc.style.maxHeight = '85vh';
+        toc.style.overflowY = 'auto';
+        toc.style.zIndex = '1000';
+        toc.style.gridColumn = 'unset';
+        toc.style.right = 'unset';
+        
+        // Adjust main article
+        const article = document.querySelector('d-article');
+        if (article) {
+          article.style.marginLeft = '300px';
+          article.style.paddingLeft = '20px';
+        }
+      }
+    }
+    
+    // Try multiple times to ensure it works
+    moveTOC();
+    setTimeout(moveTOC, 100);
+    setTimeout(moveTOC, 500);
+    setTimeout(moveTOC, 1000);
+  });
+</script>
+
+<hr>
+
+<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;"></p>
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
 
