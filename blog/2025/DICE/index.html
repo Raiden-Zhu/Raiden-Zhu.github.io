@@ -183,13 +183,13 @@
     <script src="/assets/js/distillpub/overrides.js"></script>
     
     <style type="text/css">
-      /* --- Override Distill Grid System for Wider Text --- */ @media(min-width: 1180px) {
+      /* --- Override Distill Grid System for Wider Text (1.5x) --- */ /* Original: 8 columns × 60px = 480px */ /* Target: 12 columns × 60px = 720px (1.5x wider) */ @media(min-width: 1180px) {
   .base-grid,
   d-article,
   d-byline,
   d-footnote-list,
   d-citation-list {
-    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
     grid-column-gap: 32px;
   }
 }
