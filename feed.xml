@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-11T11:50:21+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="Raiden-Zhu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Raiden-Zhu.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-11T12:04:23+00:00</updated><id>Raiden-Zhu.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">DICE: Data Influence Cascade in Decentralized Learning</title><link href="Raiden-Zhu.github.io/blog/2025/DICE/" rel="alternate" type="text/html" title="DICE: Data Influence Cascade in Decentralized Learning" /><published>2025-03-15T00:00:00+00:00</published><updated>2025-03-15T00:00:00+00:00</updated><id>Raiden-Zhu.github.io/blog/2025/DICE</id><content type="html" xml:base="Raiden-Zhu.github.io/blog/2025/DICE/"><![CDATA[<p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;" /></p>
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
@@ -13,9 +13,9 @@
 
 <p>Training state-of-the-art AI models has become astronomically expensive, risking concentration of AI capabilities within a handful of tech giants. <strong>Decentralized Learning (DL)</strong> offers a compelling alternative: crowdsourcing both data and computational resources across a peer-to-peer (P2P) network. Unlike centralized or federated approaches relying on a central server, decentralized learning enables direct peer-to-peer model exchanges through gossip protocols, democratizing access to large-scale machine learning while naturally preserving data privacy.</p>
 
-<div class="l-page">
-  <img src="https://raiden-zhu.github.io/assets/img/publication_preview/topology_text.png" alt="Decentralized Learning Architecture" style="max-width: 100%; height: auto;" />
-  <p style="text-align: center; font-style: italic;">Figure: Architectural comparison between centralized (server-based) and decentralized (peer-to-peer) learning paradigms.</p>
+<div style="text-align: center; margin: 1.5em 0;">
+  <img src="https://raiden-zhu.github.io/assets/img/publication_preview/topology_text.png" alt="Decentralized Learning Architecture" style="max-width: 85%; height: auto;" />
+  <p style="font-style: italic; margin-top: 0.5em; font-size: 0.95em;">Figure: Architectural comparison between centralized (server-based) and decentralized (peer-to-peer) learning paradigms.</p>
 </div>
 
 <hr />
@@ -56,7 +56,7 @@
 
 <div class="custom-box" style="background-color: #fff9e6; border-left-color: #ff9800;">
   <h4>💡 The Ripple Effect Analogy</h4>
-  <p>Imagine dropping a stone into a still pond. The initial impact creates ripples that propagate outward in expanding circles. Similarly, when a node trains on its local data, the resulting model update creates an "influence ripple" that cascades through the network via peer-to-peer communications. Just as water ripples eventually fade with distance, data influence also decays as it propagates through multiple hops.</p>
+  <p>Like a stone dropped into a pond, a node's local update creates influence ripples that propagate through the network via peer-to-peer communications. Just as water ripples fade with distance, data influence decays across multiple hops.</p>
 </div>
 
 <p>[IMAGE_PLACEHOLDER_2]
@@ -70,7 +70,7 @@
 
 <p>This work introduces <strong>DICE (Data Influence Cascade in dEcentralized learning)</strong>, the first comprehensive framework for measuring data influence in fully decentralized learning systems. Our key contributions span three dimensions:</p>
 
-<p><strong>Conceptually</strong>, we establish a customer-centric perspective for defining data value in decentralized settings. Inspired by management theory (Drucker, 1985), we recognize that when a node shares its model update, <em>its neighbors are the customers</em>. Therefore, data influence should be measured by the impact on these receiving nodes’ test performance—not by the contributing node itself.</p>
+<p><strong>Conceptually</strong>, we establish a customer-centric perspective for defining data value in decentralized settings. Inspired by management theory <d-cite key="drucker1985innovation"></d-cite>, we recognize that when a node shares its model update, <em>its neighbors are the customers</em>. Therefore, data influence should be measured by the impact on these receiving nodes’ test performance—not by the contributing node itself.</p>
 
 <p><strong>Theoretically</strong>, we develop a rigorous mathematical framework that:</p>
 <ul>
@@ -131,8 +131,6 @@
 
 <p>The theorem above represents our main theoretical contribution, but understanding its significance requires unpacking how we built this result from foundational principles. Let’s trace the conceptual journey from defining the ideal “ground truth” influence to deriving a practical, computable approximation.</p>
 
-<hr />
-
 <h3 id="layer-1-defining-the-ground-truth-"><strong>Layer 1: Defining the Ground Truth</strong> 🎯</h3>
 
 <p>Before we can approximate influence, we must first define what we’re approximating—the ideal, “gold standard” measure of data influence. In decentralized learning, this requires carefully reasoning about causality: <em>What would change if a particular data point were removed?</em></p>
@@ -157,8 +155,6 @@
 
 <p><strong>Intuition</strong>: This aggregates influence across all nodes within an \(r\)-hop neighborhood. The counterfactual \(\boldsymbol{\theta}_k^{t+r,-j}\) requires retraining the <em>entire network</em> for \(r\) rounds without \(\boldsymbol{z}_j^t\)—an exponentially expensive operation that makes direct computation infeasible in practice.</p>
 
-<hr />
-
 <h3 id="layer-2-building-a-computable-bridge-"><strong>Layer 2: Building a Computable Bridge</strong> 🌉</h3>
 
 <p>The ground-truth definitions are conceptually clear but computationally intractable. We need an approximation that can be computed efficiently using only information available during standard training. This is where gradient-based influence estimation enters.</p>
@@ -181,8 +177,6 @@
 
 <p>This proposition is the crucial stepping stone: it shows that influence can be estimated using <strong>gradients computed during normal training</strong>, without expensive leave-one-out retraining.</p>
 
-<hr />
-
 <h3 id="layer-3-dissecting-the-main-theorem-"><strong>Layer 3: Dissecting the Main Theorem</strong> 🔬</h3>
 
 <p>Now we return to our main theorem with fresh eyes. The multi-hop approximation \(\mathcal{I}_{\mathrm{DICE-E}}^{(r)}\) extends Proposition 1 to capture how influence propagates and transforms as it cascades through multiple hops. The complex formula can be understood through four distinct components, each playing a specific physical role:</p>
@@ -190,34 +184,22 @@
 <p>[IMAGE_PLACEHOLDER_3]
 <em>Figure: Visual decomposition of the four key components in the multi-hop influence formula.</em></p>
 
-<div class="custom-box" style="background-color: #f0f8ff; border-left-color: #0066cc;">
-  <h4>🧩 The Four Pillars of Cascading Influence</h4>
+<div class="custom-box" style="background-color: #f0f8ff; border-left-color: #0066cc; padding: 1.2em;">
+  <h4 style="margin-bottom: 0.8em;">🧩 The Four Pillars of Cascading Influence</h4>
   
-  <p><strong>1. Optimization Term 💧</strong> — <em>Source of Influence</em></p>
-  <p style="margin-left: 1.5em;">
-    <strong>Mathematical Form:</strong> $$ \Delta_j(\boldsymbol{\theta}_j^t, \boldsymbol{z}_j^t) $$<br />
-    <strong>Intuition:</strong> The initial "push" that data gives to its local model. This is the stone dropping into water, creating the first disturbance.
-  </p>
+  <p style="margin-bottom: 0.6em;"><strong>1. Optimization Term 💧</strong> — <em>Source of Influence</em><br />
+  <span style="margin-left: 1.5em; display: inline-block; margin-top: 0.2em;"><strong>Math:</strong> $$ \Delta_j(\boldsymbol{\theta}_j^t, \boldsymbol{z}_j^t) $$ | The initial "push" that data gives to its local model.</span></p>
 
-  <p><strong>2. Communication Term 🌐</strong> — <em>Propagation Path</em></p>
-  <p style="margin-left: 1.5em;">
-    <strong>Mathematical Form:</strong> $$ \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} $$<br />
-    <strong>Intuition:</strong> Tracks the specific path influence takes through the network topology. The mixing matrix $$ \boldsymbol{W} $$ determines which nodes influence flows to and how much weight each edge carries.
-  </p>
+  <p style="margin-bottom: 0.6em;"><strong>2. Communication Term 🌐</strong> — <em>Propagation Path</em><br />
+  <span style="margin-left: 1.5em; display: inline-block; margin-top: 0.2em;"><strong>Math:</strong> $$ \prod_{s=1}^{\rho} \boldsymbol{W}_{k_s, k_{s-1}}^{t+s-1} $$ | Tracks the path through network topology.</span></p>
 
-  <p><strong>3. Curvature Term 🔍</strong> — <em>Influence Modulator</em></p>
-  <p style="margin-left: 1.5em;">
-    <strong>Mathematical Form:</strong> $$ \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H}(\boldsymbol{\theta}_{k_s}^{t+s-1}; \boldsymbol{z}_{k_s}^{t+s-1}) \right) $$<br />
-    <strong>Intuition:</strong> Intermediate nodes aren't passive relays—their loss landscape curvature (Hessian $$ \boldsymbol{H} $$) actively shapes, dampens, or amplifies the passing influence signal.
-  </p>
+  <p style="margin-bottom: 0.6em;"><strong>3. Curvature Term 🔍</strong> — <em>Influence Modulator</em><br />
+  <span style="margin-left: 1.5em; display: inline-block; margin-top: 0.2em;"><strong>Math:</strong> $$ \prod_{s=2}^{\rho} \left( \boldsymbol{I} - \eta^{t+s-1} \boldsymbol{H} \right) $$ | Loss landscape curvature shapes the signal.</span></p>
 
-  <p><strong>4. Test Gradient 📏</strong> — <em>Impact Measurement</em></p>
-  <p style="margin-left: 1.5em;">
-    <strong>Mathematical Form:</strong> $$ \nabla L(\boldsymbol{\theta}_{k_\rho}^{t+\rho}; \boldsymbol{z}') $$<br />
-    <strong>Intuition:</strong> The "probe" that measures final influence by checking how much the cascaded update affects test loss at the destination node.
-  </p>
+  <p style="margin-bottom: 0.6em;"><strong>4. Test Gradient 📏</strong> — <em>Impact Measurement</em><br />
+  <span style="margin-left: 1.5em; display: inline-block; margin-top: 0.2em;"><strong>Math:</strong> $$ \nabla L(\boldsymbol{\theta}_{k_\rho}^{t+\rho}; \boldsymbol{z}') $$ | Measures final impact on test loss.</span></p>
 
-  <p style="margin-top: 1em;"><strong>The Complete Picture:</strong> Data influence is born at the source node (optimization), travels through the network topology (communication), gets modulated by intermediate nodes' learning landscapes (curvature), and is ultimately measured by its impact on test performance (test gradient). Each component is essential—remove any one, and the cascade breaks down.</p>
+  <p style="margin-top: 0.8em; padding-top: 0.8em; border-top: 1px solid #d0e0f0;"><strong>The Complete Picture:</strong> Data influence is born at the source node (optimization), travels through the network topology (communication), gets modulated by intermediate nodes' learning landscapes (curvature), and is ultimately measured by its impact on test performance (test gradient).</p>
 </div>
 
 <p><strong>Remarkable Insights from This Decomposition:</strong></p>
@@ -272,8 +254,6 @@
   <p><strong>Result:</strong> Within a few communication rounds, malicious nodes become isolated, and the network self-heals—all without centralized coordination. This demonstrates DICE's power for building <strong>robust, self-governing decentralized systems</strong>.</p>
 </div>
 
-<hr />
-
 <h2 id="citation">Citation</h2>
 
 <div class="custom-box">
@@ -292,6 +272,12 @@
 
   </div>
 </div>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<d-bibliography></d-bibliography>
 
 <!--
 
