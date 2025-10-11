@@ -193,26 +193,20 @@
     grid-column-gap: 32px;
   }
 }
-/* --- Elegant TOC Positioning on Left --- */ /* Use sticky positioning - TOC stays on left but doesn't overlap header */ @media(min-width: 1400px) {
+/* --- Elegant TOC Positioning on Left --- */ /* Force TOC to left side with sticky positioning */ @media(min-width: 1400px) {
   d-contents {
-    position: sticky !important;
-    top: 80px !important;
-    left: 0 !important;
-    float: left !important;
+    position: fixed !important;
+    top: 120px !important;
+    left: calc((100vw - 1180px) / 2 - 280px) !important;
     width: 240px !important;
     max-width: 240px !important;
-    margin-left: -280px !important;
-    margin-right: 40px !important;
     padding: 1em !important;
     background: rgba(255, 255, 255, 0.95) !important;
     border-radius: 8px !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
     z-index: 100 !important;
-  }
-  
-  /* Add left margin to main content to make space for TOC */
-  d-article {
-    margin-left: 0 !important;
+    max-height: calc(100vh - 140px) !important;
+    overflow-y: auto !important;
   }
 }
 /* On smaller screens, keep TOC in default position */ @media(max-width: 1399px) {
@@ -504,9 +498,7 @@
 
 <h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
 
-<p>🗓️ <strong>2025-10-11</strong> - Added background context and practical applications</p>
-
-<p>🗓️ <strong>2025-07-10</strong> - Updated main results</p>
+<p>🗓️ <strong>2025-07-10</strong> - Added background context and practical applications</p>
 
 <hr>
 
