@@ -193,11 +193,18 @@
     grid-column-gap: 32px;
   }
 }
-/* --- TOC Styling (Keep Distill Default Position) --- */ /* Use Distill's default right-side TOC with elegant styling */ d-contents {
+/* --- TOC Styling (Move to Left Side) --- */ /* Force TOC to left sidebar */ d-contents {
+  position: fixed !important;
+  left: 20px !important;
+  top: 120px !important;
+  width: 240px !important;
+  max-height: calc(100vh - 160px) !important;
+  overflow-y: auto !important;
   padding: 1em !important;
   background: rgba(255, 255, 255, 0.95) !important;
   border-radius: 8px !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  z-index: 1000 !important;
 }
 /* --- Main Article Layout --- */ d-article {
   max-width: 100%;
@@ -538,7 +545,9 @@
 </div>
 
 <div style="text-align: center; margin: 1.5em 0;">
-  <img src="https://raiden-zhu.github.io/assets/img/publication_preview/ripple.png" alt="Cascading Data Influence Visualization" style="max-width: 85%; height: auto;">
+  <div style="max-width: 85%; margin: 0 auto; height: 400px; overflow: hidden;">
+    <img src="https://raiden-zhu.github.io/assets/img/publication_preview/ripple.png" alt="Cascading Data Influence Visualization" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;">
+  </div>
   <p style="font-style: italic; margin-top: 0.5em; font-size: 0.88em; color: #666;">Figure: Visualization of cascading data influence in decentralized learning as ripples spreading through a network.</p>
 </div>
 
