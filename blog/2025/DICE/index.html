@@ -529,7 +529,7 @@
 
 <p><strong>1. Multiple Models, Not One:</strong> In decentralized learning, there is no single global model. Each participant maintains their own local model, and the notion of “model performance” becomes ambiguous. Whose model should we evaluate? How do we aggregate influence across different models?</p>
 
-<p><strong>2. Dynamic, Cascading Influence:</strong> More fundamentally, data influence in decentralized learning is not static-it <strong>cascades</strong> through the network. When a node performs a local update using its data, this change propagates to its neighbors through gossip communication. These neighbors then pass the influence to <em>their</em> neighbors, creating a <strong>ripple effect</strong> that spreads across the entire network over time.</p>
+<p><strong>2. Dynamic, Cascading Influence:</strong> More fundamentally, data influence in decentralized learning is not static—it <strong>cascades</strong> through the network. When a node performs a local update using its data, this change propagates to its neighbors through gossip communication. These neighbors then pass the influence to <em>their</em> neighbors, creating a <strong>ripple effect</strong> that spreads across the entire network over time.</p>
 
 <div class="custom-box" style="background-color: #fff9e6; border-left-color: #ff9800;">
   <h4>💡 The Ripple Effect Analogy</h4>
@@ -545,7 +545,7 @@
 
 <p>This work introduces <strong>DICE (Data Influence Cascade in dEcentralized learning)</strong>, the first comprehensive framework for measuring data influence in fully decentralized learning systems. Our key contributions span three dimensions:</p>
 
-<p><strong>Conceptually</strong>, we establish a customer-centric perspective for defining data value in decentralized settings. Inspired by management theory <d-cite key="drucker1985innovation"></d-cite>, we recognize that when a node shares its model update, <em>its neighbors are the customers</em>. Therefore, data influence should be measured by the impact on these receiving nodes’ test performance-not by the contributing node itself.</p>
+<p><strong>Conceptually</strong>, we establish a customer-centric perspective for defining data value in decentralized settings. Inspired by management theory <d-cite key="drucker1985innovation"></d-cite>, we recognize that when a node shares its model update, <em>its neighbors are the customers</em>. Therefore, data influence should be measured by the impact on these receiving nodes’ test performance—rather than by the contributing node itself.</p>
 
 <p><strong>Theoretically</strong>, we develop a rigorous mathematical framework that:</p>
 <ul>
@@ -727,7 +727,7 @@
   
   <p><strong>Solution with Proximal Influence:</strong> Each node computes proximal influence for all its neighbors. Honest nodes observe that malicious neighbors consistently produce <em>negative</em> influence (increasing test loss rather than decreasing it). By setting a simple threshold (e.g., exclude neighbors with influence &lt; 0), honest nodes can autonomously prune malicious connections.</p>
   
-  <p><strong>Result:</strong> Within a few communication rounds, malicious nodes become isolated, and the network self-heals-all without centralized coordination. This demonstrates DICE's power for building <strong>robust, self-governing decentralized systems</strong>.</p>
+  <p><strong>Result:</strong> Within a few communication rounds, malicious nodes become isolated, and the network self-heals—all without centralized coordination. This demonstrates DICE's power for building <strong>robust, self-governing decentralized systems</strong>.</p>
 </div>
 
 <h2 id="citation">Citation</h2>
