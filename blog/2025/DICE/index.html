@@ -193,41 +193,11 @@
     grid-column-gap: 32px;
   }
 }
-/* --- Ultimate TOC Solution: Sticky Positioning --- */ /* TOC stays in document flow, sticks when scrolled into view */ @media(min-width: 1400px) {
-  /* Create space for TOC by adjusting article container */
-  d-article {
-    display: grid !important;
-    grid-template-columns: 240px 1fr !important;
-    grid-gap: 40px !important;
-    align-items: start !important;
-  }
-  
-  d-contents {
-    position: sticky !important;
-    top: 80px !important;
-    grid-column: 1 !important;
-    width: 240px !important;
-    max-width: 240px !important;
-    padding: 1em !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-    max-height: calc(100vh - 100px) !important;
-    overflow-y: auto !important;
-    align-self: start !important;
-  }
-  
-  /* Main content takes second column */
-  d-article > *:not(d-contents) {
-    grid-column: 2 !important;
-  }
-}
-/* On smaller screens, stack vertically */ @media(max-width: 1399px) {
-  d-contents {
-    position: relative !important;
-    width: 100% !important;
-    margin-bottom: 2em !important;
-  }
+/* --- TOC Styling (Keep Distill Default Position) --- */ /* Use Distill's default right-side TOC with elegant styling */ d-contents {
+  padding: 1em !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
 /* --- Main Article Layout --- */ d-article {
   max-width: 100%;
