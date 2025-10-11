@@ -193,48 +193,26 @@
     grid-column-gap: 32px;
   }
 }
-/* --- TOC Styling - Force to Left Side with Strong Overrides --- */ /* Override Distill's default grid positioning for TOC */ d-contents {
-  position: fixed !important;
-  left: 20px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  width: 260px !important;
-  max-height: 85vh !important;
-  overflow-y: auto !important;
-  padding: 1.2em 1em 1.2em 0.8em !important;
-  margin: 0 !important;
-  background: rgba(255, 255, 255, 0.98) !important;
+/* --- TOC Styling (Display inline before content) --- */ /* Keep TOC in normal document flow to avoid any overlap issues */ d-contents {
+  position: relative !important;
+  padding: 1em 1em 1em 0.5em !important; /* Reduced left padding for text to shift left */
+  margin: 2em auto !important;
+  max-width: 800px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   border-radius: 8px !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
   border: 1px solid #e0e0e0 !important;
-  z-index: 1000 !important;
-  grid-column: unset !important; /* Remove grid positioning */
 }
-/* Adjust main content to avoid TOC overlap */ @media(min-width: 1024px) {
-  d-article {
-    margin-left: 300px !important;
-    padding-left: 20px !important;
-  }
-}
-/* Hide TOC on small screens */ @media(max-width: 1023px) {
-  d-contents {
-    display: none !important;
-  }
-}
-/* Optimize TOC text alignment */ d-contents nav {
+/* Shift TOC text content to the left */ d-contents nav {
   padding-left: 0 !important;
   margin-left: 0 !important;
 }
 d-contents nav > * {
-  padding-left: 0.3em !important;
+  padding-left: 0.5em !important;
 }
 d-contents nav ul {
-  padding-left: 1.2em !important;
+  padding-left: 1em !important;
   margin-left: 0 !important;
-}
-d-contents h2 {
-  font-size: 1.3em !important;
-  margin-bottom: 0.8em !important;
 }
 /* --- Main Article Layout --- */ d-article {
   max-width: 100%;
