@@ -193,14 +193,30 @@
     grid-column-gap: 32px;
   }
 }
-/* --- Elegant TOC Positioning on Left --- */ /* Force TOC to left side with sticky positioning */ @media(min-width: 1400px) {
+/* --- Elegant TOC Positioning on Left --- */ /* Force TOC to far left side, completely clear of poster */ @media(min-width: 1600px) {
   d-contents {
     position: fixed !important;
     top: 120px !important;
-    left: calc((100vw - 1180px) / 2 - 280px) !important;
-    width: 240px !important;
-    max-width: 240px !important;
+    left: max(20px, calc((100vw - 1400px) / 2)) !important;
+    width: 220px !important;
+    max-width: 220px !important;
     padding: 1em !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    z-index: 100 !important;
+    max-height: calc(100vh - 140px) !important;
+    overflow-y: auto !important;
+  }
+}
+/* Medium screens: TOC on left but with less spacing */ @media(min-width: 1400px) and (max-width: 1599px) {
+  d-contents {
+    position: fixed !important;
+    top: 120px !important;
+    left: 20px !important;
+    width: 200px !important;
+    max-width: 200px !important;
+    padding: 0.8em !important;
     background: rgba(255, 255, 255, 0.95) !important;
     border-radius: 8px !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
