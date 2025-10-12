@@ -497,9 +497,9 @@ d-contents nav ul {
 
 <p><img src="https://raiden-zhu.github.io/assets/img/publication_preview/Poster_DICE.png" alt="DICE" style="max-width: 100%; height: auto;"></p>
 
-<h3 id="updates-in-progress-more-coming-soon-">Updates in progress. More coming soon! 😉</h3>
+<h3 id="updates-in-progress-more-coming-soon">Updates in progress. More coming soon!</h3>
 
-<p>🗓️ <strong>2025-07-10</strong> - Added background context and practical applications</p>
+<p>🗓️ <strong>2025-07-10</strong> - Added background context and practical applications.</p>
 
 <hr>
 
@@ -636,7 +636,7 @@ d-contents nav ul {
 <h3 id="layer-1-defining-the-ground-truth-">
 <strong>Layer 1: Defining the Ground Truth</strong> 🎯</h3>
 
-<p>Before we can approximate influence, we must first define what we’re approximating-the ideal, “gold standard” measure of data influence. In decentralized learning, this requires carefully reasoning about causality: <em>What would change if a particular data point were removed?</em></p>
+<p>Before we can approximate influence, we must first define what we’re approximating-the ideal, “gold standard” measure of data influence. This requires carefully reasoning about causality: <em>What would change if a particular data point is removed in decentralized learning?</em></p>
 
 <p><strong>Definition 1 (One-hop Ground-truth Influence)</strong></p>
 
@@ -646,11 +646,11 @@ d-contents nav ul {
 
 <p>where \(\boldsymbol{\theta}_k^{t+1}\) is node \(k\)’s model at time \(t+1\) trained with \(\boldsymbol{z}_j^t\), and \(\boldsymbol{\theta}_k^{t+1,-j}\) is the counterfactual model obtained by retraining <em>without</em> \(\boldsymbol{z}_j^t\).</p>
 
-<p><strong>Intuition</strong>: This measures the direct impact of data \(\boldsymbol{z}_j^t\) on its immediate neighbors’ test performance. If removing the data point increases test loss (positive influence), the data was helpful; if it decreases test loss (negative influence), the data was harmful.</p>
+<p><strong>Intuition</strong>: This measures the direct impact of data \(\boldsymbol{z}_j^t\) on its immediate neighbors’ test performance. If removing the data point increases test loss (positive influence), the data might be helpful; if it decreases test loss (negative influence), the data might be harmful.</p>
 
 <p><strong>Definition 2 (Multi-hop Ground-truth Influence)</strong></p>
 
-<p>The influence doesn’t stop at immediate neighbors-it cascades through the network. The \(r\)-hop ground-truth influence extends the counterfactual reasoning recursively:</p>
+<p>An important point to note in decentralized learning is that the influence doesn’t stop at immediate neighbors but cascades through the network. The \(r\)-hop ground-truth influence extends the counterfactual reasoning recursively:</p>
 
 \[\mathcal{I}_{\mathrm{DICE-GT}}^{(r)}(\boldsymbol{z}_j^t, \boldsymbol{z}') = \sum_{k \in \mathcal{N}_{\mathrm{out}}^{(r)}(j)} q_k \left[ L(\boldsymbol{\theta}_k^{t+r,-j}; \boldsymbol{z}') - L(\boldsymbol{\theta}_k^{t+r}; \boldsymbol{z}') \right]\]
 
