@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "[Lie Symmetry Net: Preserving Conservation Laws in Modelling Financial Market Dynamics](https://arxiv.org/abs/2406.09189)" is accpeted at **TMLR** 🎉!
+Our paper "[Lie Symmetry Net: Preserving Conservation Laws in Modelling Financial Market Dynamics](https://openreview.net/forum?id=rkfop9GyxB)" is accpeted at **TMLR** 🎉!
