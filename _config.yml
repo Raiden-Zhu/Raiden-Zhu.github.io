@@ -18,7 +18,7 @@ keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: Raiden-Zhu.github.io # the base hostname & protocol for your site
+url: https://raiden-zhu.github.io # the base hostname & protocol for your site
 baseurl: 
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -115,6 +115,14 @@ contact_note: >
 google_analytics:  # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
+# Keep disabled until a GoatCounter site, public counter, and start date are verified.
+visitor_stats:
+  site_code:
+  tracking_enabled: false
+  homepage_counter_enabled: false
+  collection_start: # "YYYY-MM-DD"
+  public_dashboard_enabled: false
+
 google_site_verification:  # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 
@@ -210,6 +218,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  # Published only by the separate visitor-statistics activation change.
+  - assets/js/visitor-stats.js
+  - assets/js/vendor/goatcounter/count.00034b047b4f43e086b3546a4aedf945c8b1a2df.js
+  - assets/js/vendor/goatcounter/LICENSE.count-js.txt
 keep_files:
   - CNAME
   - .nojekyll
@@ -242,7 +254,9 @@ defaults:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ['robots.txt']
+  exclude:
+    - robots.txt
+    - assets/js/vendor/goatcounter/count.00034b047b4f43e086b3546a4aedf945c8b1a2df.js
   uglifier_args:
     harmony: true
 

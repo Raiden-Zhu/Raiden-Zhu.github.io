@@ -16,3 +16,15 @@
     panelbear('config', { site: '{{site.panelbear_analytics}}' });
   </script>
 {%- endif -%}
+{%- assign visitor_stats_code = site.visitor_stats.site_code | default: "" | strip -%}
+{%- assign visitor_stats_slug = visitor_stats_code | slugify -%}
+{%- assign visitor_stats_code_size = visitor_stats_code | size -%}
+{%- if site.visitor_stats.tracking_enabled == true and visitor_stats_code != blank and visitor_stats_code == visitor_stats_slug and visitor_stats_code_size <= 63 -%}
+  <!-- GoatCounter is vendored locally to avoid a third-party script CDN. -->
+  <script
+    defer
+    data-goatcounter="https://{{ visitor_stats_code | escape }}.goatcounter.com/count"
+    data-goatcounter-settings='{"no_events":true,"referrer":""}'
+    src="{{ '/assets/js/vendor/goatcounter/count.00034b047b4f43e086b3546a4aedf945c8b1a2df.js' | relative_url }}"
+  ></script>
+{%- endif -%}

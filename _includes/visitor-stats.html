@@ -1,0 +1,50 @@
+{%- assign visitor_stats_code = site.visitor_stats.site_code | default: "" | strip -%}
+{%- assign visitor_stats_slug = visitor_stats_code | slugify -%}
+{%- assign visitor_stats_code_size = visitor_stats_code | size -%}
+{%- assign visitor_stats_start = site.visitor_stats.collection_start | default: "" | strip -%}
+{%- if site.visitor_stats.tracking_enabled == true and site.visitor_stats.homepage_counter_enabled == true -%}
+  {%- if visitor_stats_code != blank and visitor_stats_code == visitor_stats_slug and visitor_stats_code_size <= 63 and visitor_stats_start != blank -%}
+    <aside
+      class="visitor-stats"
+      aria-label="Homepage visit statistics"
+      data-visitor-stats
+      data-site-code="{{ visitor_stats_code | escape }}"
+      data-collection-start="{{ visitor_stats_start | escape }}"
+    >
+      {%- if site.visitor_stats.public_dashboard_enabled == true -%}
+        <a
+          class="visitor-stats__panel"
+          href="https://{{ visitor_stats_code | escape }}.goatcounter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+      {%- else -%}
+        <div class="visitor-stats__panel">
+      {%- endif -%}
+          <span class="visitor-stats__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.1 2.4 3.2 5.4 3.2 9S14.1 18.6 12 21M12 3C9.9 5.4 8.8 8.4 8.8 12s1.1 6.6 3.2 9"></path>
+            </svg>
+          </span>
+          <span class="visitor-stats__copy">
+            <strong class="visitor-stats__count" data-visitor-count aria-live="polite" aria-atomic="true">Count unavailable</strong>
+            <span class="visitor-stats__label">
+              Homepage visits recorded since
+              <time datetime="{{ visitor_stats_start | escape }}">{{ visitor_stats_start | date: "%B %-d, %Y" }}</time>
+            </span>
+            {%- if site.visitor_stats.public_dashboard_enabled == true -%}
+              <span class="visitor-stats__details">
+                Details <span aria-hidden="true">&#8599;</span><span class="sr-only"> (opens in a new tab)</span>
+              </span>
+            {%- endif -%}
+          </span>
+      {%- if site.visitor_stats.public_dashboard_enabled == true -%}
+        </a>
+      {%- else -%}
+        </div>
+      {%- endif -%}
+    </aside>
+    <script defer src="{{ '/assets/js/visitor-stats.js' | relative_url }}"></script>
+  {%- endif -%}
+{%- endif -%}
