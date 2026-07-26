@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: Raiden-Zhu.github.io/sitemap.xml
+Sitemap: https://raiden-zhu.github.io/sitemap.xml
