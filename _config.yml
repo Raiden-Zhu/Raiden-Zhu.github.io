@@ -115,13 +115,13 @@ contact_note: >
 google_analytics:  # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
-# Keep disabled until a GoatCounter site, public counter, and start date are verified.
+# Public aggregate statistics are served by the verified GoatCounter site below.
 visitor_stats:
-  site_code:
-  tracking_enabled: false
-  homepage_counter_enabled: false
-  collection_start: # "YYYY-MM-DD"
-  public_dashboard_enabled: false
+  site_code: raiden-zhu
+  tracking_enabled: true
+  homepage_counter_enabled: true
+  collection_start: "2026-07-27"
+  public_dashboard_enabled: true
 
 google_site_verification:  # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
@@ -218,10 +218,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-  # Published only by the separate visitor-statistics activation change.
-  - assets/js/visitor-stats.js
-  - assets/js/vendor/goatcounter/count.00034b047b4f43e086b3546a4aedf945c8b1a2df.js
-  - assets/js/vendor/goatcounter/LICENSE.count-js.txt
 keep_files:
   - CNAME
   - .nojekyll

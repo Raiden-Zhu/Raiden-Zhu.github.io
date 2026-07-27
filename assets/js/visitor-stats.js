@@ -39,6 +39,7 @@
       'https://' + siteCode + '.goatcounter.com/counter/' + encodeURIComponent('/') + '.json'
     );
     endpoint.searchParams.set('start', collectionStart);
+    endpoint.searchParams.set('end', '9999-12-31');
 
     countNode.setAttribute('aria-busy', 'true');
     countNode.textContent = 'Loading count...';
