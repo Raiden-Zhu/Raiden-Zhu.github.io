@@ -14,7 +14,7 @@
       {%- if site.visitor_stats.public_dashboard_enabled == true -%}
         <a
           class="visitor-stats__panel"
-          href="https://{{ visitor_stats_code | escape }}.goatcounter.com/"
+          href="https://{{ visitor_stats_code | escape }}.goatcounter.com/?filter=in%3Apath%20at%3Astart%20at%3Aend%20%2F"
           target="_blank"
           rel="noopener noreferrer"
         >
