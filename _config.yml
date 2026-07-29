@@ -121,7 +121,7 @@ visitor_stats:
   tracking_enabled: true
   homepage_counter_enabled: true
   collection_start: "2026-07-27"
-  public_dashboard_enabled: false
+  public_dashboard_enabled: true
 
 google_site_verification:  # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
