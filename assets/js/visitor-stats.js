@@ -25,17 +25,33 @@
     return count.length <= 31 && formattedCountPattern.test(count) ? count : null;
   }
 
+  function requestCount(endpoint, options, retries) {
+    return window.fetch(endpoint.toString(), options)
+      .then(function(response) {
+        if (!response.ok) throw new Error('Visitor count request failed');
+        return response.json();
+      })
+      .catch(function(error) {
+        if (retries <= 0 || (options.signal && options.signal.aborted)) throw error;
+        return new Promise(function(resolve) {
+          window.setTimeout(resolve, 350);
+        }).then(function() {
+          return requestCount(endpoint, options, retries - 1);
+        });
+      });
+  }
+
   function renderStats(stats) {
     var countNode = stats.querySelector('[data-visitor-count]');
     var siteCode = stats.getAttribute('data-site-code') || '';
     var collectionStart = stats.getAttribute('data-collection-start') || '';
 
     if (!countNode || !siteCodePattern.test(siteCode) || !isValidDate(collectionStart)) return;
-    if (!window.fetch || !window.AbortController || !window.URL) return;
+    if (!window.fetch || !window.URL) return;
 
-    var controller = new AbortController();
-    var timeout = window.setTimeout(function() { controller.abort(); }, 6000);
-    var endpoint = new URL(
+    var controller = window.AbortController ? new window.AbortController() : null;
+    var timeout = controller ? window.setTimeout(function() { controller.abort(); }, 6000) : null;
+    var endpoint = new window.URL(
       'https://' + siteCode + '.goatcounter.com/counter/' + encodeURIComponent('/') + '.json'
     );
     endpoint.searchParams.set('start', collectionStart);
@@ -44,27 +60,25 @@
     countNode.setAttribute('aria-busy', 'true');
     countNode.textContent = 'Loading count...';
 
-    fetch(endpoint.toString(), {
+    var requestOptions = {
       method: 'GET',
       mode: 'cors',
       credentials: 'omit',
-      referrerPolicy: 'no-referrer',
-      signal: controller.signal
-    })
-      .then(function(response) {
-        if (!response.ok) throw new Error('Visitor count request failed');
-        return response.json();
-      })
+      referrerPolicy: 'no-referrer'
+    };
+    if (controller) requestOptions.signal = controller.signal;
+
+    requestCount(endpoint, requestOptions, 1)
       .then(function(data) {
         var count = normalizeCount(data && data.count);
         if (count === null) throw new Error('Visitor count response was invalid');
         countNode.textContent = count;
       })
       .catch(function() {
-        countNode.textContent = 'Count unavailable';
+        countNode.textContent = 'Visit statistics';
       })
       .then(function() {
-        window.clearTimeout(timeout);
+        if (timeout !== null) window.clearTimeout(timeout);
         countNode.removeAttribute('aria-busy');
       });
   }
