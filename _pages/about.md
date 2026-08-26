@@ -34,7 +34,7 @@ Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a Ph.D. candid
 
 ### <span style="font-family: 'Open Sans'; font-weight: bold;">🦄 Research Interest</span>
 
-<small><em>"Research is my venture. Papers are my products."</em></small>
+<small><em>"My research is my brand; papers are my products."</em></small>
 
 <!--My research vision is to understand the fundamental mechanisms underpinning the practical success of deep learning, including (M)LLMs, and to develop a theoretically grounded, incentivized, democratic, and scalable decentralized learning framework as a foundation for next-generation general intelligence.
 Currently, my research lies at the intersection of these two directions: -->
