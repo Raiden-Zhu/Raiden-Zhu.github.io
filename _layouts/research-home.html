@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} — Tongtian Zhu</title>
+  <meta name="description" content="Tongtian Zhu studies learning mechanisms, language model training, and decentralized learning at Zhejiang University.">
+  <link rel="canonical" href="https://raiden-zhu.github.io{{ page.url }}">
+  <meta property="og:title" content="{{ page.title }} — Tongtian Zhu">
+  <meta property="og:description" content="Understanding learning. Improving training. Selected research on decentralized learning, optimization, and generalization.">
+  <meta property="og:image" content="https://raiden-zhu.github.io/assets/img/photo_10.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ '/assets/css/research-home.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/css/research-pages.css">
+  <script defer src="{{ '/assets/js/research-home.js' | relative_url }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Tongtian Zhu home"><img class="monogram" src="/assets/img/home-reference/monogram.png" width="31" height="30" alt=""> <span>Tongtian Zhu</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/publications/">Research</a>
+        <a href="{{ '/blog/' | relative_url }}">Writing</a>
+        <a href="{{ '/teaching/' | relative_url }}">Talks</a>
+      </nav>
+    </div>
+  </header>
+  {{ content }}
+  <footer class="site-footer">
+    <div><span>© 2026 Tongtian Zhu</span><span class="footer-location">Zhejiang University · Hangzhou</span></div>
+  </footer>
+  <div class="home-stats">{% include visitor-stats.html %}</div>
+  {% include scripts/analytics.html %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "raiden-homepage-preview",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/preview-home.mjs"
+  },
+  "devDependencies": {
+    "marked": "17.0.5"
+  }
+}

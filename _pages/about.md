@@ -1,50 +1,94 @@
 ---
-layout: about
+layout: research-home
 title: About
 permalink: /
-subtitle: <small><em>"Convince future generations, not just peers."</em></small>
-
-profile:
-  align: left
-  image: photo_10.jpg
-  image_circular: True # false: crops the image to make it circular
-  address: >
-      <p><span style="font-size: 0.85em; font-family: 'Open Sans';">At the gorgeous <a href='https://en.wikipedia.org/wiki/West_Lake'>Westlake</a>, <a href='https://en.wikipedia.org/wiki/Hangzhou'>Hangzhou</a></span></p>
-
-
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
 ---
-
-<!--[<span style="font-weight: bold; color: #B509AC;">Zhejiang University</span>](https://www.zju.edu.cn/english/)-->
-
-Hi there 😃. I am Tongtian Zhu (prounced as "Tong-tee-an Joo"), a Ph.D. candidate at the Computer Science Department of [Zhejiang University (ZJU)](https://www.zju.edu.cn/english/), supervised by Professors [Can Wang](https://person.zju.edu.cn/en/wangcan) and [Chun Chen](https://person.zju.edu.cn/en/0082004). <!-- I earned my B.S. degree in Mathematical Science from CUMTB, as well as my B.Econ. degree in Economics (double degree) from [<span style="font-weight: bold; color: #B509AC;">Peking University</span>](https://english.pku.edu.cn/) (PKU) in 2021. --> 
-<!-- Previously, I held a research internship at [JD Explore Academy (JDE)](https://jdcorporateblog.com/jd-unveils-four-new-enterprise-level-products/jd-explore-academy/), working on the generalization theory of decentralized learning,  mentored by Doctor [Fengxiang He](https://fengxianghe.github.io/) and Professor [Dacheng Tao](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).--> 
-<!-- **I am open to both academic and industry opportunities.** --> If you have matched opportunities, questions, or are interested in collaborating, or just want to chat, please always feel free to contact me via [**email**](mailto:raiden@zju.edu.cn) or [**WeChat**](https://raw.githubusercontent.com/Raiden-Zhu/Raiden-Zhu.github.io/master/assets/img/WeChat_QR_code.jpg).  <!-- For regular updates and insights, feel free to follow my [**Twitter**](https://twitter.com/Raiden13238619) as well. -->
-
-<i class="ai ai-google-scholar"></i> [**Google Scholar**](https://scholar.google.com/citations?user=QvBDUsIAAAAJ&hl=en) &nbsp;&nbsp; <!-- <i class="fas fa-book"></i>  [**Semantic Scholar**](https://www.semanticscholar.org/author/Tongtian-Zhu/2173757802) &nbsp;&nbsp;--> <i class="fa fa-twitter"></i> [**Twitter**](https://x.com/Tongtian_Zhu) &nbsp;&nbsp; <i class="fa fa-envelope"></i> [**Email**](mailto:raiden@zju.edu.cn) &nbsp;&nbsp; <i class="fa fa-weixin"></i> [**WeChat**](https://raw.githubusercontent.com/Raiden-Zhu/Raiden-Zhu.github.io/master/assets/img/WeChat_QR_code.jpg) &nbsp;&nbsp;<!--  <i class="fa fa-github"></i> <!--[**GitHub**](https://github.com/Raiden-Zhu) -->
-
-<!-- <br/>&nbsp;&nbsp; <i class="fab fa-zhihu"></i> [**Zhihu**](https://www.zhihu.com/people/you-li-70-94) <br/> -->
-
-&nbsp;
-
-&nbsp;
-
-### <span style="font-family: 'Open Sans'; font-weight: bold;">🦄 Research Interest</span>
-
-<small><em>"My research is my brand; papers are my products."</em></small>
-
-<!--My research vision is to understand the fundamental mechanisms underpinning the practical success of deep learning, including (M)LLMs, and to develop a theoretically grounded, incentivized, democratic, and scalable decentralized learning framework as a foundation for next-generation general intelligence.
-Currently, my research lies at the intersection of these two directions: -->
-
-- **Language model training** (e.g., optimizers, looped architectures, efficient parallelism);
-- **Decentralized learning** (e.g., [training dynamics](https://arxiv.org/abs/2306.02913), [generalization](https://arxiv.org/abs/2206.12680), [data influence](https://openreview.net/forum?id=2TIYkqieKw), [communication allocation](https://openreview.net/forum?id=lWGMbJRCtQ));
-- **Science of learning** (e.g., [training dynamics/implicit bias](https://arxiv.org/abs/2306.02913), [symmetries](https://arxiv.org/abs/2406.09189), [emergence of mergeability](https://openreview.net/forum?id=lWGMbJRCtQ));
-
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+<main id="main">
+  <section class="hero" aria-labelledby="name">
+    <div class="hero-copy">
+      <h1 id="name">Tongtian Zhu</h1>
+      <p class="hero-tagline">Convince future generations, not just peers.</p>
+      <p class="hero-bio">I am a Ph.D. candidate at the Computer Science Department of <a href="https://www.zju.edu.cn/english/">Zhejiang University (ZJU)</a>, supervised by Professors <a href="https://person.zju.edu.cn/en/wangcan">Can Wang</a> and <a href="https://person.zju.edu.cn/en/0082004">Chun Chen</a>.</p>
+      <p class="hero-bio">My research focuses on understanding learning mechanisms.</p>
+      <div class="hero-links" aria-label="Contact and profiles">
+        <a href="mailto:raiden@zju.edu.cn"><img src="/assets/img/home-reference/email.png" alt="" width="19" height="19">Email</a>
+        <a href="https://scholar.google.com/citations?user=QvBDUsIAAAAJ&amp;hl=en"><img src="/assets/img/home-reference/scholar.png" alt="" width="19" height="19">Google Scholar</a>
+        <a href="https://github.com/Raiden-Zhu"><img src="/assets/img/home-reference/github.png" alt="" width="19" height="19">GitHub</a>
+        <a href="https://x.com/Tongtian_Zhu"><img src="/assets/img/home-reference/x.png" alt="" width="19" height="19">X</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="/assets/img/photo_10.jpg" alt="Tongtian Zhu at West Lake in Hangzhou" width="262" height="278" fetchpriority="high">
+      <figcaption>West Lake, Hangzhou</figcaption>
+    </figure>
+  </section>
+  <section class="research-areas" aria-label="Research interests">
+    <div class="area"><p class="eyebrow">Research area</p><h2>Language model training</h2><p>Developing more effective and efficient training methods for language models, including optimizers, looped architectures, and efficient parallelism.</p></div>
+    <div class="area"><p class="eyebrow">Research area</p><h2>Decentralized learning</h2><p>Understanding learning in distributed systems, including <a href="https://arxiv.org/abs/2306.02913">training dynamics</a>, <a href="https://arxiv.org/abs/2206.12680">generalization</a>, <a href="https://openreview.net/forum?id=2TIYkqieKw">data influence</a>, and <a href="https://openreview.net/forum?id=lWGMbJRCtQ">communication allocation</a>.</p></div>
+    <div class="area"><p class="eyebrow">Research area</p><h2>Science of learning</h2><p>Studying learning mechanisms, such as <a href="https://arxiv.org/abs/2306.02913">training dynamics / implicit bias</a>, <a href="https://arxiv.org/abs/2406.09189">symmetries</a>, and <a href="https://openreview.net/forum?id=lWGMbJRCtQ">emergence of mergeability</a>.</p></div>
+  </section>
+  <section class="research" id="research" aria-labelledby="research-heading">
+    <div class="section-heading"><div><p class="eyebrow">Publications</p><h2 id="research-heading">Selected research</h2></div><a href="/publications/">All publications →</a></div>
+    <p class="research-motto">“My research is my brand; papers are my products.”</p>
+    <article class="paper" id="single-merging">
+      <a class="paper-visual" href="https://openreview.net/forum?id=lWGMbJRCtQ" aria-label="Read the single global merging paper"><span class="venue-badge">ICLR 2026 (Oral)</span><img src="/assets/img/publication_preview/single-merge-hd.webp" alt="Concept illustration: local training with sparse gossip followed by one final parameter average" width="1672" height="940" loading="lazy"></a>
+      <div class="paper-body">
+        <p class="paper-kicker"><span class="paper-index">01</span><span>ICLR 2026</span><span class="honor">Oral</span></p>
+        <h3><a href="https://openreview.net/forum?id=lWGMbJRCtQ">On the Surprising Effectiveness of a Single Global Merging in Decentralized Learning</a></h3>
+        <p class="takeaway">A single global model merging can be remarkably effective in decentralized learning, challenging conventional wisdom about frequent communication.</p>
+        <p class="authors"><strong>Tongtian Zhu</strong>, Tianyu Zhang, Mingze Wang, Zhanpeng Zhou, and Can Wang</p>
+        <div class="paper-links"><a href="https://openreview.net/forum?id=lWGMbJRCtQ">Paper</a><a href="https://paper-list.notion.site/ICLR-26-The-Grokking-Moment-in-Decentralized-Learning-On-The-Surprising-Effectiveness-of-A-Singl-2f43218102c0805d99d6e56d2934fac4?source=copy_link">Blog</a></div>
+      </div>
+    </article>
+    <article class="paper" id="dice">
+      <a class="paper-visual dice" href="https://openreview.net/forum?id=2TIYkqieKw" aria-label="Read the DICE paper"><span class="venue-badge">ICLR 2025</span><img src="/assets/img/publication_preview/dice-hd.webp" alt="Concept illustration: data influence cascading across a decentralized network" width="1672" height="941" loading="lazy"></a>
+      <div class="paper-body">
+        <p class="paper-kicker"><span class="paper-index">02</span><span>ICLR 2025</span></p>
+        <h3><a href="https://openreview.net/forum?id=2TIYkqieKw">DICE: Data Influence Cascade in Decentralized Learning</a></h3>
+        <p class="takeaway">We study how data influence propagates in decentralized learning and reveal a cascade effect that shapes training dynamics and generalization.</p>
+        <p class="authors"><strong>Tongtian Zhu</strong>, Wenhao Li, Can Wang, and Fengxiang He</p>
+        <div class="paper-links"><a href="https://openreview.net/forum?id=2TIYkqieKw">Paper</a><a href="https://github.com/Raiden-Zhu/ICLR-2025-DICE">Code</a><a href="/blog/2025/DICE/">Project</a></div>
+      </div>
+    </article>
+    <article class="paper" id="dsgd-sam">
+      <button class="paper-visual original-figure" type="button" data-figure-open aria-haspopup="dialog" aria-controls="dsgd-figure-dialog" aria-label="Enlarge the original DSGD and SAM figure"><span class="venue-badge">ICML 2023</span><img src="/assets/img/publication_preview/dsgd-sam-pastel.webp" alt="Concept illustration: decentralized SGD linked asymptotically to average-direction SAM" width="1672" height="941" loading="lazy"></button>
+      <div class="paper-body">
+        <p class="paper-kicker"><span class="paper-index">03</span><span>ICML 2023</span></p>
+        <h3><a href="https://arxiv.org/abs/2306.02913">Decentralized SGD and Average-direction SAM are Asymptotically Equivalent</a></h3>
+        <p class="takeaway">We show that decentralized SGD and average-direction SAM are asymptotically equivalent, providing a unified understanding of their implicit regularization.</p>
+        <p class="authors"><strong>Tongtian Zhu</strong>, Fengxiang He, Kaixuan Chen, Mingli Song, and Dacheng Tao</p>
+        <div class="paper-links"><a href="https://arxiv.org/abs/2306.02913">Paper</a><a href="https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM">Code</a></div>
+      </div>
+    </article>
+    <article class="paper" id="topology">
+      <a class="paper-visual" href="https://arxiv.org/abs/2206.12680" aria-label="Read the topology-aware generalization paper"><span class="venue-badge">ICML 2022 (Spotlight)</span><img src="/assets/img/publication_preview/topology-hd.webp" alt="Concept illustration of communication topology and generalization" width="1672" height="941" loading="lazy"></a>
+      <div class="paper-body">
+        <p class="paper-kicker"><span class="paper-index">04</span><span>ICML 2022</span><span class="honor">Spotlight</span></p>
+        <h3><a href="https://arxiv.org/abs/2206.12680">Topology-aware Generalization of Decentralized SGD</a></h3>
+        <p class="takeaway">We establish how the network topology affects the generalization of decentralized SGD, revealing a connection between graph structure and learning performance.</p>
+        <p class="authors"><strong>Tongtian Zhu</strong>, Fengxiang He, Lan Zhang, Zhengyang Niu, Mingli Song, and Dacheng Tao</p>
+        <div class="paper-links"><a href="https://arxiv.org/abs/2206.12680">Paper</a><a href="https://github.com/Raiden-Zhu/Generalization-of-DSGD">Code</a></div>
+      </div>
+    </article>
+  </section>
+  <div class="lower-grid">
+    <section class="updates" aria-labelledby="updates-heading">
+      <h2 id="updates-heading" class="eyebrow">Recent updates</h2>
+      <ol>
+        <li><time datetime="2026-01-26">Jan 26, 2026</time><p>Our paper <a href="#single-merging">“On the Surprising Effectiveness of a Single Global Merging in Decentralized Learning”</a> has been accepted to ICLR 2026 <span class="news-honor">(Oral Presentation, Top 1.2%)</span>.</p></li>
+        <li><time datetime="2025-08-09">Aug 09, 2025</time><p>Gave a talk at the <a href="https://c2sml.cn/conference_en.html">Conference on Scientific Machine Learning (CSML 2025)</a>.</p></li>
+        <li><time datetime="2025-01-23">Jan 23, 2025</time><p>Our <a href="#dice">DICE paper</a> was accepted to <a href="https://openreview.net/forum?id=2TIYkqieKw">ICLR 2025</a>.</p></li>
+      </ol>
+    </section>
+    <section class="beyond" aria-labelledby="beyond-heading">
+      <h2 id="beyond-heading" class="eyebrow">Beyond research</h2>
+      <p>Outside of research, I enjoy drawing and basketball. They help me stay curious and balanced.</p>
+      <img class="westlake-sketch" src="/assets/img/home-reference/westlake-sketch.png" width="350" height="140" alt="West Lake line illustration with the note: Good ideas in a better tomorrow." loading="lazy">
+    </section>
+  </div>
+</main>
+<dialog id="dsgd-figure-dialog" class="figure-dialog" aria-labelledby="figure-dialog-title">
+  <div class="figure-dialog-header"><div><p class="eyebrow">ICML 2023 · Research figure</p><h2 id="figure-dialog-title">Decentralized SGD &amp; sharpness-aware minimization</h2></div><button type="button" data-figure-close aria-label="Close enlarged figure">Close</button></div>
+  <img src="/assets/img/publication_preview/230705%20DSGD_SAM%20(2).png" alt="Original unmodified research figure showing decentralized training and SAM optimization geometry" width="1672" height="941">
+  <p class="figure-dialog-caption">Original research figure · <a href="https://arxiv.org/abs/2306.02913">Read the paper</a></p>
+</dialog>

@@ -1,0 +1,315 @@
+[
+  {
+    "abbr": "ICLR 2026 (Oral)",
+    "title": "On The Surprising Effectiveness of a Single Global Merging in Decentralized Learning",
+    "author": "Zhu, Tongtian and Zhang, Tianyu and Wang, Mingze and Zhou, Zhanpeng and Wang, Can",
+    "booktitle": "International Conference on Learning Representations",
+    "year": "2026",
+    "url": "https://paper-list.notion.site/ICLR-26-The-Grokking-Moment-in-Decentralized-Learning-On-The-Surprising-Effectiveness-of-A-Singl-2f43218102c0805d99d6e56d2934fac4?source=copy_link",
+    "abstract": "Decentralized learning provides a scalable alternative to parameter-server-based training, yet its performance is often hindered by limited peer-to-peer communication. \nIn this paper, we study how communication should be scheduled over time to improve global generalization, including determining when and how frequently devices synchronize. \nCounterintuitive empirical results show that concentrating communication budgets in the later stages of decentralized training remarkably improves global generalization.\nSurprisingly, we uncover that fully connected communication at the final step, implemented by a single global merging, can significantly improve the generalization performance of decentralized learning under high data heterogeneity. \nOur theoretical contributions, which explain these phenomena, are first to establish that the globally merged model of decentralized SGD can match the convergence rate of parallel SGD.\nTechnically, we reinterpret part of the discrepancy among local models, which were previously considered as detrimental noise, as constructive components essential for matching this rate. \nThis work provides promising results that  decentralized learning is able to generalize under high data heterogeneity and limited communication, while offering broad new avenues for model merging research.",
+    "tldr": "We discover and theoretically explain why and when a single global parameter merging in decentralized learning can recover the performance of federated learning, even in highly heterogeneous and communication-constrained environments.",
+    "dimensions": "true",
+    "selected": "true",
+    "bibtex_show": "true",
+    "code": "",
+    "preview": "Surprising.png",
+    "id": "zhu2026surprising",
+    "image": "single-merge-hd.webp",
+    "summary": "A single final merge can recover performance after sparse communication, connecting model mergeability with decentralized training dynamics.",
+    "authors": [
+      "Tongtian Zhu",
+      "Tianyu Zhang",
+      "Mingze Wang",
+      "Zhanpeng Zhou",
+      "Can Wang"
+    ],
+    "links": {
+      "Paper": "https://openreview.net/forum?id=lWGMbJRCtQ",
+      "Blog": "https://paper-list.notion.site/ICLR-26-The-Grokking-Moment-in-Decentralized-Learning-On-The-Surprising-Effectiveness-of-A-Singl-2f43218102c0805d99d6e56d2934fac4?source=copy_link"
+    }
+  },
+  {
+    "abbr": "Preprint 2026",
+    "title": "Distributed Team Orchestration via Supervisor Networks: Convergence, Optimality, and Resilience",
+    "author": "Zhu, Juntian and Chen, Guanpu and Zhu, Tongtian and de Carvalho, Miguel and Yang, Zhouwang and He, Fengxiang",
+    "year": "2026",
+    "eprint": "2608.09256",
+    "archivePrefix": "arXiv",
+    "url": "https://arxiv.org/abs/2608.09256",
+    "preview": "team-orchestration-hd.webp",
+    "id": "zhu2026teamorchestration",
+    "image": "team-orchestration-hd.webp",
+    "summary": "Supervisor networks coordinate team learning under imperfect beliefs, with resilience to misleading reports from Byzantine teams.",
+    "authors": [
+      "Juntian Zhu",
+      "Guanpu Chen",
+      "Tongtian Zhu",
+      "Miguel de Carvalho",
+      "Zhouwang Yang",
+      "Fengxiang He"
+    ],
+    "links": {
+      "Paper": "https://arxiv.org/abs/2608.09256"
+    }
+  },
+  {
+    "abbr": "Springer 2026 (Book chapter)",
+    "title": "Imagining a Democratic, Affordable Future of Foundation Models: A Decentralised Avenue",
+    "author": "He, Fengxiang and Nan, Lihao and Zhu, Tongtian",
+    "booktitle": "Handbook of Blockchain Analytics",
+    "year": "2026",
+    "publisher": "Springer, Cham",
+    "pages": "303--320",
+    "doi": "10.1007/978-3-031-95418-4_16",
+    "url": "https://link.springer.com/chapter/10.1007/978-3-031-95418-4_16",
+    "note": "First online 27 July 2025; publisher citation year 2026",
+    "preview": "decentralised-foundation-hd.webp",
+    "id": "he2026decentralisedfoundation",
+    "image": "decentralised-foundation-hd.webp",
+    "summary": "A review of decentralised foundation models, covering shared resources, incentive mechanisms, and training in heterogeneous environments.",
+    "authors": [
+      "Fengxiang He",
+      "Lihao Nan",
+      "Tongtian Zhu"
+    ],
+    "links": {
+      "Chapter": "https://link.springer.com/chapter/10.1007/978-3-031-95418-4_16"
+    }
+  },
+  {
+    "abbr": "ICLR 2025",
+    "title": "DICE: Data Influence Cascade in Decentralized Learning",
+    "author": "Zhu, Tongtian and Li, Wenhao and Wang, Can and He, Fengxiang",
+    "booktitle": "International Conference on Learning Representations",
+    "year": "2025",
+    "url": "https://openreview.net/forum?id=2TIYkqieKw",
+    "pdf": "https://openreview.net/pdf?id=2TIYkqieKw",
+    "abstract": "Decentralized learning offers a promising approach to crowdsource data consumptions and computational workloads across geographically distributed compute interconnected through peer-to-peer networks, accommodating the exponentially increasing demands. However, proper incentives are still in absence, considerably discouraging participation. Our vision is that a fair incentive mechanism relies on fair attribution of contributions to participating nodes, which faces non-trivial challenges arising from the localized connections making influence ``cascade'' in a decentralized network. To overcome this, we design the first  method to estimate Data Influence CascadE (DICE) in a decentralized environment. Theoretically, the framework derives tractable approximations of influence cascade over arbitrary neighbor hops, suggesting the influence cascade is determined by an interplay of data, communication topology, and the curvature of loss landscape.DICE also lays the foundations for applications including selecting suitable collaborators and identifying malicious behaviors.\nProject page is available at https://raiden-zhu.github.io/blog/2025/DICE.",
+    "tldr": "<strong><span style=\"font-weight: bold; color: #B509AC;\">TLDR</span>: DICE introduces the first framework to define and estimate data influence in decentralized learning. We first theoretically uncover that data contribution in decentralized learning doesn't remain local: it spreads across the communication graph like \"ripples in water,\" creating a cascading effect. This cascade depends on three key factors: the data itself, the curvature of the optimization landscape, and the structure of the communication graph.</strong>",
+    "dimensions": "true",
+    "selected": "true",
+    "bibtex_show": "true",
+    "code": "https://github.com/Raiden-Zhu/ICLR-2025-DICE",
+    "preview": "influence.png",
+    "id": "openreview-dice25",
+    "image": "dice-hd.webp",
+    "summary": "DICE traces how data influence cascades through a decentralized network, shaped by data, communication topology, and loss curvature.",
+    "authors": [
+      "Tongtian Zhu",
+      "Wenhao Li",
+      "Can Wang",
+      "Fengxiang He"
+    ],
+    "links": {
+      "Paper": "https://openreview.net/pdf?id=2TIYkqieKw",
+      "Code": "https://github.com/Raiden-Zhu/ICLR-2025-DICE",
+      "Project": "/blog/2025/DICE/"
+    }
+  },
+  {
+    "abbr": "TMLR 2025",
+    "title": "Lie Symmetry Net: Preserving Conservation Laws in Modelling Financial Market Dynamics via Differential Equations",
+    "author": "Jiang, Xuelian and Zhu, Tongtian and Xu, Yingxiang and Wang, Can and Zhang, Yeyu and He, Fengxiang",
+    "booktitle": "Transactions on Machine Learning Research",
+    "abstract": "This paper employs a novel Lie symmetries-based framework to model the intrinsic symmetries within financial market. Specifically, we introduce Lie symmetry net (LSN), which characterises the Lie symmetries of the  differential equations (DE) estimating financial market dynamics, such as the Black-Scholes equation. To simulate these differential equations in a symmetry-aware manner, LSN incorporates a Lie symmetry risk derived from the conservation laws associated with the Lie symmetry operators of the target differential equations. This risk measures how well the Lie symmetries are realised and guides the training of LSN under the structural risk minimisation framework. Extensive numerical experiments demonstrate that LSN effectively realises the Lie symmetries and achieves an error reduction of more than one order of magnitude compared to state-of-the-art methods. The code is available at https://github.com/Jxl163/LSN_code.",
+    "year": "2025",
+    "dimensions": "true",
+    "bibtex_show": "true",
+    "code": "https://github.com/Jxl163/LSN_code",
+    "preview": "LSN.jpg",
+    "id": "jiang2024lie",
+    "image": "lsn-hd.webp",
+    "summary": "Lie Symmetry Net incorporates symmetries and associated conservation laws when learning solutions to differential equations.",
+    "authors": [
+      "Xuelian Jiang",
+      "Tongtian Zhu",
+      "Yingxiang Xu",
+      "Can Wang",
+      "Yeyu Zhang",
+      "Fengxiang He"
+    ],
+    "links": {
+      "Paper": "https://openreview.net/forum?id=rkfop9GyxB",
+      "Code": "https://github.com/Jxl163/LSN_code"
+    }
+  },
+  {
+    "abbr": "ICML 2023",
+    "title": "Decentralized SGD and Average-direction SAM are Asymptotically Equivalent",
+    "author": "Zhu, Tongtian and He, Fengxiang and Chen, Kaixuan and Song, Mingli and Tao, Dacheng",
+    "booktitle": "Proceedings of the 40th International Conference on Machine Learning",
+    "year": "2023",
+    "pages": "43005--43036",
+    "editor": "Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan",
+    "volume": "202",
+    "series": "Proceedings of Machine Learning Research",
+    "publisher": "PMLR",
+    "pdf": "https://arxiv.org/pdf/2306.02913",
+    "url": "https://proceedings.mlr.press/v202/zhu23e.html",
+    "abstract": "Decentralized stochastic gradient descent (D-SGD) allows collaborative learning on massive device simultaneously without the control of a central server. Sharpness-aware minimization, or SAM, is a popular optimization technique that effectively improves model generalization by explicitly minimizing a sharpness-based measure alongside the training loss. In this paper, we prove that D-SGD asymptotically minimizes the loss function of an average-direction SAM. This asymptotic equivalence further demonstrates three advantages of D-SGD: (1) D-SGD exhibits a gradient smoothing effect; (2) there exists an uncertainty self-estimating mechanism in D-SGD to improve posterior estimation; and (3) the sharpness regularization effect of D-SGD does not decrease as total batch size increases, which justifies the superiority of D-SGD over centralized SGD (C-SGD) in large-batch settings. We conduct extensive experiments which are in full agreement with our theory. Our code will be made publicly available.",
+    "tldr": "<strong><span style=\"font-weight: bold; color: #B509AC;\">TLDR</span>: The first work on the surprising sharpness-aware minimization nature (i.e., a kind of unique <span style=\"font-weight: bold; color: #B509AC;\">implicit bias</span>) of decentralized learning. We provide a completely new perspective to understand model decentralization, which helps to bridge the gap between practice and exisiting theory in decentralized learning.</strong>",
+    "slides": "https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM/blob/main/Slides_ICML_2023_Decentralized_SGD_and_Average_direction_SAM_are_Asymptotically_Equivalent%20.pdf",
+    "poster": "https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM/blob/main/Poster_ICML2023_D_SGD_as_SAM.pdf",
+    "code": "https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM",
+    "dimensions": "true",
+    "selected": "true",
+    "bibtex_show": "true",
+    "preview": "230705 DSGD_SAM (2).png",
+    "id": "pmlr-zhu23",
+    "image": "dsgd-sam-pastel.webp",
+    "summary": "Decentralized SGD and average-direction SAM are asymptotically equivalent, connecting decentralized training with implicit sharpness regularization.",
+    "authors": [
+      "Tongtian Zhu",
+      "Fengxiang He",
+      "Kaixuan Chen",
+      "Mingli Song",
+      "Dacheng Tao"
+    ],
+    "links": {
+      "Paper": "https://arxiv.org/pdf/2306.02913",
+      "Code": "https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM",
+      "Slides": "https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM/blob/main/Slides_ICML_2023_Decentralized_SGD_and_Average_direction_SAM_are_Asymptotically_Equivalent%20.pdf",
+      "Poster": "https://github.com/Raiden-Zhu/ICML-2023-DSGD-and-SAM/blob/main/Poster_ICML2023_D_SGD_as_SAM.pdf"
+    }
+  },
+  {
+    "abbr": "KDD 2023",
+    "author": "Chen, Kaixuan and Liu, Shunyu and Zhu, Tongtian and Qiao, Ji and Su, Yun and Tian, Yingjie and Zheng, Tongya and Zhang, Haofei and Feng, Zunlei and Ye, Jingwen and Song, Mingli",
+    "title": "Improving Expressivity of GNNs with Subgraph-Specific Factor Embedded Normalization",
+    "year": "2023",
+    "publisher": "Association for Computing Machinery",
+    "abstract": "Graph Neural Networks~(GNNs) have emerged as a powerful category of learning architecture for handling graph-structured data. However, existing GNNs typically ignore crucial structural characteristics in node-induced subgraphs, which thus limits their expressiveness for various downstream tasks. In this paper, we strive to strengthen the representative capabilities of GNNs by devising a dedicated plug-and-play normalization scheme, termed as SUbgraph-sPEcific FactoR Embedded Normalization (SuperNorm), that explicitly considers the intra-connection information within each node-induced subgraph. To this end, we embed the subgraph-specific factor at the beginning and the end of the standard BatchNorm, as well as incorporate graph instance-specific statistics for improved distinguishable capabilities. In the meantime, we provide theoretical analysis to support that, with the elaborated SuperNorm, an arbitrary GNN is at least as powerful as the 1-WL test in distinguishing non-isomorphism graphs. Furthermore, the proposed SuperNorm scheme is also demonstrated to alleviate the over-smoothing phenomenon. Experimental results related to predictions of graph, node, and link properties on the eight popular datasets demonstrate the effectiveness of the proposed method. The code is available at https://github.com/chenchkx/SuperNorm.",
+    "booktitle": "Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+    "pages": "237–249",
+    "numpages": "13",
+    "keywords": "graph normalization, subgraph-specific factor, graph isomorphism test, oversmoothing issue, graph neural networks",
+    "location": "Long Beach, CA, USA",
+    "series": "KDD '23",
+    "dimensions": "true",
+    "bibtex_show": "true",
+    "preview": "KDD.png",
+    "code": "https://github.com/chenchkx/SuperNorm",
+    "id": "10.1145/3580305.3599388",
+    "image": "supernorm-hd.webp",
+    "summary": "SuperNorm incorporates local subgraph structure into normalization to improve GNN expressivity and alleviate over-smoothing.",
+    "authors": [
+      "Kaixuan Chen",
+      "Shunyu Liu",
+      "Tongtian Zhu",
+      "Ji Qiao",
+      "Yun Su",
+      "Yingjie Tian",
+      "Tongya Zheng",
+      "Haofei Zhang",
+      "Zunlei Feng",
+      "Jingwen Ye",
+      "Mingli Song"
+    ],
+    "links": {
+      "Paper": "https://doi.org/10.1145/3580305.3599388",
+      "Code": "https://github.com/chenchkx/SuperNorm"
+    }
+  },
+  {
+    "abbr": "ECAI 2023",
+    "title": "Adversarial Erasing with Pruned Elements: Towards Better Graph Lottery Ticket",
+    "author": "Wang, Yuwen and Liu, Shunyu and Chen, Kaixuan and Zhu, Tongtian and Qiao, Ji and Shi, Mengjie and Wan, Yuanyu and Song, Mingli",
+    "booktitle": "European Conference on Artificial Intelligence",
+    "year": "2023",
+    "series": "Proceedings of European Conference on Artificial Intelligence",
+    "publisher": "ECAI",
+    "pdf": "https://arxiv.org/abs/2308.02916",
+    "abstract": "Graph Lottery Ticket (GLT), a combination of core subgraph and sparse subnetwork, has been proposed to mitigate the computational cost of deep Graph Neural Networks (GNNs) on large input graphs while preserving original performance. However, the winning GLTs in exisiting studies are obtained by applying iterative magnitude-based pruning (IMP) without re-evaluating and re-considering the pruned information, which disregards the dynamic changes in the significance of edges/weights during graph/model structure pruning, and thus limits the appeal of the winning tickets. In this paper, we formulate a conjecture, i.e., existing overlooked valuable information in the pruned graph connections and model parameters which can be re-grouped into GLT to enhance the final performance. Specifically, we propose an adversarial complementary erasing (ACE) framework to explore the valuable information from the pruned components, thereby developing a more powerful GLT, referred to as the ACE-GLT. The main idea is to mine valuable information from pruned edges/weights after each round of IMP, and employ the ACE technique to refine the GLT processing. Finally, experimental results demonstrate that our ACE-GLT outperforms existing methods for searching GLT in diverse tasks.",
+    "code": "https://github.com/Wangyuwen0627/ACE-GLT",
+    "dimensions": "true",
+    "bibtex_show": "true",
+    "preview": "2023ecai-wang2023adversarial.png",
+    "id": "wang2023adversarial",
+    "image": "ace-glt-hd.webp",
+    "summary": "ACE-GLT reconsiders pruned graph connections and model weights to refine sparse graph lottery tickets.",
+    "authors": [
+      "Yuwen Wang",
+      "Shunyu Liu",
+      "Kaixuan Chen",
+      "Tongtian Zhu",
+      "Ji Qiao",
+      "Mengjie Shi",
+      "Yuanyu Wan",
+      "Mingli Song"
+    ],
+    "links": {
+      "Paper": "https://arxiv.org/abs/2308.02916",
+      "Code": "https://github.com/Wangyuwen0627/ACE-GLT"
+    }
+  },
+  {
+    "abbr": "AAAI 2023 (Oral)",
+    "title": "Contrastive Identity-Aware Learning for Multi-Agent Value Decomposition",
+    "author": "Liu, Shunyu and Zhou, Yihe and Song, Jie and Zheng, Tongya and Chen, Kaixuan and Zhu, Tongtian and Feng, Zunlei and Song, Mingli",
+    "booktitle": "Proceedings of the 37th AAAI Conference on Artificial Intelligence",
+    "year": "2023",
+    "abstract": "Value Decomposition (VD) aims to deduce the contributions of agents for decentralized policies in the presence of only global rewards, and has recently emerged as a powerful credit assignment paradigm for tackling cooperative Multi-Agent Reinforcement Learning (MARL) problems. One of the main challenges in VD is to promote diverse behaviors among agents, while existing methods directly encourage the diversity of learned agent networks with various strategies. However, we argue that these dedicated designs for agent networks are still limited by the indistinguishable VD network, leading to homogeneous agent behaviors and thus downgrading the cooperation capability. In this paper, we propose a novel Contrastive Identity-Aware learning (CIA) method, explicitly boosting the credit-level distinguishability of the VD network to break the bottleneck of multi-agent diversity. Specifically, our approach leverages contrastive learning to maximize the mutual information between the temporal credits and identity representations of different agents, encouraging the full expressiveness of credit assignment and further the emergence of individualities. The algorithm implementation of the proposed CIA module is simple yet effective that can be readily incorporated into various VD architectures. Experiments on the SMAC benchmarks and across different VD backbones demonstrate that the proposed method yields results superior to the state-of-the-art counterparts. Our code is available at this https URL.",
+    "pdf": "https://arxiv.org/pdf/2211.12712",
+    "code": "https://github.com/liushunyu/CIA",
+    "dimensions": "true",
+    "bibtex_show": "true",
+    "preview": "contrastive_aware.png",
+    "id": "liu2023",
+    "image": "cia-hd.webp",
+    "summary": "Contrastive identity-aware learning distinguishes agents’ temporal credits to encourage diverse behaviors in cooperative multi-agent learning.",
+    "authors": [
+      "Shunyu Liu",
+      "Yihe Zhou",
+      "Jie Song",
+      "Tongya Zheng",
+      "Kaixuan Chen",
+      "Tongtian Zhu",
+      "Zunlei Feng",
+      "Mingli Song"
+    ],
+    "links": {
+      "Paper": "https://arxiv.org/pdf/2211.12712",
+      "Code": "https://github.com/liushunyu/CIA"
+    }
+  },
+  {
+    "abbr": "ICML 2022 (Spotlight)",
+    "title": "Topology-aware Generalization of Decentralized SGD",
+    "author": "Zhu, Tongtian and He, Fengxiang and Zhang, Lan and Niu, Zhengyang and Song, Mingli and Tao, Dacheng",
+    "booktitle": "Proceedings of the 39th International Conference on Machine Learning",
+    "pages": "27479--27503",
+    "year": "2022",
+    "editor": "Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan",
+    "volume": "162",
+    "series": "Proceedings of Machine Learning Research",
+    "publisher": "PMLR",
+    "pdf": "https://arxiv.org/pdf/2206.12680",
+    "url": "https://proceedings.mlr.press/v162/zhu22d.html",
+    "abstract": "This paper studies the algorithmic stability and generalizability of decentralized stochastic gradient descent (D-SGD). We prove that the consensus model learned by D-SGD is \\mathcal{O}{(N^{-1}+ m^{-1} +\\lambda^2)}\\mathcal{O}{(N^{-1}+ m^{-1} +\\lambda^2)}-stable in expectation in the non-convex non-smooth setting, where NN is the total sample size, mm is the worker number, and 1+\\lambda1+\\lambda is the spectral gap that measures the connectivity of the communication topology. These results then deliver an \\mathcal{O}{(N^{-(1+\\alpha)/2}+ m^{-(1+\\alpha)/2}+\\lambda^{1+\\alpha} + \\phi_S)}\\mathcal{O}{(N^{-(1+\\alpha)/2}+ m^{-(1+\\alpha)/2}+\\lambda^{1+\\alpha} + \\phi_S)} in-average generalization bound, which is non-vacuous even when \\lambda\\lambda is closed to 11, in contrast to vacuous as suggested by existing literature on the projected version of D-SGD. Our theory indicates that the generalizability of D-SGD is positively correlated with the spectral gap, and can explain why consensus control in initial training phase can ensure better generalization. Experiments of VGG-11 and ResNet-18 on CIFAR-10, CIFAR-100 and Tiny-ImageNet justify our theory. To our best knowledge, this is the first work on the topology-aware generalization of vanilla D-SGD.",
+    "tldr": "<strong><span style=\"font-weight: bold; color: #B509AC;\">TLDR</span>: The first work on the topology-aware generalization analysis of vanilla Decentralized SGD algorithm.</strong>",
+    "slides": "https://github.com/Raiden-Zhu/Generalization-of-DSGD/blob/main/Slides_ICML2022_Generalization_of_D_SGD.pdf",
+    "poster": "https://github.com/Raiden-Zhu/Generalization-of-DSGD/blob/main/Poster_ICML2022_Generalization_of_D_SGD_v8.png",
+    "code": "https://github.com/Raiden-Zhu/Generalization-of-DSGD",
+    "dimensions": "true",
+    "selected": "true",
+    "bibtex_show": "true",
+    "preview": "Topology.png",
+    "id": "pmlr-v162-zhu22d",
+    "image": "topology-hd.webp",
+    "summary": "Network topology affects how decentralized SGD generalizes, linking graph connectivity with learning performance.",
+    "authors": [
+      "Tongtian Zhu",
+      "Fengxiang He",
+      "Lan Zhang",
+      "Zhengyang Niu",
+      "Mingli Song",
+      "Dacheng Tao"
+    ],
+    "links": {
+      "Paper": "https://arxiv.org/pdf/2206.12680",
+      "Code": "https://github.com/Raiden-Zhu/Generalization-of-DSGD",
+      "Slides": "https://github.com/Raiden-Zhu/Generalization-of-DSGD/blob/main/Slides_ICML2022_Generalization_of_D_SGD.pdf",
+      "Poster": "https://github.com/Raiden-Zhu/Generalization-of-DSGD/blob/main/Poster_ICML2022_Generalization_of_D_SGD_v8.png"
+    }
+  }
+]
