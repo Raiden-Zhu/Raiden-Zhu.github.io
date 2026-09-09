@@ -83,7 +83,7 @@ permalink: /
     <section class="beyond" aria-labelledby="beyond-heading">
       <h2 id="beyond-heading" class="eyebrow">Beyond research</h2>
       <p>Outside of research, I enjoy drawing and basketball. They help me stay curious and balanced.</p>
-      <img class="westlake-sketch" src="/assets/img/home-reference/westlake-sketch.png" width="350" height="140" alt="West Lake line illustration with the note: Good ideas in a better tomorrow." loading="lazy">
+      <img class="westlake-sketch" src="/assets/img/home-reference/westlake-sketch-v3.png" width="350" height="140" alt="West Lake line illustration with the note: Good ideas in a better tomorrow." loading="lazy">
     </section>
   </div>
 </main>
