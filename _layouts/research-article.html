@@ -1,0 +1,15 @@
+---
+layout: research-home
+---
+<main id="main" class="article-page">
+<header class="article-header"><a class="back-link" href="/blog/">← Writing</a><p class="eyebrow">2025 · ICLR · Research explainer</p><h1>{{ page.title }}</h1><p class="authors"><strong>Tongtian Zhu</strong>, Wenhao Li, Can Wang, and Fengxiang He</p>
+<div class="paper-links"><a href="https://openreview.net/forum?id=2TIYkqieKw">Paper</a><a href="https://github.com/Raiden-Zhu/ICLR-2025-DICE">Code</a><a href="https://arxiv.org/abs/2507.06931">arXiv</a><a href="https://github.com/Raiden-Zhu/ICLR-2025-DICE/blob/main/Slides_DICE.pdf">Slides</a><a href="https://github.com/Raiden-Zhu/ICLR-2025-DICE/blob/main/Poster_DICE.png">Poster</a><a href="https://www.bilibili.com/video/BV1vwQrY5Et7/">Video · 中文</a><a href="https://x.com/Tongtian_Zhu/status/1882111164735512790">Thread</a><a href="https://huggingface.co/blog/TongtianZhu/dice">Hugging Face</a></div></header>
+<article class="article-body">{{ content }}</article>
+<div class="article-bottom"><a href="/blog/">← All writing</a><a href="/publications/">All publications →</a></div>
+</main>
+<script>
+// Kramdown emits math/tex nodes; convert them for the shared MathJax 3 renderer.
+document.querySelectorAll('script[type^="math/tex"]').forEach(function(node){var display=node.type.includes('mode=display');var text=document.createTextNode((display?'\\[':'\\(')+node.textContent+(display?'\\]':'\\)'));node.replaceWith(text);});
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],tags:'ams'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>

@@ -218,6 +218,13 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - package.json
+  - package-lock.json
+  - node_modules
+  - scripts/preview-home.mjs
+  - scripts/build-research-archives.py
+  - HOMEPAGE_REDESIGN.md
+  - design-qa.md
 keep_files:
   - CNAME
   - .nojekyll
