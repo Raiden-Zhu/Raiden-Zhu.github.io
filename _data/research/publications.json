@@ -11,7 +11,7 @@
     "dimensions": "true",
     "selected": "true",
     "bibtex_show": "true",
-    "code": "",
+    "code": "https://github.com/Raiden-Zhu/ICLR-2026-Grokking-in-Decentralized-Learning",
     "preview": "Surprising.png",
     "id": "zhu2026surprising",
     "image": "single-merge-hd.webp",
@@ -25,6 +25,7 @@
     ],
     "links": {
       "Paper": "https://openreview.net/forum?id=lWGMbJRCtQ",
+      "Code": "https://github.com/Raiden-Zhu/ICLR-2026-Grokking-in-Decentralized-Learning",
       "Blog": "https://paper-list.notion.site/ICLR-26-The-Grokking-Moment-in-Decentralized-Learning-On-The-Surprising-Effectiveness-of-A-Singl-2f43218102c0805d99d6e56d2934fac4?source=copy_link"
     }
   },
