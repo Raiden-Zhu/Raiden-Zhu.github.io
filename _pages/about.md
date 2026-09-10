@@ -36,7 +36,7 @@ permalink: /
         <p class="paper-kicker"><span class="paper-index">01</span><span>ICLR 2026</span><span class="honor">Oral</span></p>
         <h3><a href="https://openreview.net/forum?id=lWGMbJRCtQ">On the Surprising Effectiveness of a Single Global Merging in Decentralized Learning</a></h3>
         <p class="takeaway">A single global model merging can be remarkably effective in decentralized learning, challenging conventional wisdom about frequent communication.</p>
-        <p class="authors"><strong>Tongtian Zhu</strong>, Tianyu Zhang, Mingze Wang, Zhanpeng Zhou, and Can Wang</p>
+        <p class="authors"><strong>Tongtian Zhu</strong><sup>*</sup>, Tianyu Zhang<sup>*</sup>, Mingze Wang, Zhanpeng Zhou, and Can Wang<br><span>* Equal contribution</span></p>
         <div class="paper-links"><a href="https://openreview.net/forum?id=lWGMbJRCtQ">Paper</a><a href="https://github.com/Raiden-Zhu/ICLR-2026-Grokking-in-Decentralized-Learning">Code</a><a href="https://paper-list.notion.site/ICLR-26-The-Grokking-Moment-in-Decentralized-Learning-On-The-Surprising-Effectiveness-of-A-Singl-2f43218102c0805d99d6e56d2934fac4?source=copy_link">Blog</a></div>
       </div>
     </article>

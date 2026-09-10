@@ -51,7 +51,9 @@ def links(d):return '<div class="paper-links">'+''.join(link(u,n) for n,u in d.i
 def head(title,path,intro,eyebrow):return f'''---\nlayout: research-home\ntitle: {title}\npermalink: {path}\n---\n<main id="main" class="archive-page"><header class="archive-header"><a class="back-link" href="/">← Home</a><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p class="archive-intro">{intro}</p></header>'''
 def row(p,n):
  primary=next(iter(p['links'].values()))
- authors=', '.join(f'<strong>{esc(a)}</strong>' if a == "Tongtian Zhu" else esc(a) for a in p["authors"])
+ equal=set(p.get('equal_contributors','').split(' and ')) - {''}
+ authors=', '.join((f'<strong>{esc(a)}</strong>' if a == "Tongtian Zhu" else esc(a)) + ('<sup>*</sup>' if a in equal else '') for a in p["authors"])
+ if equal: authors += '<br><span>* Equal contribution</span>'
  return f'''<article class="paper" id="paper-{n}"><a class="paper-visual" href="{esc(primary)}" aria-label="Read {esc(p['title'])}"><span class="venue-badge">{esc(p['abbr'])}</span><img src="/assets/img/publication_preview/{p['image']}" alt="{esc(p['summary'])}" width="1672" height="941" loading="lazy"></a><div class="paper-body"><p class="paper-kicker"><span>{n:02d}</span><span>{esc(p['abbr'])}</span></p><h3>{link(primary,p['title'])}</h3><p class="takeaway">{esc(p['summary'])}</p><p class="authors">{authors}</p>{links(p['links'])}</div></article>'''
 pubs=list(byid[k] for k in curation)
 s=head('All publications','/publications/','Research on learning mechanisms, decentralized training, and related problems. '+link('https://scholar.google.com/citations?user=QvBDUsIAAAAJ&hl=en','Google Scholar ↗'),'Research archive')
