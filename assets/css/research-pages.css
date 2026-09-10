@@ -60,3 +60,55 @@
  .article-body blockquote,.article-body .custom-box{padding:15px}
  .paper-links a+a:before{margin-right:8px}
 }
+
+/* Incremental update: append ONCE to assets/css/research-pages.css.
+   If the Mobile reading layout block already exists, replace that block.
+   Do not replace the entire stylesheet. No HTML, image or JS changes required. */
+
+/* Mobile reading layout: compact interests and visually connected paper entries.
+   Scoped to phones so the approved desktop composition stays untouched. */
+@media(max-width:620px){
+ .site-header,.site-footer,main,.home-stats{width:calc(100% - 36px)}
+ .header-inner{min-height:60px;padding:8px 0;gap:2px 12px}
+ .wordmark{font-size:17px;gap:8px}.wordmark span{padding-left:8px}
+ .monogram{width:22px;height:28px}
+ .site-header nav{gap:16px}.site-header nav a{font-size:14px;display:inline-flex;align-items:center;min-height:40px}
+ .hero{grid-template-columns:minmax(0,1fr) 86px;gap:14px 12px;padding:22px 0 20px}
+ .hero h1{font-size:clamp(28px,8vw,36px);letter-spacing:-1px;line-height:1.08}
+ .portrait img{width:80px;height:86px}.portrait figcaption{display:none}
+ .hero-tagline,.research-motto{font-size:16px;line-height:1.45}
+ .hero-tagline{margin:0}.hero-bio{font-size:16px;line-height:1.45}
+ .hero-links{gap:4px 18px;margin-top:0}.hero-links a{min-height:40px;font-size:14px}
+ .research-areas{display:block;padding:0 0 18px}
+ .area,.area:first-child,.area:last-child{padding:9px 0;border:0}
+ .area+.area{border-top:1px solid #e5e2e6}
+ .area h2{display:inline;font-size:16px;line-height:1.45;letter-spacing:0;margin:0}
+ .area h2::after{content:'. '}
+ .area p:last-child{display:inline;font-size:14px;line-height:1.5}
+ .research{padding-top:20px}
+ .section-heading{flex-wrap:wrap;align-items:center;gap:6px 12px}
+ .section-heading .eyebrow{display:none}
+ .section-heading h2{font-size:28px;letter-spacing:-.8px}
+ .section-heading>a{font-size:14px;min-height:36px;display:inline-flex;align-items:center;margin:0}
+ .research-motto{margin:8px 0 6px}
+ .paper,.archive-page .paper{grid-template-columns:112px minmax(0,1fr);gap:10px 14px;align-items:start;padding:22px 0 16px}
+ .paper .paper-body{display:contents}
+ .paper .paper-kicker{display:none}
+ .paper .paper-visual,.archive-page .paper-visual{grid-column:1;grid-row:1;width:112px;height:78px;margin-top:8px;align-self:center;justify-self:start}
+ .paper .venue-badge{font-size:10px;line-height:1.3;padding:3px 5px;max-width:112px;white-space:normal;top:-13px}
+ .paper h3,.archive-page .paper h3{grid-column:2;grid-row:1;font-size:18px;line-height:1.25;letter-spacing:-.2px;margin:0;overflow-wrap:break-word}
+ .paper .takeaway{grid-column:1/-1;grid-row:2;font-size:15px;line-height:1.45;margin:0}
+ .paper .authors{grid-column:1/-1;grid-row:3;font-size:13px;line-height:1.45;margin:0;color:var(--muted)}
+ .paper .authors strong{color:var(--ink)}
+ .paper .paper-links{grid-column:1/-1;grid-row:4;justify-content:flex-start;flex-wrap:wrap;gap:8px;margin-top:-3px;font-size:14px}
+ .paper .paper-links a{display:inline-flex;align-items:center;min-height:40px}
+ .paper .paper-links a+a:before{margin-right:8px}
+ .year-nav{flex-wrap:wrap;gap:8px 22px}.year-nav a{padding:8px 0}
+ .lower-grid{margin-top:8px}.updates li{grid-template-columns:76px minmax(0,1fr);gap:12px;line-height:1.45}
+ .visitor-stats__copy{flex-wrap:wrap}.footer-location{display:inline-block}
+}
+@media(max-width:360px){
+ .paper,.archive-page .paper{grid-template-columns:96px minmax(0,1fr);column-gap:12px}
+ .paper .paper-visual,.archive-page .paper-visual{width:96px;height:72px}
+ .paper .venue-badge{max-width:96px}
+}
