@@ -112,3 +112,23 @@
  .paper .paper-visual,.archive-page .paper-visual{width:96px;height:72px}
  .paper .venue-badge{max-width:96px}
 }
+
+/* Separate conference identity from the oral distinction. */
+.paper .venue-badge--split{display:flex;flex-wrap:wrap;gap:6px;padding:0;background:transparent;max-width:100%;white-space:normal}
+.venue-badge--split .venue-conference,.venue-badge--split .venue-honor{padding:3px 6px;border-radius:3px;white-space:nowrap}
+.venue-badge--split .venue-conference{background:#715881;color:#fff}
+.venue-badge--split .venue-honor{background:#f5f1f7;color:#60466f;box-shadow:inset 0 0 0 1.9px #a28baf;font-weight:700}
+.venue-badge--split .venue-honor strong{font-weight:700}
+@media(max-width:620px){
+ .paper .venue-badge--split{font-size:9px;letter-spacing:0;gap:3px;max-width:100%}
+ .venue-badge--split .venue-conference,.venue-badge--split .venue-honor{padding:3px 4px}
+}
+
+/* Keep the distinction together beneath the conference label on phones. */
+@media(max-width:620px){
+ .paper .venue-badge--split{flex-direction:column;align-items:flex-start;top:-38px}
+ .paper .paper-visual:has(.venue-badge--split){margin-top:38px}
+}
+
+/* Give every publication label a little breathing room above its illustration. */
+.paper .venue-badge{transform:translateY(-6px)}

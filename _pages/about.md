@@ -31,7 +31,7 @@ permalink: /
     <div class="section-heading"><div><p class="eyebrow">Publications</p><h2 id="research-heading">Selected research</h2></div><a href="/publications/">All publications →</a></div>
     <p class="research-motto">My research is my brand; papers are my products.</p>
     <article class="paper" id="single-merging">
-      <a class="paper-visual" href="https://openreview.net/forum?id=lWGMbJRCtQ" aria-label="Read the single global merging paper"><span class="venue-badge">ICLR 2026 (Oral)</span><img src="/assets/img/publication_preview/single-merge-hd.webp" alt="Concept illustration: local training with sparse gossip followed by one final parameter average" width="1672" height="940" loading="lazy"></a>
+      <a class="paper-visual" href="https://openreview.net/forum?id=lWGMbJRCtQ" aria-label="Read the single global merging paper"><span class="venue-badge venue-badge--split"><span class="venue-conference">ICLR 2026</span><span class="venue-honor"><strong>Oral</strong> · Top 1.2%</span></span><img src="/assets/img/publication_preview/single-merge-hd.webp" alt="Concept illustration: local training with sparse gossip followed by one final parameter average" width="1672" height="940" loading="lazy"></a>
       <div class="paper-body">
         <p class="paper-kicker"><span class="paper-index">01</span><span>ICLR 2026</span><span class="honor">Oral</span></p>
         <h3><a href="https://openreview.net/forum?id=lWGMbJRCtQ">On the Surprising Effectiveness of a Single Global Merging in Decentralized Learning</a></h3>
