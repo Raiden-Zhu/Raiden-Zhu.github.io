@@ -8,7 +8,7 @@ permalink: /
     <div class="hero-copy">
       <h1 id="name">Tongtian Zhu</h1>
       <p class="hero-tagline">Convince future generations, not just peers.</p>
-      <p class="hero-bio">I am a Ph.D. candidate at the Computer Science Department of <a href="https://www.zju.edu.cn/english/">Zhejiang University (ZJU)</a>, supervised by Professors <a href="https://person.zju.edu.cn/en/wangcan">Can Wang</a> and <a href="https://person.zju.edu.cn/en/0082004">Chun Chen</a>.</p>
+      <p class="hero-bio">I am a Ph.D. candidate at the Computer Science Department of <a href="https://www.zju.edu.cn/english/">Zhejiang University (ZJU)</a>, advised by Professors <a href="https://person.zju.edu.cn/en/wangcan">Can Wang</a> and <a href="https://person.zju.edu.cn/en/0082004">Chun Chen</a>.</p>
       <p class="hero-bio">My research focuses on understanding learning mechanisms.</p>
       <div class="hero-links" aria-label="Contact and profiles">
         <a href="mailto:raiden@zju.edu.cn"><img src="/assets/img/home-reference/email.png" alt="" width="19" height="19">Email</a>
