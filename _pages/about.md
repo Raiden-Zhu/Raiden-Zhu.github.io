@@ -45,7 +45,7 @@ permalink: /
       <div class="paper-body">
         <p class="paper-kicker"><span class="paper-index">02</span><span>ICLR 2025</span></p>
         <h3><a href="https://openreview.net/forum?id=2TIYkqieKw">DICE: Data Influence Cascade in Decentralized Learning</a></h3>
-        <p class="takeaway">We study how data influence propagates in decentralized learning and reveal a cascade effect that shapes training dynamics and generalization.</p>
+        <p class="takeaway">We study how data influence propagates in decentralized learning and reveal a cascade effect that shapes training dynamics.</p>
         <p class="authors"><strong>Tongtian Zhu</strong>, Wenhao Li, Can Wang, and Fengxiang He</p>
         <div class="paper-links"><a href="https://openreview.net/forum?id=2TIYkqieKw">Paper</a><a href="https://github.com/Raiden-Zhu/ICLR-2025-DICE">Code</a><a href="/blog/2025/DICE/">Project</a></div>
       </div>
