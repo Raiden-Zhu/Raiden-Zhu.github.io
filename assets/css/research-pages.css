@@ -132,3 +132,14 @@
 
 /* Give every publication label a little breathing room above its illustration. */
 .paper .venue-badge{transform:translateY(-6px)}
+
+/* Homepage visitor map. */
+.visitor-map-section{border-top:1px solid var(--line);padding:22px 18px 26px}
+.visitor-map-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+.visitor-map-heading h2{margin:0;font-size:10px;letter-spacing:1.8px}
+.visitor-map-heading>a{font-size:13px}
+.visitor-map-widget{width:60px;max-width:100%;min-height:68px;margin:0;text-align:left}
+.visitor-map-widget .mmvst_globe{filter:hue-rotate(65deg) saturate(.65)}
+.visitor-map-widget img,.visitor-map-widget iframe{max-width:100%}
+.visitor-map-widget img{height:auto}
+@media(max-width:620px){.visitor-map-section{padding:20px 0}.visitor-map-heading{flex-wrap:wrap;gap:8px}}
