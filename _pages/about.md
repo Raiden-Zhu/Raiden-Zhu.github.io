@@ -75,6 +75,13 @@ permalink: /
       <img class="westlake-sketch" src="/assets/img/home-reference/westlake-sketch-v3.png" width="350" height="140" alt="West Lake line illustration with the note: Good ideas in a better tomorrow." loading="lazy">
     </section>
   </div>
+  <section class="visitor-map-section" aria-labelledby="visitor-map-heading">
+    <div class="visitor-map-heading"><h2 id="visitor-map-heading" class="eyebrow">Visitors around the world</h2><a href="https://raiden-zhu.goatcounter.com/" target="_blank" rel="noopener noreferrer">Visit statistics ↗</a></div>
+    <div class="visitor-map-widget">
+      <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d=h_OPw58FFc382kx2VEmCdwaGd1V8_mWrFG7IT5Jyq84&amp;cl=78618e&amp;co=f1edf3&amp;w=60"></script>
+      <noscript><a href="https://mapmyvisitors.com/web/1c8io"><img src="https://mapmyvisitors.com/map.png?d=h_OPw58FFc382kx2VEmCdwaGd1V8_mWrFG7IT5Jyq84&amp;cl=ffffff" alt="Visitor locations on a world map"></a></noscript>
+    </div>
+  </section>
 </main>
 <dialog id="dsgd-figure-dialog" class="figure-dialog" aria-labelledby="figure-dialog-title">
   <div class="figure-dialog-header"><div><p class="eyebrow">ICML 2023 · Research figure</p><h2 id="figure-dialog-title">Decentralized SGD &amp; sharpness-aware minimization</h2></div><button type="button" data-figure-close aria-label="Close enlarged figure">Close</button></div>
