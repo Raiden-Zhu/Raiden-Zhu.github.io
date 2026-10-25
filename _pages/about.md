@@ -22,7 +22,7 @@ permalink: /
     </figure>
   </section>
   <section class="research-areas" aria-label="Research interests">
-    <div class="area"><p class="eyebrow">Research area</p><h2>Language model training</h2><p>Developing more effective and efficient training methods for language models, including optimizers, looped architectures, and efficient parallelism.</p></div>
+    <div class="area"><p class="eyebrow">Research area</p><h2>New training paradigms</h2><p>Exploring new ways to train language models (and beyond), rethinking how learning signals are generated and parameters are updated.</p></div>
     <div class="area"><p class="eyebrow">Research area</p><h2>Decentralized learning</h2><p>Understanding learning in distributed systems, including <a href="https://arxiv.org/abs/2306.02913">training dynamics</a>, <a href="https://arxiv.org/abs/2206.12680">generalization</a>, <a href="https://openreview.net/forum?id=2TIYkqieKw">data influence</a>, and <a href="https://openreview.net/forum?id=lWGMbJRCtQ">communication allocation</a>.</p></div>
     <div class="area"><p class="eyebrow">Research area</p><h2>Science of learning</h2><p>Studying learning mechanisms, such as <a href="https://arxiv.org/abs/2306.02913">training dynamics / implicit bias</a>, <a href="https://arxiv.org/abs/2406.09189">symmetries</a>, and <a href="https://openreview.net/forum?id=lWGMbJRCtQ">emergence of mergeability</a>.</p></div>
   </section>
